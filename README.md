@@ -3,7 +3,8 @@
 
 ## Integrantes:
 
-* Valeria Castillo
+* Valeria Castillo,San miguel,Prov. Bs As.  edad: 36 años, casada. Estudiando  programacion full stack en digital house, estudie en secundaria  tecnica con orientacion Bienen y Servicios, nivel de ingles intermedio, y un curso de arte. mis intereses generales son la musica, el diseño y el arte. mis metas a mediano plazo son desarrollarme como profesional en el area de progamacion las ramas que mas me interesan son AI, ciberseguridad y el blockchain. 
+
 * Paula Escobar
 * Lucio Testa
 * Nazareno Figoli
