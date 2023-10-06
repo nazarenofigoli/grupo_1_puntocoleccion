@@ -3,7 +3,8 @@
 
 ## Integrantes:
 
-* Valeria Castillo
+* Valeria Castillo,San miguel,Prov. Bs As.  edad: 36 años, casada. Estudiando  programacion full stack en digital house, estudie en secundaria  tecnica con orientacion Bienes y Servicios, nivel de ingles intermedio, y un curso de arte. mis intereses generales son la musica, el diseño y el arte. mis metas a mediano plazo son desarrollarme como profesional en el area de progamacion las ramas que mas me interesan son AI, ciberseguridad y el blockchain. 
+
 * Paula Escobar
 * Lucio Testa
 * Nazareno Figoli
@@ -19,7 +20,12 @@
 
 ## Sitios de referencia:
 * [Geekon](https://geekon.com.ar), tomamos de referecia carrito de compras y carrucel.
-* [Magic4ever](https://magic4ever.com.ar)
-* [Joguiba](https://www.joguiba.com)
-* [Jugueteriapoly](https://jugueteriapoly.es)
-* [Juguetes](https://juguetes.link)
+* [Magic4ever](https://magic4ever.com.ar),basamos nuestro proyecto en este sitio web ya que fue el primero que vimos al pensar en el producto que elegimos.
+* [Playxfun](https://www.playxfun.com/), de esta pagina nos gusto la estructura y el dinamismo que tiene en presentacion de productos.
+* [Juguetes](https://juguetes.link), se baso de este sitio el modelo de detalle de producto
+* [MercadoLibre](https://www.mercadolibre.com.ar/), Al ser una empresa de las mas conocidas estudiamos su diseño y estructura.
+* [ ]()
+
+
+
+
