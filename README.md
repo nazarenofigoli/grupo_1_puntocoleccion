@@ -24,7 +24,7 @@
 * [Playxfun](https://www.playxfun.com/), de esta pagina nos gusto la estructura y el dinamismo que tiene en presentacion de productos.
 * [Juguetes](https://juguetes.link), se baso de este sitio el modelo de detalle de producto
 * [MercadoLibre](https://www.mercadolibre.com.ar/), Al ser una empresa de las mas conocidas estudiamos su diseño y estructura.
-* [ ]()
+* [Viducomics](https://www.viducomics.com.ar/), tomamos la estuctura de como se muestran los elementos en el catalogo
 
 
 
