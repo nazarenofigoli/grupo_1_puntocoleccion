@@ -21,9 +21,9 @@
 ## Sitios de referencia:
 * [Geekon](https://geekon.com.ar), tomamos de referecia carrito de compras y carrucel.
 * [Magic4ever](https://magic4ever.com.ar),basamos nuestro proyecto en este sitio web ya que fue el primero que vimos al pensar en el producto que elegimos.
-* [Playxfun](https://www.playxfun.com/), de esta pagina nos gustola estructura y el dinamismo que tiene en presentacion de productos.
-* [Juguetes](https://juguetes.link), se tomo de esta el modelo de detalle de producto
-* [MercadoLibre](https://www.mercadolibre.com.ar/), al ser una empresa de las mas conocidas estudiamos su diseño y estructura.
+* [Playxfun](https://www.playxfun.com/), de esta pagina nos gusto la estructura y el dinamismo que tiene en presentacion de productos.
+* [Juguetes](https://juguetes.link), se baso de este sitio el modelo de detalle de producto
+* [MercadoLibre](https://www.mercadolibre.com.ar/), Al ser una empresa de las mas conocidas estudiamos su diseño y estructura.
 * [ ]()
 
 
