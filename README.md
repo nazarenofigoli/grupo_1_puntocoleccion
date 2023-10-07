@@ -25,6 +25,7 @@
 * [Juguetes](https://juguetes.link), se baso de este sitio el modelo de detalle de producto
 * [MercadoLibre](https://www.mercadolibre.com.ar/), Al ser una empresa de las mas conocidas estudiamos su diseño y estructura.
 * [Viducomics](https://www.viducomics.com.ar/), tomamos la estuctura de como se muestran los elementos en el catalogo
+* []
 
 
 
