@@ -43,10 +43,10 @@ Al terminal el curso espero poder adquirir nuevos conocimientos que me sirvan pa
 
 
 ## Links de Figma:
-* [Home] (https://www.figma.com/file/ClVt83hwhuQ7b3FqLqqdlp/PUNTO-COLECCION-HOME?type=design&node-id=0-1&mode=design&t=kcfva49iq2iGPWFD-0)
-* [Login] (https://www.figma.com/file/ClVt83hwhuQ7b3FqLqqdlp/PUNTO-COLECCION-HOME?type=design&node-id=33-446&mode=design&t=kcfva49iq2iGPWFD-0)
-* [Registro] (https://www.figma.com/file/dSrwD6dN5kcr6clApV77ec/PUNTO-COLECCION-CREATE-ACCOUNT?type=design&node-id=0-1&mode=design&t=vczM4XXSegGrKQ5Z-0) 
-* [Carrito] (https://www.figma.com/file/fUtZtudSnwv10wLVBayilZ/PUNTO-COLECCION--CARRITO?type=design&mode=design&t=dLG7o9Fa8hqvvmHw-0)
-* [Prodcutos] (https://www.figma.com/file/YqnkTndV0jkfKBLEkJTTZo/ProyectoIntegrador?type=design&node-id=96-54&mode=design&t=dLG7o9Fa8hqvvmHw-0)  
+* [Home](https://www.figma.com/file/ClVt83hwhuQ7b3FqLqqdlp/PUNTO-COLECCION-HOME?type=design&node-id=0-1&mode=design&t=kcfva49iq2iGPWFD-0)
+* [Login](https://www.figma.com/file/ClVt83hwhuQ7b3FqLqqdlp/PUNTO-COLECCION-HOME?type=design&node-id=33-446&mode=design&t=kcfva49iq2iGPWFD-0)
+* [Registro](https://www.figma.com/file/dSrwD6dN5kcr6clApV77ec/PUNTO-COLECCION-CREATE-ACCOUNT?type=design&node-id=0-1&mode=design&t=vczM4XXSegGrKQ5Z-0) 
+* [Carrito](https://www.figma.com/file/fUtZtudSnwv10wLVBayilZ/PUNTO-COLECCION--CARRITO?type=design&mode=design&t=dLG7o9Fa8hqvvmHw-0)
+* [Producutos](https://www.figma.com/file/YqnkTndV0jkfKBLEkJTTZo/ProyectoIntegrador?type=design&node-id=96-54&mode=design&t=dLG7o9Fa8hqvvmHw-0)  
 
 
