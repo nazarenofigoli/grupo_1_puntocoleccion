@@ -13,7 +13,6 @@ Este es mi primer encuentro oficial con la programación.
 A medida que pasa el tiempo desarrollo mis conocimientos Full Stack,
 En el curso actualmente con Digital House.
 
-  
 * Lucio Testa :
 Me presento formalmente mi nombre completo es **Lucio Pedro Testa**, tengo **34** años nacido en la Ciudad Autónoma de Buenos Aires. Residí siempre en **Avellaneda** (Bs. As), perteneciente al primer cordón del conurbano bonaerense. Soy técnico personal y profesional en computación con conocimientos básicos en programación debido a mi formación en secundario técnico (**EET N°7 "José Hernández**"- Avellaneda). Actualmente me encuentro cursando el curso de programación Full Stack en Digital House.
 Tengo afición por la tecnología y videojuegos, me gusta estar informado de las últimas tecnologías en materia de hardware informático. Mis categorías de juegos preferidos son los **First Personal Shooter** y los MMPORG, aunque juego otros también. 
