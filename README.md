@@ -13,7 +13,6 @@ Este es mi primer encuentro oficial con la programación.
 A medida que pasa el tiempo desarrollo mis conocimientos Full Stack,
 En el curso actualmente con Digital House.
 
-  
 * Lucio Testa :
 Me presento formalmente mi nombre completo es **Lucio Pedro Testa**, tengo **34** años nacido en la Ciudad Autónoma de Buenos Aires. Residí siempre en **Avellaneda** (Bs. As), perteneciente al primer cordón del conurbano bonaerense. Soy técnico personal y profesional en computación con conocimientos básicos en programación debido a mi formación en secundario técnico (**EET N°7 "José Hernández**"- Avellaneda). Actualmente me encuentro cursando el curso de programación Full Stack en Digital House.
 Tengo afición por la tecnología y videojuegos, me gusta estar informado de las últimas tecnologías en materia de hardware informático. Mis categorías de juegos preferidos son los **First Personal Shooter** y los MMPORG, aunque juego otros también. 
@@ -43,5 +42,11 @@ Al terminal el curso espero poder adquirir nuevos conocimientos que me sirvan pa
 * [Malditohard](https://www.malditohard.com.ar/), tomamos de referencia el diseño de como esta armado el home.
 
 
+## Links de Figma:
+* [Home](https://www.figma.com/file/ClVt83hwhuQ7b3FqLqqdlp/PUNTO-COLECCION-HOME?type=design&node-id=0-1&mode=design&t=kcfva49iq2iGPWFD-0)
+* [Login](https://www.figma.com/file/ClVt83hwhuQ7b3FqLqqdlp/PUNTO-COLECCION-HOME?type=design&node-id=33-446&mode=design&t=kcfva49iq2iGPWFD-0)
+* [Registro](https://www.figma.com/file/dSrwD6dN5kcr6clApV77ec/PUNTO-COLECCION-CREATE-ACCOUNT?type=design&node-id=0-1&mode=design&t=vczM4XXSegGrKQ5Z-0) 
+* [Carrito](https://www.figma.com/file/fUtZtudSnwv10wLVBayilZ/PUNTO-COLECCION--CARRITO?type=design&mode=design&t=dLG7o9Fa8hqvvmHw-0)
+* [Producutos](https://www.figma.com/file/YqnkTndV0jkfKBLEkJTTZo/ProyectoIntegrador?type=design&node-id=96-54&mode=design&t=dLG7o9Fa8hqvvmHw-0)  
 
 
