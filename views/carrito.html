@@ -1,55 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href='/css/style.css'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
-</head>
-<body>
-<header></header>
-<main>
-    <section class="carrito-producto-cantidad">
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="carrito-producto-cantidad">
         <h5>PRODUCTO</h5>
         <h5>CANTIDAD</h5>
-    </section> 
+      </section>
 
-    <section>
-    <article>
-        <img src="/img/naruto.jpeg" alt="producto" width="100%" />
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus.</p>
-        <h4>1x00.000,00</h4>
-        <input type="button" value="-1+" />
-    </article>
+      <section>
+        <article>
+          <img src="/img/naruto.jpeg" alt="producto" width="100%" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
+            egestas dolor, nec dignissim metus.
+          </p>
+          <h4>1x00.000,00</h4>
+          <input type="button" value="-1+" />
+        </article>
 
-    <article>
-        <img src="/img/naruto.jpeg" alt="producto" width="100%" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. </p>
-        <h4>1x00.000,00</h4>
-        <input type="button" value="-1+" />
-    </article>
-    </section>
+        <article>
+          <img src="/img/naruto.jpeg" alt="producto" width="100%" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
+            egestas dolor, nec dignissim metus.
+          </p>
+          <h4>1x00.000,00</h4>
+          <input type="button" value="-1+" />
+        </article>
+      </section>
 
-    <section>
-    <input type="button" value="SEGUIR COMPRANDO" />
-    <input type="button" value="ACTUALIZAR CARRITO"/>
-    </section>
+      <section>
+        <nav>
+          <ul>
+            <li>
+              <a href="">SEGUIR COMPRANDO</a><br />
+              <a href="">ACTUALIZAR CARRITO</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
 
-    <section>
+      <section>
         <h3>TOTAL DEL PRODUCTO</h3>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p>Subtotal</p>
         <p>$00.000,00</p>
-    </section>
+      </section>
 
-    <section>
+      <section>
         <p>Envío</p>
-        
-    </section>
+        <form>
+          <input type="radio" id="si" name="Precío" value="Si" />
+          <label for="si">Precío fijo: $00.000,00</label>
+        </form>
 
-</main>
-<footer></footer>
-</body>
+        <form>
+          <input type="radio" id="si" name="Retirar" value="Si" />
+          <label for="si">Retirar en el local</label>
+        </form>
+      </section>
+
+      <section>
+        <nav>
+          <p>Enviar a</p>
+          <a href="">cambiar dirección</a>
+        </nav>
+      </section>
+
+      <section>
+        <p>Total</p>
+        <p>00.000,00</p>
+      </section>
+
+      <nav>
+        <a href="">IR A FINALIZAR COMPRA</a>
+      </nav>
+    </main>
+    <footer></footer>
+  </body>
 </html>
