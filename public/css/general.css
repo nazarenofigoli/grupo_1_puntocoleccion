@@ -1,3 +1,11 @@
+:root{
+    --Verde: #27EAA8;
+    --Negro:#000;
+    --GrisOscuro:#262424;
+    --GrisClaro:#D9D9D9;
+    --Blanco:#fff;
+}
+
 *{
     font-family: 'Inter', sans-serif;
     margin: 0px;

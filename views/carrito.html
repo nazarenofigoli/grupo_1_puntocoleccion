@@ -4,87 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://kit.fontawesome.com/cbbf860933.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
   </head>
   <body>
     <header></header>
+
+
     <main>
       <section class="carrito-producto-cantidad">
         <h5>PRODUCTO</h5>
         <h5>CANTIDAD</h5>
+      </section><hr class="carrito-linea"/>
+
+      <section class="carrito-section">
+        <article class="carrito-accesorio-descripcion-total">
+          <a href=""><i class="fa-solid fa-circle-xmark"></i></a>
+          <img src="/img/naruto.jpeg" alt="producto" width="100%" />
+          <div class="carrito-loren-precio">
+          <p>Lorem ipsum</p>
+          <h4>1x00.000,00</h4>
+        </div>
+          <input type="button" value="-1+" />
+        </article><hr class="carrito-linea"/>
+
+        <article class="carrito-accesorio-descripcion-total">
+          <a href=""><i class="fa-solid fa-circle-xmark"></i></a>
+          <img src="/img/naruto.jpeg" alt="producto" width="100%" />
+          <div class="carrito-loren-precio">
+          <p>Lorem ipsum</p>
+          <h4>1x00.000,00</h4>
+        </div>
+          <input type="button" value="-1+" />
+        </article><hr class="carrito-linea"/>
       </section>
 
       <section>
-        <article>
-          <img src="/img/naruto.jpeg" alt="producto" width="100%" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
-            egestas dolor, nec dignissim metus.
-          </p>
-          <h4>1x00.000,00</h4>
-          <input type="button" value="-1+" />
-        </article>
-
-        <article>
-          <img src="/img/naruto.jpeg" alt="producto" width="100%" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
-            egestas dolor, nec dignissim metus.
-          </p>
-          <h4>1x00.000,00</h4>
-          <input type="button" value="-1+" />
-        </article>
-      </section>
-
-      <section>
-        <nav>
+        <nav class="carrito-nav">
           <ul>
             <li>
-              <a href="">SEGUIR COMPRANDO</a><br />
-              <a href="">ACTUALIZAR CARRITO</a>
+              <a class="carrito-nav-seguir" href=""><h5>SEGUIR COMPRANDO</h5></a>
+              <a class="carrito-nav-actualizar" href=""><h5>ACTUALIZAR CARRITO</h5></a>
             </li>
           </ul>
         </nav>
       </section>
 
-      <section>
-        <h3>TOTAL DEL PRODUCTO</h3>
-      </section>
 
-      <section>
+      <section class="carrito-caja-total">
+
+      <article class="carrito-caja-total-h5">
+      <div class="carrito-h5">
+        <h5>TOTAL DEL PRODUCTO</h5>
+      </div>
+    </article>
+
+
+      <div class="carrito-subtotal">
         <p>Subtotal</p>
         <p>$00.000,00</p>
-      </section>
+      </div><hr class='carrito-linea'/>
 
-      <section>
+      <div class="carrito-envio">
         <p>Envío</p>
-        <form>
+        </div>
+
+
+        <article class="carrito-detalle-compra">
+
+        <div class="carrito-form-definitivo">
+        <form class="carrito-form1">
           <input type="radio" id="si" name="Precío" value="Si" />
           <label for="si">Precío fijo: $00.000,00</label>
-        </form>
+        </form><br>
 
-        <form>
+        <form class="carrito-form2">
           <input type="radio" id="si" name="Retirar" value="Si" />
           <label for="si">Retirar en el local</label>
         </form>
-      </section>
+      </div>
 
-      <section>
+      <div class="carrito-cambiar-enviar">
         <nav>
           <p>Enviar a</p>
           <a href="">cambiar dirección</a>
         </nav>
-      </section>
+      </div><hr class='carrito-linea'/>
 
-      <section>
+      <div class="carrito-precio-total">
         <p>Total</p>
-        <p>00.000,00</p>
-      </section>
-
-      <nav>
+        <p>$00.000,00</p>
+      </div>
+      </article>
+      
+      <div class="carrito-finalizar">
         <a href="">IR A FINALIZAR COMPRA</a>
-      </nav>
+      </div>
+    </section>
     </main>
+
     <footer></footer>
   </body>
 </html>
