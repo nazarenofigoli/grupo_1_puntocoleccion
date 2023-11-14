@@ -1,0 +1,159 @@
+footer {
+    background-color: #000;
+    border-top: 0.5px solid var(--Verde);
+    background-attachment: fixed;
+    color: var(--Blanco);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    
+}
+footer i {
+    color: #FFF;
+}
+
+footer section {
+
+width: 100%;
+}
+footer section article p {
+
+    display: none;
+}
+
+.footer_section_article h4 {
+
+font-size: 10px;
+text-transform: uppercase;
+}
+
+.footer_section_parte2 p {
+    font-size: 8px;
+    display: block;
+}
+.footer_section_article a {
+font-size: 8px;
+color: var(--Blanco);
+
+}
+
+.footer_section_parte1 {
+    display:flex; 
+    justify-content: space-between;
+    
+}
+
+.footer_section_parte2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.footer_section_article {
+    margin-top: 10px;
+    width: 33.33%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    
+}
+.footer_section_article li {
+    margin-bottom: 10px;
+}
+.footer_article_marcas_descatadas {
+    display:flex;
+    flex-wrap: wrap;
+    gap:5px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.footer_article_marcas_descatadas img {
+    width: 25%;
+    }
+
+.footer_section_parte2 img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer_section_derechos_contactos {
+
+display: flex;
+flex-direction: column;
+align-content: center;
+
+}
+
+.footer_section_derechos_contactos i {
+    padding: 3px;
+}
+
+
+@media (min-width : 768px) {
+
+    footer section article p {
+
+        display: inline;
+        margin-left: 2px;
+    }
+
+    .footer_section_parte2 p {
+        font-size: 10px;
+    }
+
+    .footer_section_article a {
+        font-size: 14px;
+    }
+    
+    .footer_section_article h4 {
+
+        font-size: 14px;
+        
+    }
+
+    .footer_section_article li {
+        margin-bottom: 20px;
+    }
+
+    .footer_article_marcas_descatadas img {
+
+        margin-left: 5%;
+    }
+}
+
+@media (min-width : 1024px) {
+    .footer_section_parte2 p {
+        font-size: 16px;
+    }
+
+    .footer_section_article a {
+        font-size: 16px;
+    }
+    
+    .footer_section_article h4 {
+
+        font-size: 16px;
+        
+    }
+
+    .footer_section_article li {
+        margin-bottom: 30px;
+    }
+
+    .footer_section_parte2 img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .footer_article_marcas_descatadas img {
+
+        margin-left: 7%;
+    }
+
+}
