@@ -176,6 +176,13 @@ align-content: center;
         width: 100px;
     
     }
+
+    .linea2 {
+        
+            width:120px ;
+
+        }
+
     .footer_section_parte2 p {
         font-size: 16px;
     }
@@ -208,7 +215,7 @@ align-content: center;
 
 @media (min-width : 1440px) {
     .linea2 {
-     width:120px ;
+     width:180px ;
 }
 
 }
