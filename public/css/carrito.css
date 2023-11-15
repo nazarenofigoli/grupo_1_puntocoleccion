@@ -1,4 +1,6 @@
-
+.carrito-main{
+    margin-bottom: 20%;
+}
 .carrito-producto-cantidad{
     display: flex;
     flex-direction: row;
