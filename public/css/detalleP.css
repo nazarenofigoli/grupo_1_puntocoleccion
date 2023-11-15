@@ -1,3 +1,83 @@
 .main-detalleP{
-    background-color: ;
+    margin: 10px 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.box foto-principal{
+    width: 85%;
+    background-color: rgb(39 234 168 / 22%);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex
+}
+#foto-principal-dp{
+    width: 250px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.box fotos-secund{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#foto-2-dp{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 55%
+}
+#foto-3-dp{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 55%
+}
+.nav-bar-detalleP{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    height: 30px;
+    margin:5%;
+}
+.nav-bar-detalleP ul{
+    display: flex;
+}
+.nav-bar-detalleP ul li{
+    color:white;
+}
+.nav-bar-detalleP:hover{
+    background-color: rgb(39, 234, 168);
+}
+.compras-detalleP{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#nameP{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: rgb(38, 36, 36);
+    font-weight: revert-layer;
+}
+#precioP{
+    font-weight: bold;
+}
+#cuotasP{
+    font-size: 10px;
+    font-weight: bold;
+    color:rgb(172, 22, 22);
+}
+#input-Dp{
+    width: 35%;
+}
+#botonDP{
+    display: flex;
+    width: 31%;
+    color: rgb(39, 234, 168);
+    border-radius: 32%;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
 }
