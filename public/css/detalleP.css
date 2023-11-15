@@ -6,6 +6,13 @@
     align-items: center;
     
 }
+.articulos-detalleP{
+    width: 20%;
+    margin-bottom: -13%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .box foto-principal{
     width: 85%;
     background-color: rgb(39 234 168 / 22%);
