@@ -1,103 +1,143 @@
 .main_index_section_titulos h4 {
 
-    background-color:var(--Negro);
-    font-size: 1em;
-    width: 100%;
-    text-transform: uppercase;
-    color: var(--Blanco);
+background-color:var(--Negro);
+font-size: 1em;
+width: 100%;
+text-transform: uppercase;
+color: var(--Blanco);
+text-align: center;
+padding: 2%;
+margin-bottom: 0px;
+}
+
+
+.main_index_section_tendecias {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
     text-align: center;
     padding: 5px;
     margin-bottom: 0px;
     }
     
-    
-    .main_index_section_tendecias {
-        margin-top: 15px;
-        display: flex;
-        flex-direction: column;
-        gap:20px;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .main_index_section_articulo {
-    
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-    
-    .main_index_section_botones {
-        display: flex;
-        justify-content: space-around;
-    }
-    .main_index_section_ofertas {
-        margin-top:15px;
-        display: flex;
-        flex-direction: column;
-        gap:20px;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .main_index_section_marcas {
-    margin-top: 20px;
-    display: flex;   
-    width: 100%;
-    height: 10%;
-    border-top:1px solid var(--Negro);
-    border-bottom:1px solid var(--Negro);
-    background-color:var(--GrisClaro);
+
+
+.main_index_section_botones {
+    display: flex;
+    justify-content: space-around;
+}
+.main_index_section_ofertas {
+    margin-top:15px;
+    display: flex;
+    flex-direction: column;
     gap:20px;
     justify-content: space-evenly;
     padding: 2%;
     }
     
-    .main_index_section_marcas img{
-        
-        width: 10%;
+
+.main_imagen_producto {
+    border: 1px solid #000;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    width: 80%;
+    padding: 5%;
+}
+
+.main_index_descripcion-precio {
+    border: 1px solid #000;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 100%;  
+    margin-top: -5px;
+    width: 80%;
+    padding: 5%;
+}
+
+
+.main_descripcion {
+    color:var(--Negro);
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.main_precio {
+    color:var(--Negro);
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.main_cuotas {
+    color:var(--Verde);
+    font-size: 13px;
+    font-weight: 600;
+
+}
+
+.main_index_descripcion-precio p {
+    margin-top: 4%;
+
+}
+
+.main_index_botones {
+margin-top: 4%;
+background-color: var(--Negro);
+color:var(--Verde);
+border:1px solid var(--Negro);
+border-radius: 20px;
+font-size: 8px;
+padding: 3%;  
+width: 35%;
+}
+
+.main_index_section_envios {
+    width: 100%;
+    height: auto;
+    background-color: var(--GrisClaro);
+    border-top: 1px solid var(--Negro);
+    border-bottom: 1px solid var(--Negro);
+    display: flex;
+    padding: 2%;
+    margin-top: 20px;
+}
+
+.main_index_section_envios article {
+flex:1 ; 
+text-align:center;
+}
+
+.main_index_section_envios img {
+
+    width: 30px;
+    height: 30px;
+}
+
+.main_index_textos_envios  {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main_index_textos_envios h6 {
+    font-size: 10px;
+
+}
+
+.main_index_textos_envios p {
+    font-size: 9px;
+
+}
+
+@media (min-width:768px) {
+    .main_index_section_titulos h4 {
+
+        font-size: 20px;
     }
-    
-    .main_imagen_producto {
-        border: 1px solid #000;
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
-        width: 80%;
-        padding: 5%;
-    }
-    
-    .main_index_descripcion-precio {
-        border: 1px solid #000;
-        border-bottom-left-radius: 40px;
-        border-bottom-right-radius: 40px;
-        width: 100%;  
-        margin-top: -5px;
-        width: 80%;
-        padding: 5%;
-    }
-    
-    
-    .main_descripcion {
-        color:var(--Negro);
-        font-size: 14px;
-        font-weight: 900;
-    }
-    
-    .main_precio {
-        color:var(--Negro);
-        font-size: 16px;
-        font-weight: 600;
-    
-    }
-    
-    .main_cuotas {
-        color:var(--Verde);
-        font-size: 13px;
-        font-weight: 600;
-    
-    }
-    
-    .main_index_descripcion-precio p {
-    margin-top: 2%;
-    }
+
+    .main_index_section_tendecias {
+    flex-direction: row;
+}
+}
