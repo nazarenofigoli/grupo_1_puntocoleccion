@@ -1,0 +1,81 @@
+
+.main_index_section_titulos h4 {
+
+background-color:var(--Negro);
+font-size: 1em;
+width: 100%;
+text-transform: uppercase;
+color: var(--Blanco);
+text-align: center;
+padding: 5px;
+margin-bottom: 0px;
+}
+
+
+.main_index_section_tendecias {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+    text-align: center;
+    
+    
+}
+
+.main_index_section_articulo {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    
+    
+
+}
+
+.main_index_section_botones {
+    display: flex;
+    justify-content: space-around;
+}
+.main_index_section_ofertas {
+    margin-top:15px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+    text-align: center;
+}
+
+.main_index_section_marcas {
+margin-top: 20px;
+display: flex;   
+width: 100%;
+height: 10%;
+border-top:1px solid var(--Negro);
+border-bottom:1px solid var(--Negro);
+background-color:var(--GrisClaro);
+gap:20px;
+justify-content: space-evenly;
+padding: 2%;
+}
+
+.main_index_section_marcas img{
+    
+    width: 10%;
+}
+
+.main_imagen_producto {
+    border: 1px solid #000;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.main_index_descripcion-precio {
+    border: 1px solid #000;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 100%;  
+}
+
+
