@@ -1,0 +1,22 @@
+.registro_main_titulos p {
+text-align: center;
+font-size: 10px;
+}
+
+.registro_main_titulos h1 {
+    background-color: var(--Negro);
+    font-size: 25px;
+    color:var(--Blanco);
+    padding:2%;
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid ;
+
+}
+
+.registro_main form {
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    align-content: center;
+}

@@ -12,22 +12,26 @@
 
     </header>
     <main class="registro_main">
-        <p>Inicio▶Cuenta▶Crear Cuenta</p>
-        <h1>Crear Cuenta</h1>
-        <form action="/registro" method="post">
-            <label for="nombre">NOMBRE:</label>
-            <input type="text" name="nombre"placeholder="ej: Roberto Carlos">
-            <label for="email">E-MAIL:</label >
-            <input type="email" name="email" placeholder="ej: tumail@email.com" required>
-            <label for="telefono">TELÉFONO:</label >
-            <input type="tel" name="apellido" placeholder="ej:1122334455">
-            <label for="password">CONTRASEÑA:</label>
-            <input type="password" name="password" placeholder="●●●●●●●●" required>
-            <label for="password">REPETIR CONTRASEÑA:</label>
-            <input type="password" name="password" placeholder="●●●●●●●●" required>
-            <button type="reset">BORRAR FORMULARIO</button>
-            <button type="submit">CREAR CUENTA</button>
-        </form>
+        <section class="registro_main_titulos">
+            <p>Inicio▶Cuenta▶Crear Cuenta</p>
+            <h1>Crear Cuenta</h1>
+        </section>
+        <section>
+            <form action="/registro" method="post">
+                <label for="nombre">NOMBRE:</label>
+                <input type="text" name="nombre"placeholder="ej: Roberto Carlos">
+                <label for="email">E-MAIL:</label >
+                <input type="email" name="email" placeholder="ej: tumail@email.com" required>
+                <label for="telefono">TELÉFONO:</label >
+                <input type="tel" name="apellido" placeholder="ej:1122334455">
+                <label for="password">CONTRASEÑA:</label>
+                <input type="password" name="password" placeholder="●●●●●●●●" required>
+                <label for="password">REPETIR CONTRASEÑA:</label>
+                <input type="password" name="password" placeholder="●●●●●●●●" required>
+                <button type="reset">BORRAR FORMULARIO</button>
+                <button type="submit">CREAR CUENTA</button>
+            </form>
+        </section>
         <p>¿Ya ténes una cuenta? Iniciá Sesión</p>
     </main>
     <footer>
