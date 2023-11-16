@@ -69,15 +69,14 @@ padding: 2%;
     border-top-right-radius: 40px;
     width: 80%;
     padding: 5%;
-    width: 80%;
-    padding: 5%;
 }
 
 .main_index_descripcion-precio {
     border: 1px solid #000;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    width: 100%;  
+    width: 80%;
+    padding: 5%;
 }
 
 
