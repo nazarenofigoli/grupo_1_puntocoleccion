@@ -92,10 +92,11 @@ margin-top: -17px;
     display: none;
 }
 
+
 .header_navegacion__icons i {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-around;
     color: white;
     margin: 15px ;
     margin-left: 50px;
@@ -109,33 +110,37 @@ margin-top: -17px;
     width: 100%;
 }
 
-.header__lista__desordenada ul li a {
-    gap: 10px;
-    margin-left: 5px;
-    color: white;
-    font-size: 10px;
-    font-weight: bold; 
-    display: none;
-}
 
-@media(min-width: 426px) {
+
+
+
+
+@media (min-width: 768px) {
+
     .hamburger-icon {
         display: none;
     }
-    .header__lista__desordenada {
-       
-    }
-}
 
-@media (min-width: 768px) {
     .header__lista__desordenada {
-      display: flex;
-    }
-    .header__lista__desordenada ul li a {
-        gap: 10px;
-        margin-left: 5px;
-        color: white;
-        font-size: 10px;
-        font-weight: bold; 
-    }
-}
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        }  
+        
+        .header__lista__desordenada ul {
+            display: flex;
+            gap:25px;   
+        }
+    
+        .header__lista__desordenada ul li a {
+            color:var(--Blanco);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+    } 
+    
+
+
+
