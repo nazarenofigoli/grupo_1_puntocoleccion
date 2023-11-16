@@ -19,7 +19,7 @@ margin-bottom: 0px;
     gap:20px;
     align-items: center;
     text-align: center;
-   }
+}
 
 .main_index_section_articulo {
 
@@ -158,12 +158,7 @@ text-align:center;
 
         font-size: 20px;
     }
-
-    .main_index_section_tendecias {
-       flex-direction: row;
-       
-  }
-
-
-
+    .main_index_section_article_division{
+        display: flex;
+    }
 }
