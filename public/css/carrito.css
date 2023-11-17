@@ -3,7 +3,6 @@
 }
 .carrito-producto-cantidad{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     padding: 10px;
 }
@@ -18,8 +17,6 @@
 
 .carrito-accesorio-descripcion-total {
     display: flex;
-    flex-direction:row;
-    flex-wrap: nowrap;
     align-items: center;
     margin-bottom: 10px;
     gap: 10px;
@@ -190,7 +187,7 @@
     .carrito-main {
     width: 100%;
     display: flex;
-    flex-direction: row; /* Mantenido como fila */
+    flex-direction: row; 
     justify-content: center;
     }
 
@@ -251,12 +248,12 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px){
     
     .carrito-main {
     width: 100%;
     display: flex;
-    flex-direction: row; /* Mantenido como fila */
+    flex-direction: row; 
     justify-content: center;
     }
 
@@ -281,7 +278,6 @@
     }
 
     .carrito-accesorio-descripcion-total {
-    display: flex;
     width: 45%;
     gap: 20px;
     font-size: 15px;
@@ -294,7 +290,6 @@
     .carrito-caja-total{
     width: 40%;
     margin-top: 10px;
-    
     }
 
     .carrito-nav li {
@@ -313,12 +308,11 @@
     }
 
     .carrito-caja-total {
-        font-size: 12px;
-        font-weight: bold;
-        }
+    font-size: 12px;
+    font-weight: bold;
+    }
     
     .carrito-form1 {
-    margin-right: 22px;
+    margin-right: 5%;
     }
 }
-
