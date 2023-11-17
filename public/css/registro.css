@@ -1,5 +1,10 @@
 .registro_main a {
     color:var(--Negro)
+    
+}
+
+.registro_main a:hover {
+    cursor: pointer;
 }
 
 
@@ -78,6 +83,7 @@ font-size: 12px;
     font-size:16px;
     font-weight: 700;
     margin-top: 10px;
+    margin-bottom: 10px;
     background-color: var(--Negro);
     color:var(--Verde);
     width: 90%;
@@ -88,6 +94,11 @@ font-size: 12px;
 
 }
 
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
 
 @media (min-width:768px) {
     .registro_main_titulos p {
@@ -109,6 +120,7 @@ font-size: 12px;
 
     .registro_main_formulario_account {
         width: 100%;
+        ;
     }
     .registro_main_botones_account {
         display: flex;
@@ -119,6 +131,16 @@ font-size: 12px;
     }
     .registro_main_botones_account button {
         width: 45%;
+        margin-bottom: 10px;
         
     }
 }
+
+@media (min-width:1024px) {
+    .section_registro_main_formulario_account {
+        width:50%;
+        margin:0 auto;
+        padding: 1% 0% 0% 0%;
+    }
+
+   }
