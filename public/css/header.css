@@ -153,30 +153,52 @@ margin-top: -17px;
     text-align: center;}
 
 .header_navegacion__icons p{
+    position: relative;
+    bottom: 8px;
     display: block;
     color: var(--Blanco);
+
 }
 
 .nav-opcion i{
     position: relative;
     right: 25%;
-      }
+    }
 
 .header__contenedor__centro {
     flex-direction: row;
-
+    margin-left: 70px;
+    gap: 15px; 
 }
 
 .logo img {
     width: 100px;
     height: 100px;
+    position: relative;
+    right: 50px;
+    top: 10px;
 }
 
 .header__search input {
+    width: 240px;
+    padding: 5px;
+}
 
-width: 200px;
-padding: 3px;
+.nav-opcion i {
+    position: relative;
+    right: 25%;
+}
+
+.nav-opcion p {
+    position: relative;
+    font-size: 10px;
 
 }
 
-    } 
+.header__buscador i {
+    position: absolute;
+    margin-left: -22px;
+    font-size: 12px;
+    top: 6px;
+} 
+}
