@@ -176,7 +176,7 @@ margin-top: -17px;
     width: 100px;
     height: 100px;
     position: relative;
-    right: 50px;
+    /* right: 50px; */
     top: 10px;
 }
 
@@ -213,5 +213,13 @@ margin-top: -17px;
     .header__search input {
         width: 480px;
         padding: 5px;
+    }
+
+    .header__contenedor__centro {
+
+        justify-content:first baseline;
+        
+        
+
     }
 }
