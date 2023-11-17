@@ -87,10 +87,10 @@ font-size: 12px;
     background-color: var(--Negro);
     color:var(--Verde);
     width: 90%;
-    
     border:1px solid var(--Verde);
     border-radius: 50px;
     padding: 3%;
+    transition: all 2s;
 
 }
 
@@ -98,6 +98,11 @@ font-size: 12px;
     display: flex;
     justify-content: center;
     margin-top: 30px;
+}
+
+.registro_main_botones_account button:hover {
+background-color: var(--Verde);
+color:var(--Negro)
 }
 
 @media (min-width:768px) {
@@ -138,7 +143,7 @@ font-size: 12px;
 
 @media (min-width:1024px) {
     .section_registro_main_formulario_account {
-        width:50%;
+        width:40%;
         margin:0 auto;
         padding: 1% 0% 0% 0%;
     }
