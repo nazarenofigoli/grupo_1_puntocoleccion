@@ -1,3 +1,31 @@
+.main_index_section_carrusel {
+    width: 100%;
+}
+    .slider-frame {
+        width: auto;
+        height: auto;
+        margin:10px auto 10px;
+        overflow: hidden;
+    }
+    
+    .slider-frame ul {
+        display: flex;
+        padding: 0;
+        width: 500%;
+        
+        animation: slide 20s infinite alternate ease-in-out;
+    }
+    
+    .slider-frame li {
+        width: 100%;
+        list-style: none;
+    }
+    
+    .slider-frame img {
+        width: 100%;
+    }
+    
+    
 
 .main_index_section_titulos h4 {
 
@@ -173,3 +201,17 @@
         flex-direction: row;
     }
     }
+
+    @keyframes slide {
+        0% {margin-left: 0;}
+        20% {margin-left: 0;}
+        
+        25% {margin-left: -100%;}
+        45% {margin-left: -100%;}
+        
+        50% {margin-left: -200%;}
+        70% {margin-left: -200%;}
+        
+        75% {margin-left: -300%;}
+        100% {margin-left: -300%;}
+    }  
