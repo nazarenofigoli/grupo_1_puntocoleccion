@@ -1,5 +1,6 @@
 .carrito-main{
-    margin-bottom: 20%;
+    margin-bottom: 6%;
+    margin-top: 2%;
 }
 .carrito-producto-cantidad{
     display: flex;
@@ -41,7 +42,7 @@
 .carrito-accesorio-descripcion-total i{
     color: var(--Negro);
     margin-left: 10px;
-    transition: 3s;
+    transition: 1.5s;
 }
 
 .carrito-accesorio-descripcion-total i:hover{
@@ -79,7 +80,7 @@
     background-color: var(--Verde);
     width: 65%;
     padding: 1%;
-    transition: 3s;
+    transition: 1.5s;
 }
 .carrito-nav-seguir:hover{
     color:var(--Verde);
@@ -94,7 +95,7 @@
     padding: 1%;
     display: flex;
     justify-content: center;
-    transition: 3s;
+    transition: 1.5s;
 }
 
 .carrito-nav-actualizar:hover{
@@ -102,11 +103,24 @@
     background-color: var(--Negro);
 }
 
+.carrito-query-producto-enlaces{
+    transition: 1.5s;
+}
+
+.carrito-query-producto-enlaces:hover{
+    box-shadow:  0px 0px 50px  rgba(0, 0, 0, 0.5);
+}
+
 .carrito-caja-total{
     border: 2px solid var(--Negro);
     width: 90%;
     position: relative;
     right: -15px;
+    transition: 1.5s;
+}
+
+.carrito-caja-total:hover{
+    box-shadow: 0px 0px 50px  rgba(0, 0, 0, 0.5);
 }
 
 .carrito-h5{
@@ -196,7 +210,7 @@
     margin-bottom: 15px;
     margin-top: 15px;
     margin-left: 9px;
-    transition:3s;
+    transition:1.5s;
 }
 
 .carrito-finalizar a:hover{
@@ -285,7 +299,7 @@
 @media (min-width: 1024px){
     
     .carrito-producto{
-    margin-left: 75px;
+    margin-left: 45px;
     }
 
     .carrito-producto-cantidad {
@@ -298,8 +312,8 @@
     }
 
     .carrito-accesorio-descripcion-total p{
-    
-    font-size: 15px;
+    white-space: nowrap;
+    font-size: 10px;
     }
 
     
@@ -308,14 +322,16 @@
     }
 
     .carrito-3-pct{
+    width: 20%;
     gap: 35%;
-    margin-right: 22%;
+    margin-right: 24%;
     }
 
     .carrito-accesorio-descripcion-total {
-    width: 40%;
-    gap: 15%;
-    font-size: 15px;}
+    width: 27%;
+    gap: 16%;
+    font-size: 15px;
+    }
 
     .carrito-accesorio-descripcion-total img{
     width: 50%;
