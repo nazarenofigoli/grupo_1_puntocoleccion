@@ -155,6 +155,7 @@
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .carrito-envio{
@@ -162,12 +163,17 @@
     margin-left: 10px;
     position: relative;
     top: 50px;
+    font-weight: bold;
+}
+
+.carrito-form-definitivo{
+    font-weight: bold;
 }
 
 .carrito-form1{
     display: flex;
     justify-content:flex-end;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .carrito-form2{
@@ -188,6 +194,10 @@
     color:blue;
 }
 
+.carrito-cambiar-enviar p {
+    font-weight: bold;
+}
+
 .carrito-precio-total{
     display: flex;
     flex-direction: row;
@@ -195,6 +205,7 @@
     margin-right: 10px;
     margin-left: 10px;
     margin-top: 20px;
+    font-weight: bold;
 }
 
 .carrito-finalizar a{
