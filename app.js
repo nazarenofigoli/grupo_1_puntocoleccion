@@ -9,19 +9,6 @@ app.get("/", (req, res)=>{
     res.sendFile(path.join(__dirname,"/views/index.html"))
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.get("/detalle", (req, res)=>{
     res.sendFile(path.join(__dirname,"/views/detalleP.html"))
 }); 
@@ -42,6 +29,6 @@ app.listen(8080,()=>{
     console.log("Puerto 8080 iniciado")
 });
 
-app.get("/header", (req, res)=>{
-    res.sendFile(path.join(__dirname,"/views/header.html"))
+app.get("/login", (req, res)=>{
+    res.sendFile(path.join(__dirname,"/views/login.html"))
 });
