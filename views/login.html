@@ -6,17 +6,16 @@
     <link rel="stylesheet" href='/css/style.css'>
     <script src="https://kit.fontawesome.com/cbbf860933.js" crossorigin="anonymous"></script>
     <title>punto coleccion login</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
-    
   <body>
     <header>
 
     <div class="header__info">
         <p>Muñecos y Figuras coleccionables con envíos a toda Argentina.</p>
     </div>
-
-        
+    
 <section class="header__contenedor">
     <div class="hamburger-icon">
         <i class="fa-solid fa-bars"></i>
@@ -60,8 +59,6 @@
 </section>
 
 </section>
-
-
     <section>
         <nav class="header__lista__desordenada">
             <ul>
@@ -75,10 +72,11 @@
     </section>
 </header>
 
-
-
     <main class="main">
-        <form>
+
+    <h1>INGRESA</h1>
+
+        <form class="formulario__general">
         <div class="form">
           <div class="opciones-registro1">
             <input class="input-registro" type="email" placeholder="correo electronico" />
@@ -109,18 +107,21 @@
               </button>
               </div>
       </div>
-        <div>
-          <a> Crear Cuenta </a>
-          <a href=""> ¿olvidó su contraseña? </a>
-        </div>
-      <div class="captcha-login">
-        <form action="captcha" method="POST">
-          <input type="checkbox" name="captcha" value="captcha">
-          <label> no soy un robot</label>
-        </form>
+    </form>
+
+
+
+    <form>
+        
+      <div class="opciones-de-registro">
+        <a> Crear Cuenta </a> 
+    
+        <a href=""> ¿olvidó su contraseña? </a>
       </div>
     </form>
-  
+
+
+
   </main>
 
 </body>

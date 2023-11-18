@@ -18,6 +18,11 @@
     padding-top: 30px;
 }
 
+
+.formulario__general {
+    width: 100%;
+}
+
 .form {
     width: 100%;
     display: flex;
@@ -125,9 +130,13 @@ li {
     top: 5.2px;
 }
 
+
+
+
+
 .opciones-registro1 {
     position: relative;
-    width: 80%;
+    width: 100%;
     margin-top: 10px;
     padding: 10px;
 }
@@ -159,7 +168,7 @@ li {
 .inicio-reg-hijo {
     width: 100%;
     background-color: black;
-    padding: 9px;
+    padding: 8px;
     color: #27EAA8;
     border-radius: 30px;
     font-weight: bold;
@@ -176,6 +185,13 @@ li {
     margin-top: 7%;
     
 }
+
+.opciones-de-registro {
+    font-size: 15px;
+display: flex;
+gap: 15px;
+}
+
 
 @media (min-width: 768px) {
 
