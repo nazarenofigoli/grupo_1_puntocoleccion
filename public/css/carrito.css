@@ -49,8 +49,8 @@
 }
 
 .carrito-accesorio-descripcion-total p{
-    display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 10px;
     }
 
     .carrito-precio-query{
@@ -246,8 +246,8 @@
     }
 
     .carrito-accesorio-descripcion-total {
-    width: 80%;
-    gap: 21px;
+    width: 70%;
+    gap: 18px;
     font-size: 10px;
     }
 
@@ -295,6 +295,11 @@
 
     .carrito-accesorio-descripcion-total i {
         font-size: 20px;
+    }
+
+    .carrito-accesorio-descripcion-total p{
+    
+    font-size: 15px;
     }
 
     
