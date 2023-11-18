@@ -1,0 +1,242 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    width: 100%;
+    height: 120px;
+    background-color: black;
+    border-radius: 10px 10px 0 0;
+}
+
+.header__info {
+    display: flex;
+    justify-content: center;
+    background-color: #27EAA8;
+    width: 100%;
+    height: 15px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: inset rgba(0, 0, 0, 0.087) 0px 54px 55px, 
+    inset rgba(75, 75, 75, 0.12) 0px -12px 30px, inset rgba(107, 107, 107, 0.725) 0px 4px 6px,
+    inset rgba(97, 97, 97, 0.17) 0px 12px 13px, inset rgba(79, 79, 79, 0.09) 0px -3px 5px; 
+}
+
+.header__info p {
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px;
+    margin-left: 10px;
+}
+
+.header__contenedor img {
+width: 60px;
+height: 65px;
+margin-left: 22px;
+margin-top: -17px;
+}
+
+.header__contenedor {
+    width: 100%;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #27EAA8;
+}
+
+.header__contenedor__centro {
+    display: flex;
+    align-items: center;
+}
+
+
+.header__contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__buscador {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.header__buscador__desktop {
+    display: none;
+}
+
+.header__buscador input { 
+    width: 100%;
+    border-radius: 16px;
+    border: none;
+    padding: 2px;
+    margin-left: 5px;  
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.header__buscador i {
+    position: absolute;
+    margin-left: -15px;
+    font-size: 12px;
+    top: 4px;
+}
+
+.hamburger-icon {
+    background-color: #27EAA8;
+    font-size: 18px;
+    color: black;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 10px 20px 10px 15px;
+    cursor:pointer;
+    box-shadow: inset rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    inset rgba(0, 0, 0, 0.12) 0px -12px 30px, inset rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    inset rgba(0, 0, 0, 0.17) 0px 12px 13px, inset rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+}
+
+.header_navegacion__icons p {
+    display: none;
+}
+
+.header_navegacion__icons i {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    margin: 15px ;
+    margin-left: 50px;
+    align-items: center;
+    cursor:pointer 
+}
+
+.header__lista__desordenada {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    display: none;
+}
+
+
+
+@media (min-width: 768px) {
+.hamburger-icon {
+    display: none;
+    }
+
+    .header__lista__desordenada {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        }  
+        
+        .header__lista__desordenada ul {
+            display: flex;
+            gap:25px;   
+        }
+    
+        .header__lista__desordenada ul li a {
+            color:var(--Blanco);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+.header_navegacion__icons { 
+    display: flex;
+    
+}
+.nav-opcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;}
+
+.header_navegacion__icons p{
+    position: relative;
+    bottom: 8px;
+    display: block;
+    color: var(--Blanco);
+}
+
+.nav-opcion i{
+    position: relative;
+    right: 22%;
+    }
+
+.header__contenedor__centro {
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.header__contenido {
+    display: flex;
+    flex-direction: row;
+    margin-left: 72px;
+
+}
+
+.header__buscador__mobile { /*cambios buscador*/
+    display: none;
+}
+
+.header__buscador__desktop {
+    display: block;
+}
+.logo img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    right: 50px;
+    top: 10px;
+}
+
+.header__search input {
+    width: 280px;
+    padding: 5px;
+}
+
+.nav-opcion i {
+    position: relative;
+    right: 25%;
+}
+
+.nav-opcion p {
+    position: relative;
+    font-size: 10px;
+}
+
+.header__buscador i {
+    position: absolute;
+    margin-left: -22px;
+    font-size: 12px;
+    top: 6px;
+} 
+}
+
+@media (min-width:1024px) {
+    .header__search input {
+        width: 380px;
+        padding: 5px;
+    }
+}
+
+@media (min-width:1440px) {
+    .header__search input {
+    width: 280px;
+    padding: 5px;
+}
+.header__contenido {
+    display: flex;
+    flex-direction: row;
+    margin-left: 72px;
+
+}
+}
