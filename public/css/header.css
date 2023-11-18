@@ -118,7 +118,17 @@ margin-top: -17px;
     width: 100%;
     display: none;
 }
-
+@include keyframes(candy) {
+    @for $i from 1 through ($unit-alpha + 1) {
+      #{$unit-gamma * ($i - 1)} {
+        color: darken(nth($list-alpha, ($i % $unit-alpha) + 1), 15%);
+        text-shadow: 
+        .1em 0 .1em nth($list-alpha, ($i % $unit-alpha) + 1),
+    .15em 0 .1em nth($list-alpha, ($i % $unit-alpha) + 1)
+        ;
+    }
+    }
+}
 @media (min-width: 768px) {
 .hamburger-icon {
     display: none;
