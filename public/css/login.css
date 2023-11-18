@@ -193,7 +193,7 @@ gap: 15px;
 
 @media (min-width: 768px) {
     .header__buscador__mobile { /*cambios buscador*/
-        display: none;
+        /* display: none;
     }
     
     .header__buscador__desktop {
@@ -203,6 +203,26 @@ gap: 15px;
     .logo__login {
         width: 50%;
         height: 50px;
+    }
+} */
+/* 
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 30px;
+        margin-bottom: 70%;
 
+    .formulario__general {
+        width: 80%;
+    }
+    .form {
+        width: 80%;
+        display: flex;
+        justify-content: center;
     }
 }
+} */
