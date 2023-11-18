@@ -1,5 +1,6 @@
 .main_index_section_carrusel {
     width: 100%;
+    
 }
     .slider-frame {
         width: auto;
@@ -11,7 +12,7 @@
     .slider-frame ul {
         display: flex;
         padding: 0;
-        width: 500%;
+        width: 400%;
         
         animation: slide 20s infinite alternate ease-in-out;
     }
@@ -94,6 +95,12 @@
         border-top-right-radius: 40px;
         width: 80%;
         padding: 5%;
+        transition: all 2s;
+    }
+
+    .main_imagen_producto:hover {
+        box-shadow: 0 0 30px rgba(8, 8, 8,0.5);
+
     }
     
     .main_index_descripcion-precio {
@@ -141,6 +148,14 @@
     font-size: 8px;
     padding: 3%;  
     width: 35%;
+    font-weight: 600;
+    transition: all 2s;
+    }
+
+    .main_index_botones:hover{
+    background-color: var(--Verde); 
+    color:var(--Negro);
+    border:1px solid var(--Verde);   
     }
     
     .main_index_section_envios {
@@ -180,6 +195,12 @@
         font-size: 9px;
     
     }
+
+    .main_index_section_articulo {
+        margin-bottom: 15px;
+    }
+
+  
     
     @media (min-width:768px){
         .main_index_section_titulos h4 {
@@ -188,7 +209,34 @@
         }
         .main_index_section_article_division{
             display: flex;
+            gap:15px;
+            
         }
+
+        .main_index_section_articulo {
+            margin-bottom: 15px;
+        }
+
+        .main_index_botones {
+            font-size: 10px;
+        }
+
+        .main_index_section_envios img {
+    
+            width: 40px;
+            height: 40px;
+        }
+        
+        .main_index_textos_envios h6 {
+            font-size: 12px;
+        
+        }
+        
+        .main_index_textos_envios p {
+            font-size: 11px;
+        
+        }
+
     }
 
     @media (min-width: 1024px) {
@@ -200,7 +248,36 @@
         display: flex;
         flex-direction: row;
     }
+    .main_index_section_marcas {
+        padding: 1.6%
+
     }
+
+    .main_index_section_marcas img{
+     width: 5%;
+
+    }
+
+    .main_index_section_envios {
+       padding: 1%; 
+    }
+    .main_index_section_envios img {
+    
+        width: 50px;
+        height: 50px;
+    }
+    
+    .main_index_textos_envios h6 {
+        font-size: 14px;
+    
+    }
+    
+    .main_index_textos_envios p {
+        font-size: 13px;
+
+    
+    }
+}
 
     @keyframes slide {
         0% {margin-left: 0;}
