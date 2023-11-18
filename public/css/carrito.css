@@ -33,11 +33,24 @@
     height: 30px;
     width: 50px;
     margin: 10px;
+    background-color: var(--Negro);
+    border-color: var(--Verde);
+    color: var(--Verde);
+    transition: box-shadow 2s;
+}
+
+.carrito-accesorio-descripcion-total input:hover{
+    box-shadow:  0px 0px 20px  var(--Verde)
 }
 
 .carrito-accesorio-descripcion-total i{
     color: var(--Negro);
     margin-left: 10px;
+    transition: 3s;
+}
+
+.carrito-accesorio-descripcion-total i:hover{
+    color: red;
 }
 
 .carrito-accesorio-descripcion-total p{
@@ -60,7 +73,6 @@
     flex-direction: column;
     gap: 10px;
     margin: 15px;
-    
 }
 
 .carrito-nav-seguir{
@@ -71,7 +83,12 @@
     border-radius: 50px;
     background-color: var(--Verde);
     width: 65%;
-    padding: 1%
+    padding: 1%;
+    transition: 3s;
+}
+.carrito-nav-seguir:hover{
+    color:var(--Verde);
+    background-color: var(--Negro);
 }
 
 .carrito-nav-actualizar{
@@ -82,6 +99,12 @@
     padding: 1%;
     display: flex;
     justify-content: center;
+    transition: 3s;
+}
+
+.carrito-nav-actualizar:hover{
+    color:var(--Verde);
+    background-color: var(--Negro);
 }
 
 .carrito-caja-total{
@@ -108,6 +131,7 @@
 .carrito-caja-total-h5{
     display: flex;
     justify-content: center;
+    font-weight: bold;
     
 }
 
@@ -140,7 +164,7 @@
 .carrito-form2{
     display: flex;
     justify-content:flex-end;
-    margin-right: 57px;
+    margin-right: 58px;
     margin-bottom: 20px;
 }
 
@@ -164,36 +188,51 @@
     margin-top: 20px;
 }
 
-.carrito-finalizar{
+.carrito-finalizar a{
     display: flex;
     justify-content: center;
     border: 2px solid var(--Negro);
     border-radius: 50px;
     background-color: var(--Negro);
+    color: var(--Verde);
     width: 95%;
     padding: 3%;
     border-color: var(--Verde);
     margin-bottom: 15px;
     margin-top: 15px;
     margin-left: 9px;
+    transition:3s;
 }
 
-.carrito-finalizar a {
-    color: var(--Verde);
-} 
+.carrito-finalizar a:hover{
+    background-color: var(--Verde);
+    border-color:var(--Negro);
+    color: var(--Negro);
+}
 
-@media (min-width: 767px) and (max-width: 1023px){
-
+@media (min-width: 768px){
     .carrito-main {
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-direction: row; 
     justify-content: center;
     }
 
+    .carrito-producto {
+        margin-left: 55px;
+    }
+
+    .carrito-producto {
+        margin-left: 50px;
+    }
+
     .carrito-producto-cantidad{
     font-size: 12px;
     font-weight: bold;
+    }
+
+    .carrito-accesorio-descripcion-total i {
+        font-size: 15px;
     }
 
     .carrito-h5-ocultar{
@@ -202,19 +241,18 @@
 
     .carrito-3-pct {
     display: flex;
-    flex-direction: row;
-    gap: 25%;
-    margin-right: 20%;
+    gap: 30%;
+    margin-right: 18%;
     }
 
     .carrito-query-producto-enlaces{
-    width: 50%;
+    width: 60%;
+    margin-left: 2%;
     }
 
     .carrito-accesorio-descripcion-total {
-    display: flex;
-    width: 50%;
-    gap: 22px;
+    width: 80%;
+    gap: 21px;
     font-size: 10px;
     }
 
@@ -246,72 +284,43 @@
     .carrito-form1 {
         margin-right: 22px;
     }
+    
 }
 
 @media (min-width: 1024px){
     
-    .carrito-main {
-    width: 100%;
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-    }
-
     .carrito-producto{
-    margin-left: 40px;
+    margin-left: 75px;
     }
-    
 
-    .carrito-h5-ocultar{
-    display: block;
+    .carrito-producto-cantidad {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .carrito-accesorio-descripcion-total i {
+        font-size: 20px;
+    }
+
+    
+    .carrito-form2{
+        margin-right: 56px;
     }
 
     .carrito-3-pct{
-    display: flex;
-    flex-direction: row;
-    gap: 30%;
+    gap: 35%;
     margin-right: 22%;
     }
 
-    .carrito-query-producto-enlaces{
-    width: 50%;
-    }
-
     .carrito-accesorio-descripcion-total {
-    width: 45%;
-    gap: 20px;
-    font-size: 15px;
-    }
+    width: 40%;
+    gap: 15%;
+    font-size: 15px;}
 
     .carrito-accesorio-descripcion-total img{
     width: 50%;
     }
 
-    .carrito-caja-total{
-    width: 40%;
-    margin-top: 10px;
-    }
-
-    .carrito-nav li {
-    display: flex;
-    flex-direction: row;
-    align-items: center; 
-    margin-top: 20px;   
-    }
-
-    .carrito-precio-movile{
-    display: none;
-    }
-
-    .carrito-precio-query{
-    display: block;
-    }
-
-    .carrito-caja-total {
-    font-size: 12px;
-    font-weight: bold;
-    }
-    
     .carrito-form1 {
     margin-right: 5%;
     }
