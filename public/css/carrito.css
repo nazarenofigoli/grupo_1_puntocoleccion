@@ -36,11 +36,6 @@
     background-color: var(--Negro);
     border-color: var(--Verde);
     color: var(--Verde);
-    transition: box-shadow 2s;
-}
-
-.carrito-accesorio-descripcion-total input:hover{
-    box-shadow:  0px 0px 20px  var(--Verde)
 }
 
 .carrito-accesorio-descripcion-total i{
@@ -50,7 +45,7 @@
 }
 
 .carrito-accesorio-descripcion-total i:hover{
-    color: red;
+    color: var(--Verde);
 }
 
 .carrito-accesorio-descripcion-total p{
