@@ -9,9 +9,16 @@ app.get("/", (req, res)=>{
     res.sendFile(path.join(__dirname,"/views/index.html"))
 });
 
+
+app.get("/detalle", (req, res)=>{
+    res.sendFile(path.join(__dirname,"/views/detalleP.html"))
+}); 
+
+
 app.get("/carrito", (req, res)=>{
     res.sendFile(path.join(__dirname,"/views/carrito.html"))
 });
+
 
 app.get("/registro", (req, res)=>{
     res.sendFile(path.join(__dirname,"/views/registro.html"))
@@ -21,6 +28,19 @@ app.post ('/registro',(req,res)=>{
     console.log(req.body);
     res.redirect("/");
     })
+
+
+    app.get("/login", (req, res)=>{
+        res.sendFile(path.join(__dirname,"/views/login.html"))
+    });
+
+app.get("/carrito", (req, res)=>{
+    res.sendFile(path.join(__dirname,"/views/carrito.html"))
+});
+app.get("/header", (req, res)=>{
+    res.sendFile(path.join(__dirname,"/views/header.html"))
+});
+
 
 app.use(express.static("public"));
 
@@ -41,4 +61,5 @@ app.post ('/login',(req,res)=>{
 app.get("/header", (req, res)=>{
     res.sendFile(path.join(__dirname,"/views/header.html"))
 });
+
 

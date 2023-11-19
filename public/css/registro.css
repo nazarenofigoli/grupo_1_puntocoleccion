@@ -106,9 +106,11 @@ color:var(--Negro);
 cursor: pointer;
 }
 
+
 .registro_carrito {
 display: none;   
 }
+
 
 @media (min-width:768px) {
     .registro_main_titulos p {

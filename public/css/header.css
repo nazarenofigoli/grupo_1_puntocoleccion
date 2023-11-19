@@ -108,11 +108,10 @@ margin-top: -17px;
     display: none;
 }
 
-
 .header_navegacion__icons i {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-end;
     color: white;
     margin: 15px ;
     margin-left: 50px;
@@ -206,7 +205,7 @@ margin-top: -17px;
     width: 100px;
     height: 100px;
     position: relative;
-    /* right: 50px; */
+    right: 50px;
     top: 10px;
 }
 
