@@ -13,6 +13,30 @@
     color: var(--Verde);
 }
 
+
+@keyframes INGRESA {
+    0% {
+        scale: 1;
+    }
+    
+    100% {
+        scale: 1.1;
+    
+    }
+}
+
+
+
+.INGRESA {
+    margin-bottom: 15px;
+    animation-name: INGRESA; 
+    animation-duration: 1000ms;  
+    animation-iteration-count: infinite;
+
+}
+
+
+
 .main {
     display: flex;
     flex-direction: column;
@@ -21,10 +45,6 @@
     width: 100%;
     padding-top: 30px;
     margin-bottom: 70%;
-}
-
-.INGRESA {
-    margin-bottom: 15px;
 }
 
 .formulario__general {
