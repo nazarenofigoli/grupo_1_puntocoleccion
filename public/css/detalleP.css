@@ -1,4 +1,4 @@
-body{
+.body-detallesP{
     background-color: #dee2e6;
     margin: 0;
 }
@@ -144,7 +144,7 @@ h5{
     box-shadow: 0px 0px 15px 15px #27EAA8;
 }
 @media (min-width:768px){
-body{
+.body-detallesP{
     max-width: 768px;
     border:3px solid var(--Negro);
     }
@@ -219,7 +219,7 @@ body{
 
 
 @media (min-width:1024px){
-    body{
+.body-detallesP{
         max-width: 1024px;
     }
     .main-detalleP{
@@ -361,7 +361,7 @@ body{
         font-size: 34px;
         height: 24vh;
     }
-    body{
+    .body-detallesP{
         max-width: 1440px; 
         border:3px solid rgb(14, 44, 14);
     }
