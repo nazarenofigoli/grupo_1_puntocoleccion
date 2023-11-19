@@ -1,10 +1,4 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .header_navegacion__icons i:hover  {
     color: var(--Verde);
 }
@@ -123,6 +117,12 @@ gap: 15px;
 
 
 @media (min-width: 768px) {
+    .eye {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+    
     .formulario__general {
         width: 63%;
     }
