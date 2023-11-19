@@ -15,3 +15,8 @@ app.listen(8080,()=>{
 app.get("/login", (req, res)=>{
     res.sendFile(path.join(__dirname,"/views/login.html"))
 });
+
+app.post ('/login',(req,res)=>{
+    console.log(req.body);
+    res.redirect("/");
+    });
