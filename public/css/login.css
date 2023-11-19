@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+.header_navegacion__icons i:hover  {
+    color: var(--Verde);
+}
+
+.header_navegacion__icons p:hover {
+    color: var(--Verde);
+}
+
 .main {
     display: flex;
     flex-direction: column;
