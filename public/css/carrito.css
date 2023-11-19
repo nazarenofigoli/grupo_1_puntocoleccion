@@ -47,6 +47,7 @@
 
 .carrito-accesorio-descripcion-total i:hover{
     color: var(--Verde);
+    border-radius: var(--Negro);
 }
 
 .carrito-accesorio-descripcion-total p{
