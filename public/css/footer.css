@@ -5,8 +5,9 @@ footer {
     color: var(--Blanco);
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
-    
+    margin-top: 20px;
 }
+
 footer i {
     color: #FFF;
 }
@@ -166,7 +167,7 @@ align-content: center;
         margin-bottom: 20px;
     }
 
-   
+
 }
 
 @media (min-width : 1024px) {
@@ -196,10 +197,5 @@ align-content: center;
         width: 80px;
         height: 80px;
     }
-
-   
-
 }
-
-
 
