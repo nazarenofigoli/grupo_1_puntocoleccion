@@ -1,0 +1,359 @@
+.carrito-main{
+    margin-bottom: 6%;
+    margin-top: 2%;
+}
+.carrito-producto-cantidad{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.carrito-producto{
+    margin-left: 30px;
+}
+
+.carrito-h5-ocultar{
+    display: none;
+}
+
+.carrito-accesorio-descripcion-total {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 4px;
+}
+
+.carrito-accesorio-descripcion-total img{
+    width: 30%;
+    border: 1px solid var(--Negro);
+    border-radius: 20%;
+    margin-top: 10px;
+}
+
+.carrito-accesorio-descripcion-total input{
+    height: 30px;
+    width: 50px;
+    margin: 10px;
+    background-color: var(--Negro);
+    border-color: var(--Verde);
+    color: var(--Verde);
+}
+
+.carrito-accesorio-descripcion-total i{
+    color: var(--Negro);
+    margin-left: 10px;
+    transition: 1.5s;
+}
+
+.carrito-accesorio-descripcion-total i:hover{
+    color: var(--Verde);
+    border-radius: var(--Negro);
+}
+
+.carrito-accesorio-descripcion-total p{
+    flex-wrap: wrap;
+    font-size: 10px;
+    }
+
+    .carrito-precio-query{
+        display: none;
+    }
+
+.carrito-linea{
+    background-color:var(--Negro);
+    margin-right: 10px ;
+    margin-left: 10px;
+    height: 1px;
+}
+.carrito-nav li{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px;
+}
+
+.carrito-nav-seguir{
+    display: flex;
+    justify-content: center;
+    color:var(--Negro);
+    border: 2px solid var(--Negro);
+    border-radius: 50px;
+    background-color: var(--Verde);
+    width: 65%;
+    padding: 1%;
+    transition: 1.5s;
+}
+.carrito-nav-seguir:hover{
+    color:var(--Verde);
+    background-color: var(--Negro);
+}
+
+.carrito-nav-actualizar{
+    color: var(--Negro);
+    border: 2px solid var(--Negro);
+    border-radius: 50px;
+    width: 65%;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    transition: 1.5s;
+}
+
+.carrito-nav-actualizar:hover{
+    color:var(--Verde);
+    background-color: var(--Negro);
+}
+
+.carrito-query-producto-enlaces{
+    transition: 1.5s;
+}
+
+.carrito-query-producto-enlaces:hover{
+    box-shadow:  0px 0px 50px  rgba(0, 0, 0, 0.5);
+}
+
+.carrito-caja-total{
+    border: 2px solid var(--Negro);
+    width: 90%;
+    position: relative;
+    right: -15px;
+    transition: 1.5s;
+}
+
+.carrito-caja-total:hover{
+    box-shadow: 0px 0px 50px  rgba(0, 0, 0, 0.5);
+}
+
+.carrito-h5{
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--Negro);
+    border-radius: 50px;
+    color: var(--Verde);
+    background-color: var(--Negro);
+    width: 95%;
+    padding: 3%;
+    border-color: var(--Verde);
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.carrito-caja-total-h5{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    
+}
+
+.carrito-subtotal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.carrito-subtotal p{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.carrito-envio{
+    margin-top: 20px;
+    margin-left: 10px;
+    position: relative;
+    top: 50px;
+    font-weight: bold;
+}
+
+.carrito-form-definitivo{
+    font-weight: bold;
+}
+
+.carrito-form1{
+    display: flex;
+    justify-content:flex-end;
+    margin-right: 10px;
+}
+
+.carrito-form2{
+    display: flex;
+    justify-content:flex-end;
+    margin-right: 58px;
+    margin-bottom: 20px;
+}
+
+.carrito-cambiar-enviar{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 55px;
+    margin-bottom: 20px;
+}
+
+.carrito-cambiar-enviar a{
+    color:blue;
+}
+
+.carrito-cambiar-enviar p {
+    font-weight: bold;
+}
+
+.carrito-precio-total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.carrito-finalizar a{
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--Negro);
+    border-radius: 50px;
+    background-color: var(--Negro);
+    color: var(--Verde);
+    width: 95%;
+    padding: 3%;
+    border-color: var(--Verde);
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 9px;
+    transition:1.5s;
+}
+
+.carrito-finalizar a:hover{
+    background-color: var(--Verde);
+    border-color:var(--Negro);
+    color: var(--Negro);
+}
+
+@media (min-width: 768px){
+    .carrito-main {
+    width: 95%;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    }
+
+    .carrito-producto {
+        margin-left: 55px;
+    }
+
+    .carrito-producto {
+        margin-left: 50px;
+    }
+
+    .carrito-producto-cantidad{
+    font-size: 12px;
+    font-weight: bold;
+    }
+
+    .carrito-accesorio-descripcion-total i {
+        font-size: 15px;
+    }
+
+    .carrito-h5-ocultar{
+    display: block;
+    }
+
+    .carrito-3-pct {
+    display: flex;
+    gap: 24%;
+    margin-right: 15%;
+    }
+
+    .carrito-query-producto-enlaces{
+    width: 60%;
+    margin-left: 2%;
+    }
+
+    .carrito-accesorio-descripcion-total {
+    width: 70%;
+    gap: 19px;
+    font-size: 10px;
+    }
+
+    .carrito-caja-total{
+    width: 40%;
+    margin-top: 10px;
+    }
+
+    .carrito-nav li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;   
+    }
+
+    .carrito-precio-movile{
+    display: none;
+    }
+
+    .carrito-precio-query{
+    display: block;
+    }
+
+    .carrito-caja-total {
+    font-size: 12px;
+    font-weight: bold;
+    }
+
+    .carrito-form1 {
+        margin-right: 22px;
+    }
+    
+}
+
+@media (min-width: 1024px){
+    
+    .carrito-producto{
+    margin-left: 45px;
+    }
+
+    .carrito-producto-cantidad {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .carrito-accesorio-descripcion-total i {
+        font-size: 20px;
+    }
+
+    .carrito-accesorio-descripcion-total p{
+    white-space: nowrap;
+    font-size: 10px;
+    }
+
+    .carrito-loren-precio{
+        font-size: 15px;
+    }
+
+    
+    .carrito-form2{
+        margin-right: 56px;
+    }
+
+    .carrito-3-pct{
+    width: 20%;
+    gap: 35%;
+    margin-right: 24%;
+    }
+
+    .carrito-accesorio-descripcion-total {
+    width: 27%;
+    gap: 15%;
+    font-size: 15px;
+    }
+
+    .carrito-accesorio-descripcion-total img{
+    width: 50%;
+    }
+
+    .carrito-form1 {
+    margin-right: 5%;
+    }
+}
