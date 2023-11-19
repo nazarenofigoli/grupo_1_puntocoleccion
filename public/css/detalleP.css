@@ -118,7 +118,7 @@
     border-color:var(--Verde);
 }
 
-h5{
+.H5{
     font-size: 8px;
 }
 /* transform and animations  */
@@ -295,14 +295,14 @@ h5{
         font-size: 16px;
         margin-left: 60%;
     }
-    h5{
+    .H5{
         margin-left: 3%;
     }
     .compras-detalleP div{
         margin-left: 3%;
         font-size: 18px;
     }
-    h4{
+    .H4{
         font-size: 16px;
         margin-left: 3%;
     }
