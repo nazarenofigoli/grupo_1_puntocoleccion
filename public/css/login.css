@@ -5,11 +5,6 @@
     box-sizing: border-box;
 }
 
-.body-header-general {
-    display: flex;
-    flex-direction: column;
-}
-
 .main {
     display: flex;
     flex-direction: column;
@@ -20,9 +15,12 @@
     margin-bottom: 70%;
 }
 
+.INGRESA {
+    margin-bottom: 15px;
+}
 
 .formulario__general {
-    width: 100%;
+    width: 90%;
 }
 
 .form {
@@ -30,8 +28,6 @@
     display: flex;
     justify-content: center;
 }
-
-
 
 .opciones-registro1 {
     position: relative;
@@ -52,7 +48,6 @@
     right: 20px;
     top: 19px;
 }
-
 
 .inicio-regristro {
     height: 10px;
@@ -89,4 +84,55 @@
     font-size: 15px;
 display: flex;
 gap: 15px;
+}
+
+
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+@media (min-width: 768px) {
+    .formulario__general {
+        width: 63%;
+    }
+    
+    .opciones-registro1 input {
+        padding: 15px;
+    }
+
+    .inicio-reg-hijo {
+        padding: 15px;
+    }
+
+    .opciones-de-registro {
+        gap: 135px;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .formulario__general {
+        width: 63%;
+    }
+    
+    .opciones-registro1 input {
+        padding: 17px;
+    }
+
+    .inicio-reg-hijo {
+        padding: 17px;
+    }
+
+    .opciones-de-registro {
+        gap: 135px;
+        font-size: 20px;
+    }
+
+    .INGRESA {
+        font-size: 42px;
+    }
+
 }
