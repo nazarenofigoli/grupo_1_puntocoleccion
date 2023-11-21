@@ -1,4 +1,4 @@
-.body-detallesP{
+body{
     background-color: #dee2e6;
     margin: 0;
 }
@@ -11,55 +11,56 @@
     
 }
 .articulos-detalleP{
-    width: 30vw;
-    margin-bottom: -13%;
+    width: 95vw;
+    margin-bottom: 6%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .box_foto-principal{
-    width: 85%;
-    margin-left: 3%;
+    width: 80%;
+    margin: 3% 3%;
     display: flex;
     align-content: center;
     justify-content: space-around;
+    margin-top: 4vh;
 }
 #foto-principal-dp{
-    height: 66vw;
-    margin-top: 5vh;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
     border: 1px solid #000;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    width: 65vw;
-    padding: 5%;
-    cursor: pointer
 }
 .box_fotos-secund img{
+    height: 34vw;
     border: 1px solid #000;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-radius: 20%;
+    width: 30vw;
+    padding: 3%;
 }
 .box_fotos-secund{
+    width: 80vw;
+    height: 21vh;
     display: flex;
-    gap: 12px;
-    margin-top: 10px;
-    margin-bottom: -52px;
+    margin-top: 13px;
+    margin-bottom: -6px;
     justify-content: space-between;
 }
 #foto-2-dp{
-    height: 34vw;
+    height: 36vw;
     border: 1px solid #000;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    width: 33vw;
-    padding: 5%;
-    cursor: pointer;
+    border-radius: 20%;
+    width: 31vw;
+    padding: 3%;
+    margin-left: 2vh
 }
 #foto-3-dp{
-    width: 29vw;
-    height: 35vw;
+    width: 31vw;
+    height: 36vw;
     margin-bottom: 38%;
-    cursor: pointer
+    margin-right: 4vw;
 }
 .nav-bar-detalleP{
     background-color: black;
@@ -118,7 +119,7 @@
     border-color:var(--Verde);
 }
 
-h5{
+.h5-dp{
     font-size: 8px;
 }
 /* transform and animations  */
@@ -128,19 +129,25 @@ h5{
     color: var(--Negro);
 }
 #foto-principal-dp:hover{
-    -webkit-transform:scale(1.3);transform:scale(1.1);
-    box-shadow: 0px 0px 15px 15px #27EAA8;
+    border-color: rgba(0,0,0,.3);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+    opacity: 1;
 }
 #foto-2-dp:hover{
-    -webkit-transform:scale(1.3);transform:scale(1.1);
-    box-shadow: 0px 0px 15px 15px #27EAA8;
+    border-color: rgba(0,0,0,.3);
+    transform: translateY(-5px);
+    transform: translateY(-5px);
+    opacity: 1;
 }
 #foto-3-dp:hover{
-    -webkit-transform:scale(1.3);transform:scale(1.1);
-    box-shadow: 0px 0px 15px 15px #27EAA8;
+    border-color: rgba(0,0,0,.3);
+    transform: translateY(-5px);
+    transform: translateY(-5px);
+    opacity: 1;
 }
 @media (min-width:768px){
-.body-detallesP{
+body{
     max-width: 768px;
     border:3px solid var(--Negro);
     }
@@ -148,29 +155,41 @@ h5{
     display: flex;
 }
 .articulos-detalleP {
-    width: 8vw;    
+    width: 95vw;
+    margin-top: 2vh;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 8vh
+}
+.box_foto-principal {
+    width: 53%;
+    margin: 3% 3%;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    margin-top: 2vh;
 }
 .box_fotos-secund {
-    margin-bottom: -34px;
-    justify-content: space-evenly;
-    margin-left: -353%;
+    height: 50vh;
+    width: 49vw;
+    gap: 27px;
 }
 #foto-2-dp{
-    height: 38vw;
-    width: 31vw
+    width: 21vw;
+    height: 27vw;
+    opacity: .5;
+    transition: transform .6s,opacity .6s;
 }
 #foto-3-dp{
-    width: 29vw;
-    height: 38vw
-}
-.box_fotos-secund img{
-    width: 110%;
-    height: 110%;
+    width: 21vw;
+    height: 27vw;
+    opacity: .5;
+    transition: transform .6s,opacity .6s;
 }
 .nav-bar-detalleP{
     margin-top: 31px;
+    width: 77%;
 }
 .compras-detalleP{
     margin: 10px 21px;
@@ -182,7 +201,6 @@ h5{
     color: grey;
     margin-bottom: 10%;
     margin-top: -6%;
-    margin-left: -9%;
     font-size: 20px;
 }
 #precioP{
@@ -204,7 +222,8 @@ h5{
 .box_detalleP-info {
     margin: 3%;
     height: 224px;
-    margin-left: 13%;
+    margin-left: 2%;
+    width: 73%
 } 
 .linea-div-detalleP{
     color: black;
@@ -213,70 +232,73 @@ h5{
 }
 }
 
-
 @media (min-width:1024px){
-.body-detallesP{
+    body{
         max-width: 1024px;
     }
     .main-detalleP{
         display: flex;
-        min-width: 1024px;
+        min-width: 1000px;
     }
     .articulos-detalleP {
-        width: 8vw;
+        width: 95vw;
         margin-top: 3%;
         display: flex;
         align-items: flex-start;
-        margin-left: -52%;
+        margin-left: 0%;
         gap: 17px;
     }
     .box_foto-principal{
-        width: 5vw;
-        margin-top: 24%;
-        margin-left: 50%
+        width: 45vw;
+        margin-top: 5%;
+        margin-left: 1%;
     }
     #foto-principal-dp {
         height: 57vh;        
     }
     .box_fotos-secund {
-        margin-left: -162%;
-        gap: 24px;
+        width: 41vw;
+        margin-left: 3vw;
+        gap: -1px;
+        height: 30vh;
+        margin-bottom: -102vh;
     }
     #foto-2-dp {
-        width: 17vw;
-        height: 27vh;
+        width: 19vw;
+        height: 29vh;
+        margin-left: 1vh;
     }
     #foto-3-dp {
-        width: 18vw;
-        height: 27vh;
+        width: 19vw;
+        height: 29vh;
     }
     .box_detalleP-info {
-        margin: 3%;
-        height: 224vh;
+        margin-top: 8%;
+        width: 73vw;
+        margin-left: 5vw;
+        font-size: 25px;
+        height: 44vh
     } 
     #nameP{
-        color: grey;
-        margin-bottom: 10%;
-        margin-top: -2%;
-        margin-left: 1%;
-        font-size: 16px;
-        font-size: 22px;
-        width: 46%;
+        width: 41vw;
+        margin-left: 3vw;
+        gap: -1px;
+        height: 30vh;
+        /* margin-bottom: -102vh; */
     }
     .nav-bar-detalleP{
-        width: 48vw;
-        height: 5vh;
-        font-size: 19px;
-        max-width: 1024;
-        margin-left: 52%;
-        margin-top: -62%;
-    }
-    .compras-detalleP{
-        margin-left: 49%;
         border: 2px solid;
         width: 48vw;
-        height: 31vw;
-        margin-top: -4%;
+        height: 5vw;
+        /* margin-top: -73%; */
+        margin-left: 46vw;
+    }
+    .compras-detalleP{
+        margin-left: 48.5%;
+        width: 48vw;
+        height: 36vw;
+        max-width: 900px;
+        
     }
     #precioP{
         margin-left: 0%;
@@ -295,70 +317,84 @@ h5{
         font-size: 16px;
         margin-left: 60%;
     }
-    h5{
+    .h5-dp{
         margin-left: 3%;
     }
     .compras-detalleP div{
         margin-left: 3%;
         font-size: 18px;
     }
-    h4{
+    .h4-dp{
         font-size: 16px;
         margin-left: 3%;
     }
-    .fa-whatsapp:before {
+    /* .fa-whatsapp:before {
         margin-left: 3%;
         font-size: 30px;
-    }
-    .box_detalleP-info{
-    margin-top: 35%;
-    width: 73vw;
-    margin-left: -5%;
-    font-size: 25px;
-    height: 22vh;
-    }
-    
+    }     */
 }
 @media (min-width:1440px){
+    .body-detallesP{
+        max-width: 1440px; 
+    }
     .main-detalleP{
-        display: flex;
+        width: 95vw;
         max-width: 1440px;
-        border: solid 3px green;
+    }
+    .articulos-detalleP {
+        width: 95vw;
+        margin-top: 3%;
+        gap: 17px;
     }
     .nav-bar-detalleP{
-    margin-top: -59%;
-    max-width: 1024px;
-    margin-left: 52%;
-    font-size: 22px;
-    height: 6vh;
+        max-width: 1024px;
+        margin-left: 38%;
+        font-size: 22px;
+        height: 8vh;
     }
     .box_foto-principal {
-        width: 4vw;
+        margin-left: 1%;
+        width: 27vw;
+        height: 25vw;
+        margin-top: 0.5%;
+        
+    }
+    .compras-detalleP {
+        margin-left: 38%;
+        width: 48vw;
+        height: 27vw;
+        margin-top: -6.5%;
     }
     #foto-principal-dp {
         height: 52vh;
+        margin-top: 2vh;
     }
     .box_fotos-secund{
-        margin-left: -120%;
-        gap: 18px;
+        width: 27vw;
+        margin-top: 2vh;
+        margin-bottom: -102vh;
+        margin-left: 1vw;
     }
     #foto-2-dp {
-        width: 15vw;
-        height: 31vh
+        width: 11vw;
+    height: 29vh;
     }
     #foto-3-dp {
-        width: 16vw;
-        height: 31vh;
+        width: 11vw;
+        height: 29vh;
+    }
+    #nameP{
+        width: 41vw;
+        margin-left: 0vw;
+        gap: -1px;
+        height: 30vh;
+        margin-bottom: -14vh;
     }
     .box_detalleP-info {
-        margin-top: 30%;
+        margin-top: 18%;
         width: 73vw;
-        margin-left: -1%;
-        font-size: 34px;
-        height: 24vh;
-    }
-    .body-detallesP{
-        max-width: 1440px; 
-        border:3px solid rgb(14, 44, 14);
+        margin-left: 5vw;
+        font-size: 25px;
+        height: 43vh;
     }
 }
