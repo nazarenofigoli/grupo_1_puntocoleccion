@@ -88,54 +88,72 @@
             </section>
         </header>
         <main class="main-detalleP">
-            <section class="articulos-detalleP">
-                <div class="box_foto-principal">
-                    <img id="foto-principal-dp"
-                        src=img\9c07093f32.webp alt="imagen funko">
-                </div>
-                <div class="box_fotos-secund"><img id="foto-2-dp"
+            <section class="contenedor_general_detalleP">
+
+                <article class="articulos-detalleP">
+                    <div class="box_foto-principal">
+                        <img id="foto-principal-dp"
+                            src=img\9c07093f32.webp alt="imagen funko">
+                    </div>
+                </article>
+
+                    <section class="contenedor_detalle_info">
+                    <div class="nav-bar-detalleP">
+                        <ul>
+                            <li><a href="/">INICIO</a></li>
+                            <li><a href="#">/ NUESTRAS MARCAS</a></li>
+                        </ul>
+
+                        <div class="compras-detalleP">
+                            <h3 id="nameP">NOMBRE DE FIGURA COLECCIONABLE/MARCA</h3>
+                            <p id="precioP">$6000</p>
+                            <p id="cuotasP">12 cuotas sin interes de $xxxxx</p>
+                            <select class="form-select"
+                                aria-label="Default select example">
+                                <option selected><a>Cantidad</a></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn-detalleP"
+                        href="/carrito"><a>Agregar</a><i
+                            class="fa-solid fa-cart-shopping"
+                            id="carrito-dp"></i></button>
+                    <h5 class="h5-dp">sku:jhbdhbsdhbh<br>Categoria:Fonko,gfdsajkl.</h5>
+                    <div>
+                        <i class="fa-brands fa-instagram"
+                            style="color: #000000;"></i>
+                        <i class="fa-brands fa-facebook"
+                            style="color: #000000;"></i>
+                        <i class="fa-brands fa-twitter"
+                            style="color: #030303;"></i>
+                    </div>
+                    <h4 class="h4-dp">DUDAS O CONSULTAS</h4>
+                    <i href class="fa-brands fa-whatsapp"
+                        style="color: #4cd742;"></i> 
+                    </div>
+
+                    
+                    <div class="box_fotos-secund"><img id="foto-2-dp"
                         src=img\img--2hq.webp alt="imagen-funko-perfil"
                         width="300px " height="300px">
                     <img id="foto-3-dp" src=img\img--3hq.jpg
                         alt="imagen-funko-perfil-2" width="300px"
-                        height="300px"></div>
-                <section class="nav-bar-detalleP">
-                    <ul>
-                        <li><a href="/">INICIO</a></li>
-                        <li><a href="#">/ NUESTRAS MARCAS</a></li>
-                    </ul>
+                        height="300px"></div> 
+                    </section>
                 </section>
-                <article class="compras-detalleP">
-                    <h3 id="nameP">NOMBRE DE FIGURA COLECCIONABLE/MARCA</h3>
-                    <p id="precioP">$6000</p>
-                    <p id="cuotasP">12 cuotas sin interes de $xxxxx</p>
-                    <select class="form-select"
-                        aria-label="Default select example">
-                        <option selected>Cantidad</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
-
-                    <button type="button" class="btn-detalleP" href="/carrito">Agregar<i
-                            class="fa-solid fa-cart-shopping" id="carrito-dp"></i></i></button>
-                <h5 class="h5-dp">sku:jhbdhbsdhbh<br>Categoria:Fonko,gfdsajkl.</h5>
-                <div>
-                    <i class="fa-brands fa-instagram" style="color: #000000;"></i>
-                    <i class="fa-brands fa-facebook" style="color: #000000;"></i>
-                    <i class="fa-brands fa-twitter" style="color: #030303;"></i>
-                </div>
-                <h4 class="h4-dp">DUDAS O CONSULTAS</h4>
-                <i href class="fa-brands fa-whatsapp" style="color: #4cd742;"></i>
-            </article>
-            
-            <p class="box_detalleP-info">El nombre del producto y su marca.
-                Descripción: los atributos y especificaciones del producto.
-                Detalles: información extra sobre su uso y para qué sirve.
-                Características: información sobre los materiales, medidas o
-                dimensión que tiene el artículo.
-                .</p>
-
+                <section class="box_detalleP-info"><p class="box_detalleP-info">El nombre del producto y su
+                    marca.
+                    Descripción: los atributos y especificaciones del
+                    producto.
+                    Detalles: información extra sobre su uso y para qué
+                    sirve.
+                    Características: información sobre los materiales,
+                    medidas o
+                    dimensión que tiene el artículo.
+                    .</p>
+                </section>
         </main>
         <footer>
             <section class="footer_section_parte1">
@@ -173,7 +191,8 @@
 
                     <article class="footer_section_article">
                         <div class="footer_section_article_titulos">
-                            <hr class="linea"><h4>ayuda</h4><hr class="linea">
+                            <hr class="linea"><h4>ayuda</h4><hr
+                                class="linea">
                         </div>
                         <ul>
                             <li><a href>La Empresa</a></li>
@@ -193,7 +212,7 @@
                             76543234<i class="fa-solid fa-at"></i>contacto@puntocoleccion.com</p>
                     </div>
                 </section>
-
-            </footer>
-        </body>
-    </html>
+            </section>
+        </footer>
+    </body>
+</html>
