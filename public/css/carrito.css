@@ -42,7 +42,7 @@
 .carrito-accesorio-descripcion-total i{
     color: var(--Negro);
     margin-left: 10px;
-    transition: 1.5s;
+    transition: color 1.5s, border-radius 1.5s;
 }
 
 .carrito-accesorio-descripcion-total i:hover{
@@ -81,7 +81,7 @@
     background-color: var(--Verde);
     width: 65%;
     padding: 1%;
-    transition: 1.5s;
+    transition: color 1.5s, background-color 1.5s;
 }
 .carrito-nav-seguir:hover{
     color:var(--Verde);
@@ -96,7 +96,7 @@
     padding: 1%;
     display: flex;
     justify-content: center;
-    transition: 1.5s;
+    transition:color 1.5s, background-color 1.5s;
 }
 
 .carrito-nav-actualizar:hover{
@@ -105,7 +105,7 @@
 }
 
 .carrito-query-producto-enlaces{
-    transition: 1.5s;
+    transition:box-shadow 1.5s;
 }
 
 .carrito-query-producto-enlaces:hover{
@@ -117,7 +117,7 @@
     width: 90%;
     position: relative;
     right: -15px;
-    transition: 1.5s;
+    transition: box-shadow 1.5s;
 }
 
 .carrito-caja-total:hover{
