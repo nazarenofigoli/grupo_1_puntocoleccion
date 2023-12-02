@@ -46,7 +46,7 @@ body{
 }
 .box_fotos-secund{
     width: 49vw;
-    height: 24vh;
+    height: 16vh;
     display: flex;
     margin-left: 17%;
     gap: 10px;
@@ -67,7 +67,7 @@ body{
 .nav-bar-detalleP{
     width: 81%;
     display: flex;
-    height: 230px;
+    height:  196px;;
     margin: 5%;
     transition: 1sm;
     align-content: space-between;
@@ -166,7 +166,6 @@ body{
 @media (min-width:768px){
 body{
     max-width: 768px;
-    border:3px solid var(--Negro);
     }
     .contenedor_general_detalleP{
         width: 100%;
@@ -193,7 +192,7 @@ body{
     }
     .articulos-detalleP{
         width: 95vw;
-        margin-bottom: 6%;
+        margin-bottom: 2%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -230,8 +229,9 @@ body{
 }
 .nav-bar-detalleP{
     display: flex;
-    margin-top: 25px;
-    width: 61%;
+    margin-top: 13px;
+    width: 76%;
+    height: auto;
 }
 .compras-detalleP{
     margin-top: 18px;
@@ -243,7 +243,7 @@ body{
     color: grey;
     margin-bottom: 10%;
     margin-top: 1%;
-    font-size: 18px;
+    font-size: 16px;
 }
 #precioP{
     margin-top: -6.5%;
@@ -276,11 +276,12 @@ body{
 
 @media (min-width:1024px){
     body{
-        max-width: 1024px;
+        max-width: 1070px;
+        border: 2px solid rgba(128, 128, 128, 0.635);
     }
     .main-detalleP{
         display: flex;
-        max-width: 1000px;
+        max-width: 1060px;
     }
     .contenedor_general_detalleP{
         width: 95%;
@@ -288,7 +289,8 @@ body{
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: flex-start;
-        gap: 35px;
+        gap: 21px;
+        max-width: 1024px;
     }
     .contenedor_fila_detalleP{
         width: 100%;
@@ -296,57 +298,89 @@ body{
         flex-direction: row
     }
     .contenedor_detalle_info{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    align-items: flex-end;
-    margin-left: 8%;
+        display: flex;
+        flex-direction: column;
+        width: 46%;
+        align-items: flex-end;
+        margin-left: 6%;
+        position: relative;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* width: 50%; */
+    /* align-items: flex-end; */
+    /* margin-left: 8%; */
     }
     .articulos-detalleP {
-        width: 37vh;
-    margin-top: 3%;
-    margin-left: 4%;
+        width: 36vh;
+        margin-top: 3%;
+        margin-left: 4%
+        /* width: 37vh; */
+    /* margin-top: 3%; */
+    /* margin-left: 4%; */
     }
     .box_foto-principal{
         width: 30vw;
         margin-top: 7%;
     }
     #foto-principal-dp {
-        height: 44vh;        
+        height: 39vh;        
     }
     .box_fotos-secund {
-        margin-right: 50vw;
-        width: 36vw;
-        height: 35vh;
+        /* width: 36vw; */
+        /* height: 35vh; */
+        /* margin-top: 74%; */
+        /* margin-right: 35vw; */
+        /* position: absolute;        */
+    width: 36vw;
+    height: 35vh;
+    margin-top: 81%;
+    margin-right: 25vw;
+    position: absolute; 
     }
     #foto-2-dp {
-    width: 15vw;
-    height: 32vh
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        width: 8vw;
+        height: 15vh
     }
     #foto-3-dp {
-    width: 15vw;
-    height: 32vh;
+        max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    width: 8vw;
+    height: 15vh;
     }
     .box_detalleP-info {
     font-size: 25px;
     display: inline;
-    margin-top: 8%;
+    margin-top: 18%;
     margin-bottom: 8%;
     } 
     #nameP{
         width: 41vw;
     }
     .nav-bar-detalleP{
-    width: 47vw;
-    margin-top: 11%;
-    height: 39%;
-    display: flex;
-    align-items: stretch;
-    justify-content: space-evenly
+        width: 28vw;
+        margin-top: 9%;
+        height: 32%;
+        display: flex;
+        align-items: stretch;
+        justify-content: center
+    /* width: 47vw; */
+    /* margin-top: 11%; */
+    /* height: 39%; */
+    /* display: flex; */
+    /* align-items: stretch; */
+    /* justify-content: space-evenly */
     }
     .compras-detalleP{
-        width: 43vw;
-        height: 21vw;        
+        width: 27vw;
+        height: 18vw;
+        /* width: 43vw; */
+        /* height: 21vw;         */
     }
     #precioP{
         font-size: 23px;
@@ -372,38 +406,38 @@ body{
         font-size: 16px;
     }
 }
-@media (min-width:1440px){
-    .body-detallesP{
-        max-width: 1440px; 
-    }
-    .main-detalleP{
-        width: 95vw;
-        max-width: 1440px;
-    }
-    .contenedor_general_detalleP{
-        max-width: 1440px;
-    }
-    .box_foto-principal {
-        width: 53%;
-        display: flex;
-        justify-content: flex-end;
-        margin-left: 31%;
-    }
-    .box_fotos-secund {
-        margin-right: 38vw;
-        max-width: 1440px;
-    }
-    .contenedor_detalle_info{
-        margin-left: 16%;
-        max-width: 1440px;
-    }
-    .nav-bar-detalleP{
-        width: 34vw;
-        margin-top: 11%;
-        height: 39%;
-        display: flex;
-        align-items: stretch;
-        justify-content: space-evenly;
-        max-width: 1440px
-    }
-};
+/* @media (min-width:1440px){ */
+    /* .body-detallesP{ */
+        /* max-width: 1440px;  */
+    /* } */
+    /* .main-detalleP{ */
+        /* width: 95vw; */
+        /* max-width: 1440px; */
+    /* } */
+    /* .contenedor_general_detalleP{ */
+        /* max-width: 1440px; */
+    /* } */
+    /* .box_foto-principal { */
+        /* width: 53%; */
+        /* display: flex; */
+        /* justify-content: flex-end; */
+        /* margin-left: 31%; */
+    /* } */
+    /* .box_fotos-secund { */
+        /* margin-right: 38vw; */
+        /* max-width: 1440px; */
+    /* } */
+    /* .contenedor_detalle_info{ */
+        /* margin-left: 16%; */
+        /* max-width: 1440px; */
+    /* } */
+    /* .nav-bar-detalleP{ */
+        /* width: 34vw; */
+        /* margin-top: 11%; */
+        /* height: 39%; */
+        /* display: flex; */
+        /* align-items: stretch; */
+        /* justify-content: space-evenly; */
+        /* max-width: 1440px */
+    /* } */
+/* }; */
