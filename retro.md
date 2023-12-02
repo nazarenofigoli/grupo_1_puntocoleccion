@@ -46,7 +46,7 @@ Integrantes:
 * Figoli, Nazareno.
 * Testa, Lucio.
 Reseña:
-Se comenxo la reunion con todos los integrantes via meet,(videollamada), implementando le dinamica estrella de mar cada integrante fue esponiendo y su opinion respecto a estos 5 ejes, y llegamos a las siguientes conclusiones:
+Se comezo la reunion con todos los integrantes via meet,(videollamada), implementando le dinamica estrella de mar cada integrante fue esponiendo y su opinion respecto a estos 5 ejes, y llegamos a las siguientes conclusiones:
 
 1.Comenzar Hacer:
 * Definir tareas cocretas,
