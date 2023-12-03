@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='stylesheets/style.css'/>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
     <script src="https://kit.fontawesome.com/cbbf860933.js" crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Punto Coleccion</title>
@@ -24,7 +24,7 @@
     <section class="header__contenedor__centro">
         <div class="header__contenido">
             <a href="/"><div class="logo">
-                <img src="img/LogoP2.png" alt="logo">
+                <img src="/img/LogoP2.png" alt="logo">
             </div></a>
             <div class="header__buscador">
                 <form class="header__search">
@@ -41,12 +41,12 @@
                 <p>Contacto</p>
                 </a>
             
-                <a class="nav-opcion" href="/login">
+                <a class="nav-opcion" href="/users/login">
                 <i class="fa-regular fa-user icons_navegacion"></i>
                 <p>Ingresá</p>
                 </a>
             
-                <a class="nav-opcion" href="/carrito">
+                <a class="nav-opcion" href="/product/carrito">
                 <i class="fa-solid fa-cart-shopping icons_navegacion registro_carrito"></i>
                 <p>$0.000,0</p>
             </a>
@@ -72,12 +72,12 @@
     </header>
     <main class="registro_main">
         <section class="registro_main_titulos">
-            <a href="/"><p>Inicio</a>▶<a href="/login">Cuenta</a>▶Crear Cuenta</p>
+            <a href="/"><p>Inicio</a>▶<a href="/users/login">Cuenta</a>▶Crear Cuenta</p>
             <h1>Crear Cuenta</h1>
         </section>
-        <p class="registro_main_titulos_account">¿Ya ténes una cuenta? <a href="/login">Iniciá Sesión</a></p>
+        <p class="registro_main_titulos_account">¿Ya ténes una cuenta? <a href="/users/login">Iniciá Sesión</a></p>
         <section class="section_registro_main_formulario_account">
-            <form action="/registro" method="post" class="registro_main_formulario_account">
+            <form action="/" method="post" class="registro_main_formulario_account">
                 <label for="nombre">NOMBRE:</label>
                 <input type="text" name="nombre" placeholder="ej: Roberto Carlos">
                 <label for="email">E-MAIL:</label >
@@ -97,7 +97,7 @@
                 </div>
             </form>
         </section>
-        <p class="registro_main_titulos_account">¿Ya ténes una cuenta? <a href="/login">Iniciá Sesión</a></p>
+        <p class="registro_main_titulos_account">¿Ya ténes una cuenta? <a href="/users/login">Iniciá Sesión</a></p>
     </main>
     
         <footer>
