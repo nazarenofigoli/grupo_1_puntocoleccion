@@ -1,0 +1,15 @@
+.cargaProducto__titulo {
+display: flex;
+justify-content: center;
+font-size: 10px;
+}
+
+.cargaProducto__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.cargaProducto__contenedor__formulario {
+}
