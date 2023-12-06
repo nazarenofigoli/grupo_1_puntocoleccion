@@ -1,15 +1,28 @@
 .cargaProducto__titulo {
-display: flex;
-justify-content: center;
-font-size: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    background-color: aquamarine;
 }
 
 .cargaProducto__formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
+    border: 2px solid gray;
 }
 
 .cargaProducto__contenedor__formulario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+.cargaProducto__contenedor__formulario input {
+display: flex;
+
+}
+
+.cargaProducto__contenedor__buton__enviar {
+    display: flex;
+    align-items: center;
 }
