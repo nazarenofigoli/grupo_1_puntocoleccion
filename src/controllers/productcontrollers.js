@@ -9,9 +9,9 @@ const productControllers = {
 
 
     dashboard:(req, res) => {
-        const propiedades = ["id","nombre","imagen","sticker"];
+        const products = ["id","nombre","imagen","sticker"];
         console.log(propiedades);
-        res.render('products/dashboard2', { title: "Dashboard", products, propiedades });
+        res.render('dashboard', { title: "Dashboard", products, propiedades });
     },
 }
 

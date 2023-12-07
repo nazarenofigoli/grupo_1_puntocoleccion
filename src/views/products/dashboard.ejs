@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel='stylesheet' href='stylesheets/style.css' />
+        <link rel='stylesheet' href='../stylesheets/style.css' />
         <script src="https://kit.fontawesome.com/cbbf860933.js"
             crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/b99d7ed5f9.js"
@@ -12,38 +12,31 @@
     </head>
     <body>
         <main>
-            <a href="/products/create"><button>Crear Producto</button></a>
-            <section class="home__main__products">
-                <% products.forEach(product => {%>
-                <article class="home__main__products__product">
-                    <div class="home__main__products__product__photo-container">
-                        <img
-                            class="home__main__products__product__photo-container--phot
-                        src="/images/<%= product.imagen %>"
-                        alt="<%= product.nombre %>"
-                        >
-                    </div>
-                    <h4><%= product.nombre %></h4>
-                    <div class="contenedor-botones-dashboard">
-                        <a
-                            class="home__main__products__product__photo-container--more"
-                            href="/products/detail/<%= product.id %>"><i
-                                class="fa-brands fa-readme"></i></a>
-                        <a
-                            class="home__main__products__product__photo-container--more"
-                            href="/products/update/<%= product.id %>"><i
-                                class="fa-solid fa-pen-to-square"></i>
-                        </a>
-                        <a
-                            class="home__main__products__product__photo-container--more"
-                            href="/products/delete/<%= product.id %>"><i
-                                class="fa-solid fa-trash"></i>
-                        </a>
-                    </div>
-                </article>
-                <% }); %>
-
-            </section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Marca</th>
+                        <th>Categoría</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% products.forEach(function(product) { %>
+                        <tr>
+                            <td><%= product.id %></td>
+                            <td><%= product.nombre %></td>
+                            <td><%= product.descripcion %></td>
+                            <td><%= product.precio %></td>
+                            <td><%= product.marca %></td>
+                            <td><%= product.categoria %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+            
         </main>
     </body>
 </html>
