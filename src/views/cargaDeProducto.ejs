@@ -18,18 +18,20 @@
 <form class="cargaProducto__formulario" action="/producto" method="post">
 
         <div class="cargaProducto__contenedor__formulario">
-    <input type="text" name="nombre" placeholder="Nombre">
+    <input type="text" name="nombre" placeholder="Nombre de producto">
     <input type="file" name="imagen">
-    <textarea name="descripcion" placeholder="Descripción"></textarea>
+    <textarea name="descripcion" placeholder="Agregue una breve descripción"></textarea>
     <input type="text" name="marca" placeholder="Marca">
     <input type="text" name="categoria" placeholder="Categoría">
     <input type="number" name="precio" placeholder="Precio">
-    
-    <a class="cargaProducto__contenedor__buton__enviar"  href="/"><input type="submit" value="Enviar"></a>
-        </div>
+
+
+    <div class="cargaProducto__contenedor__buton__enviar" >
+        <a  href="/"><button type="submit" value="Enviar">Enviar</button></a>
+        <a href="/"> <button type="reset" value="Borrar">Borrar</button></a>
+    </div>
+
+</div>
 </form>
-
-    
 </body>
-
 </html>
