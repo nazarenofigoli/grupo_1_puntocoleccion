@@ -71,3 +71,4 @@ Se comezo la reunion con todos los integrantes via meet,(videollamada), implemen
 4.Dejar de hacer:
 *Dejar fuera las discuciones o temas que no esten dentro del tema del trabajo.
 
+
