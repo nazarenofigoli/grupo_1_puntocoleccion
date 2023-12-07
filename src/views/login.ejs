@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="https://kit.fontawesome.com/cbbf860933.js" crossorigin="anonymous"></script>
     <title>punto coleccion login</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -25,7 +25,7 @@
     
         <div class="header__contenido">
             <a href="/"><div class="logo">
-                <img src="img/LogoP2.png" alt="logo">
+                <img src="/img/LogoP2.png" alt="logo">
             </div></a>
             <div class="header__buscador__mobile">
             <div class="header__buscador">
@@ -50,12 +50,12 @@
                 <p>Contacto</p>
                 </a>
             
-                <a class="nav-opcion" href="/login">
+                <a class="nav-opcion" href="/users/login">
                 <i class="fa-regular fa-user icons_navegacion"></i>
                 <p>Ingresá</p>
                 </a>
             
-                <a class="nav-opcion" href="/carrito">
+                <a class="nav-opcion" href="/product/carrito">
                 <i class="fa-solid fa-cart-shopping icons_navegacion"></i>
                 <p>$0.000,0</p>
             </a>
@@ -85,7 +85,7 @@
 
     <h1 class="INGRESA">INGRESA</h1>
 
-        <form class="formulario__general">
+        <form action="/users/login" method="post" class="formulario__general">
         <div  class="form">
         <div  class="opciones-registro1">
             <input class="input-registro" type="email" placeholder="correo electronico" />
@@ -109,7 +109,7 @@
     
     <div class="form">
         <div  class="opciones-registro1">
-            <a href="/registro"></a><button class="inicio-reg-hijo"> 
+            <a href="/users/registro"></a><button class="inicio-reg-hijo"> 
                 REGISTRAME
             </button></a>
             </div>
@@ -119,7 +119,7 @@
     <form>
         
     <div class="opciones-de-registro">
-        <a href="/registro"> Crear Cuenta </a> 
+        <a href="/users/registro"> Crear Cuenta </a> 
     
         <a href=""> ¿olvidó su contraseña? </a>
     </div>
