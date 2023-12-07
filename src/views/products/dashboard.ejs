@@ -12,27 +12,38 @@
     </head>
     <body>
         <main>
-            <h2 class="h2_dashboard">listado de productos</h2>
+            <a href="/products/create"><button>Crear Producto</button></a>
+            <section class="home__main__products">
+                <% products.forEach(product => {%>
+                <article class="home__main__products__product">
+                    <div class="home__main__products__product__photo-container">
+                        <img
+                            class="home__main__products__product__photo-container--phot
+                        src="/images/<%= product.imagen %>"
+                        alt="<%= product.nombre %>"
+                        >
+                    </div>
+                    <h4><%= product.nombre %></h4>
+                    <div class="contenedor-botones-dashboard">
+                        <a
+                            class="home__main__products__product__photo-container--more"
+                            href="/products/detail/<%= product.id %>"><i
+                                class="fa-brands fa-readme"></i></a>
+                        <a
+                            class="home__main__products__product__photo-container--more"
+                            href="/products/update/<%= product.id %>"><i
+                                class="fa-solid fa-pen-to-square"></i>
+                        </a>
+                        <a
+                            class="home__main__products__product__photo-container--more"
+                            href="/products/delete/<%= product.id %>"><i
+                                class="fa-solid fa-trash"></i>
+                        </a>
+                    </div>
+                </article>
+                <% }); %>
 
-            <table class="tabla_dashboard">
-                <%-products.forEach(product =>{
-                <tr>
-                    <th>Nombre de Producto</th>
-                    <th>Precio</th>
-                    <th>Descripcion</th>
-                    <th>Imagen</th>
-                </tr>
-                <tr>
-                    <td>producto 1</td>
-                    <td>$1000</td>
-                    <td>lorem impsum in dolor</td>
-                    <td><input type="file" id="fileInput" style="display: none;">
-                        <label for="fileInput"> selecciona la imagen</label>
-                        <img id="previewImg" src="" alt="Imagen seleccionada"></td>
-                    
-                </tr>
-            })%>
-            </table>
+            </section>
         </main>
     </body>
 </html>
