@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href='stylesheets/style.css' />
+        <script src="https://kit.fontawesome.com/cbbf860933.js"
+            crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/b99d7ed5f9.js"
+            crossorigin="anonymous"></script>
+        <title><%=title%></title>
+    </head>
+    <body>
+        <main>
+            <h2 class="h2_dashboard">listado de productos</h2>
+
+            <table class="tabla_dashboard">
+                <%-products.forEach(product =>{
+                <tr>
+                    <th>Nombre de Producto</th>
+                    <th>Precio</th>
+                    <th>Descripcion</th>
+                    <th>Imagen</th>
+                </tr>
+                <tr>
+                    <td>producto 1</td>
+                    <td>$1000</td>
+                    <td>lorem impsum in dolor</td>
+                    <td><input type="file" id="fileInput" style="display: none;">
+                        <label for="fileInput"> selecciona la imagen</label>
+                        <img id="previewImg" src="" alt="Imagen seleccionada"></td>
+                    
+                </tr>
+            })%>
+            </table>
+        </main>
+    </body>
+</html>
+
+<a class="boton_dashboard" href="/products/cargaDeProducto"><button>Crear
+        Producto</button></a>
