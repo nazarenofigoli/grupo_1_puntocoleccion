@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel='stylesheet' href='../../../public/stylesheets/style.css' />
+        <link rel='stylesheet' href='/stylesheets/style.css'/>
         <script src="https://kit.fontawesome.com/cbbf860933.js"
             crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/b99d7ed5f9.js"
@@ -11,11 +11,12 @@
         <title><%=title%></title>
     </head>
     <body>
-        <main>
-            <table>
-                <thead>
+        <main class=" main_dashboard">
+            <table class="tabla _dashboard">
+                <thead class="head_tabla_dashboard">
                     <tr>
                         <th>ID</th>
+                        <th>Imagen</th>
                         <th>Nombre</th>
                         <th>Descripción</th>
                         <th>Precio</th>
@@ -23,17 +24,18 @@
                         <th>Categoría</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <% products.forEach(function(product) { %>
+                <tbody class="body_tabla_dashboard">
+                    <% products.forEach(product=>{%>
                         <tr>
-                            <td><%= product.id %></td>
-                            <td><%= product.nombre %></td>
-                            <td><%= product.descripcion %></td>
-                            <td><%= product.precio %></td>
-                            <td><%= product.marca %></td>
-                            <td><%= product.categoria %></td>
+                            <td><%= product.id%></td>
+                            <td><%= product.imagen%></td>
+                            <td><%= product.nombre%></td>
+                            <td><%= product.descripcion%></td>
+                            <td><%= product.precio%></td>
+                            <td><%= product.marca%></td>
+                            <td><%= product.categoria%></td>
                         </tr>
-                    <% }); %>
+                    <% })%>
                 </tbody>
             </table>
 
