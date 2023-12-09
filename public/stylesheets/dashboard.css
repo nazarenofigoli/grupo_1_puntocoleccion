@@ -8,6 +8,16 @@
 .main_dashboard {
     background-color: aquamarine;
 }
+.aside_dashboard{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    background-color: gray;
+    gap: 10px;
+}
+.logo_barraMenu_dashboard{
+    width: 39px;
+}
 .titulo_header_dashboard{
     border: 3px solid var(--Negro);
     background-color: var(--Verde);

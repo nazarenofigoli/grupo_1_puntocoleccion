@@ -6,7 +6,7 @@
         "precio": "1000",
         "marca": "Pop",
         "categoria": "funko",
-        "imagen":"/naruto.jpeg"
+        "imagen":"naruto.jpeg"
     },
     {
         "id": "2",
@@ -15,7 +15,7 @@
         "precio": "1200",
         "marca": "Bandai",
         "categoria": "figura",
-        "imagen":"/img--2hq.webp"
+        "imagen":"img--2hq.webp"
     },
     {
         "id": "3",
@@ -23,7 +23,8 @@
         "descripcion": "lorem impsum dolor sit amet",
         "precio": "1300",
         "marca": "banpresto",
-        "categoria": "figura"
+        "categoria": "figura",
+        "imagen":"naruto.jpeg "
     },
     {
         "id": "4",
@@ -31,7 +32,8 @@
         "descripcion": "lorem impsum dolor sit amet",
         "precio": "1400",
         "marca": "Bandai-hobby",
-        "categoria": "figura"
+        "categoria": "figura",
+        "imagen":"img--2hq.webp "
     },
     {
         "id": "5",
@@ -39,7 +41,8 @@
         "descripcion": "lorem impsum dolor sit amet",
         "precio": "1500",
         "marca": "Tsume",
-        "categoria": "figura"
+        "categoria": "figura",
+        "imagen":"naruto.jpeg "
     },
     {
         "id": "6",
@@ -47,6 +50,7 @@
         "descripcion": "lorem impsum dolor sit amet",
         "precio": "1600",
         "marca": "GoodSmile",
-        "categoria": "figura"
+        "categoria": "figura",
+        "imagen":"img--2hq.webp "
     }
     ]
