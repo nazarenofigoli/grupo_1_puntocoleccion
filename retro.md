@@ -90,18 +90,18 @@ necesitamos trabajar más.
 
 1. Comenzar a hacer: Buscar la forma de tener mejor comunicación, encontrar la 
 forma para que el trabajo en equipo sea más fluido y lo menos tensionado 
-posible. 
+posible. Respetar los puntos pactados en el sprint anterior e implementarlos en los siguientes.
 	
 2. Hacer más: Trabajar enfocados, centrados y poder    decidir y distribuir las 
 tareas más dinámicamente para optimizar el tiempo. Comunicarnos de la mejor 
 manera posible y con claridad para no generar confusiones o incomodidad en los 
-demás. Implementar mas Daylis.
+demás. Implementar mas Daylis. En caso de que haya malos entendidos, resolverlo de forma civilizada escuchando y respetando a la otra persona.
 	
 3. Hacer menos:----
 
 
 	
-4. Dejar de Hacer:----
+4. Dejar de Hacer: faltarnos el respeto, u hacer comentarios que pueden herir a otros.
 
 
 	
