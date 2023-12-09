@@ -1,13 +1,37 @@
+.body_dashboard{
+    display: flex;
+    flex-direction: column;
+}
+.header_general_dashboard{
+    height: auto;
+}
 .main_dashboard {
     background-color: aquamarine;
 }
+.titulo_header_dashboard{
+    border: 3px solid var(--Negro);
+    background-color: var(--Verde);
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 .tabla_dashboard {
-    border:solid 2px rgb(0, 0, 0)
+    width: 100%;     
+    display: flex;
+    border: blue 3px solid;    
+    height: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
 }
 
 .head_tabla_dashboard {
-    border:solid 2px rgb(0, 0, 0)
+    border: solid 2px rgb(0, 0, 0);
 }
 .body_tabla_dashboard {
-    border:solid 2px rgb(0, 0, 0)
+    border: solid 2px rgb(0, 0, 0);
+    width: 70%
 }
+
