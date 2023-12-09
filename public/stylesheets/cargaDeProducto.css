@@ -14,8 +14,7 @@
 .cargaProducto__formulario {
     display: flex;
     justify-content: center;
-    /* border: 2px solid gray; */
-    width: 100%;
+    width: 95%;
 }
 
 .cargaProducto__contenedor__formulario {
@@ -36,12 +35,10 @@
 }
 
 .cargaProducto__contenedor__buton__enviar {
-    display: flex;
-    align-items: center;
     padding: 10px;
     gap: 10px;
+    
 }
-
 
 
 @media (min-width: 768px) {
@@ -49,6 +46,7 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
+        width: 61%;
         gap: 10px;
         padding: 5px;
     }
@@ -68,7 +66,6 @@
     .cargaProducto__formulario {
     display: flex;
     justify-content: center;
-    /* border: 2px solid gray; */
     width: 100%;
 }
 
