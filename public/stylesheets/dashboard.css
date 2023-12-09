@@ -1,5 +1,5 @@
 .main_dashboard {
-    background-color: var( --GrisClaro);
+    background-color: aquamarine;
 }
 .tabla_dashboard {
     border:solid 2px rgb(0, 0, 0)
@@ -10,8 +10,4 @@
 }
 .body_tabla_dashboard {
     border:solid 2px rgb(0, 0, 0)
-}
-.boton_dashboard {
-    background-color: black;
-    color:aqua
 }

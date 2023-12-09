@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel='stylesheet' href='/stylesheets/style.css'/>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
         <script src="https://kit.fontawesome.com/cbbf860933.js"
             crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/b99d7ed5f9.js"
@@ -11,37 +11,131 @@
         <title><%=title%></title>
     </head>
     <body>
-        <main class=" main_dashboard">
-            <table class="tabla _dashboard">
-                <thead class="head_tabla_dashboard">
-                    <tr>
-                        <th>ID</th>
-                        <th>Imagen</th>
-                        <th>Nombre</th>
-                        <th>Descripción</th>
-                        <th>Precio</th>
-                        <th>Marca</th>
-                        <th>Categoría</th>
-                    </tr>
-                </thead>
-                <tbody class="body_tabla_dashboard">
-                    <% products.forEach(product=>{%>
-                        <tr>
-                            <td><%= product.id%></td>
-                            <td><%= product.imagen%></td>
-                            <td><%= product.nombre%></td>
-                            <td><%= product.descripcion%></td>
-                            <td><%= product.precio%></td>
-                            <td><%= product.marca%></td>
-                            <td><%= product.categoria%></td>
-                        </tr>
-                    <% })%>
-                </tbody>
-            </table>
+        <header>
+            <div class="header__info">
+                <p>Muñecos y Figuras coleccionables con envíos a toda Argentin
+                </div>
 
-            <a class="boton_dashboard" href="/products/cargaDeProducto"><button>Crear
-                Producto</button></a>
-            
-        </main>
-    </body>
-</html>
+                <section class="header__contenedor">
+                    <div class="hamburger-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                    <section class="header__contenedor__centro">
+
+                        <!-- <div class="header__contenido"> -->
+                        <!-- <a href="/"><div class="logo"> -->
+                        <!-- <img src="img/LogoP2.png" alt="logo"> -->
+                        <!-- </div></a> -->
+                        <!-- <div class="header__buscador__mobile"> -->
+                        <!-- <div class="header__buscador"> -->
+                        <!-- <form class="header__search"> -->
+                        <!-- <input  type="text" placeholder= "¿Que estas busc
+                    -->
+                        <!-- </form> -->
+                        <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+                    <div class="header__buscador__desktop">
+                        <div class="header__buscador">
+                            <form class="header__search">
+                                <input type="text"
+                                    placeholder="¿Que estas buscando?">
+                                <i
+                                    class="lupita icono fa-solid fa-magnifying-glass"></i>
+                            </form>
+                        </div>
+                    </div>
+                    <section>
+                        <nav class="header_navegacion__icons">
+                            <a class="nav-opcion" href>
+                                <i
+                                    class="icono fa-regular fa-envelope icons_navegacion"><
+                                    <p>Contacto</p>
+                                </a>
+
+                                <a class="nav-opcion" href="/users/login">
+
+                                    <i
+                                        class="fa-regular fa-user icons_navegacion"></i>
+                                    <p>Ingresá</p>
+                                </a>
+
+                                <a class="nav-opcion" href="/product/carrito">
+
+                                    <i
+                                        class="fa-solid fa-cart-shopping icons_navegacion"></i>
+                                    <p>$0.000,0</p>
+                                </a>
+                            </nav>
+                        </section>
+
+                    </section>
+
+                </section>
+
+                <section>
+                    <nav class="header__lista__desordenada">
+                        <ul>
+                            <li><a href="/">Inicio</a></li>
+                            <li><a href>Coleciones</a></li>
+                            <li><a href>Categorias</a></li>
+                            <li><a href>Marcas Premium</a></li>
+                            <li><a href>Mas Vistos</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </header>
+            <aside>
+                <a href="../index.ejs"><button><i
+    class="lupita icono fa-solid fa-magnifying-glass"></i>
+rm></button></a>
+                <a href=""><button><i class="fa-solid fa-plus"></i></button></a></button></a>
+                <a href=""><button> class="fa-solid fa-pen-to-square"></i></button></a></button></a>
+            </aside>
+            <main class=" main_dashboard">
+                <table class="tabla _dashboard">
+                    <thead class="head_tabla_dashboard">
+                        <tr class="sections_head_tabla_dashboard">
+                            <div class="div_head_tabla_dashboard">
+                                <th>ID</th>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Precio</th>
+                                <th>Marca</th>
+                                <th>Categoría</th>
+                                <th>Acciones</th>
+                            </div>
+                        </tr>
+                    </thead>
+                    <tbody class="body_tabla_dashboard">
+                        <% products.forEach(product=>{%>
+                        <tr>
+                            <div>
+                                <td><%= product.id%></td>
+                                <td><%= product.imagen%></td>
+                                <td><%= product.nombre%></td>
+                                <td><%= product.descripcion%></td>
+                                <td><%= product.precio%></td>
+                                <td><%= product.marca%></td>
+                                <td><%= product.categoria%></td>
+                                <td>
+                                    <a class="boton_dashboard"
+                                        href="/products/cargaDeProducto"><button>
+                                            <i class="fa-solid fa-plus"></i></button></a>
+                                    <a class="boton_dashboard"
+                                        href="/products/modificarDeProducto"><button><i
+                                                class="fa-solid fa-pen-to-square"></i></button></a>
+                                    <a class="boton_dashboard"
+                                        href="/products/_dashboard"><button><i
+                                                class="fa-regular fa-trash-can"></i></button></a>
+                                </td>
+                                <div>
+                                </tr>
+                                <% })%>
+                            </tbody>
+                        </table>
+                    </main>
+                </body>
+            </html>
