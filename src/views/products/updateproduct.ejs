@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs')%> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src="https://kit.fontawesome.com/cbbf860933.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b99d7ed5f9.js" crossorigin="anonymous"></script>
+    <title><%=title%></title>
+</head>
+<body>
+    <%- include('../partials/header.ejs')%>  
+    <main class="registro_main">
+        <section class="registro_main_titulos">
+            <h1>Editar Producto</h1>
+        </section>
+        <section class="section_registro_main_formulario_account">
+            <form action="/product/updateproduct" method="PUT" class="registro_main_formulario_account">
+                <label for="nombre">NOMBRE:</label>
+                <input type="text" name="nombre" placeholder="">
+                <label for="descripcion">DESCRIPCION:</label >
+                <textarea rows="8" name="descripcion" placeholder=""></textarea>
+                <label for="precio">PRECIO:</label >
+                <input type="number" name="precio" placeholder="">
+                <label for="marca">MARCA:</label>
+                <input type="text" name="marca" placeholder="" required>
+                <label for="categoria">CATEGORIA:</label>
+                <input type="text" name="categoria" placeholder="" required>
+                <label for="imagen">imagen:</label>
+                <input type="file" name="imagen" placeholder="" required>
+                <div class="registro_main_botones_account">
+                    <button type="submit">EDITAR</button>
+                    <button type="reset">LIMPIAR</button>
+                </div>
+            </form>
+        </section>
+        </main>
+         <%- include('../partials/footer.ejs')%>     
+</body>
+</html>

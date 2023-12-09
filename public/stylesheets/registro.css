@@ -33,8 +33,8 @@ font-size: 12px;
 }
 .section_registro_main_formulario_account {
 padding: 5%;
-display: flex;
-justify-content: center;
+/* display: flex;
+justify-content: center; */
 }
 
 .registro_main form {
@@ -62,13 +62,16 @@ justify-content: center;
     margin-top: 7px;
 }
 
-.registro_main_formulario_account input {
+.registro_main_formulario_account input, textarea {
     border:1px solid var(--Verde);
     padding: 2%;
-
-    
-
 }
+
+.registro_main_formulario_account textarea {
+
+resize: none;
+
+}  
 .registro_main_formulario_account input::placeholder {
 font-style: italic;
 font-size: 12px;
