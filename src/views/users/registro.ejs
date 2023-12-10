@@ -1,0 +1,39 @@
+<%- include("./partials/head.ejs")  %>
+
+<body>
+    
+    <%- include('../partials/header.ejs') %>
+
+    <main class="registro_main">
+        <section class="registro_main_titulos">
+            <a href="/"><p>Inicio</a>▶<a href="/users/login">Cuenta</a>▶Crear Cuenta</p>
+            <h1>Crear Cuenta</h1>
+        </section>
+        <p class="registro_main_titulos_account">¿Ya ténes una cuenta? <a href="/users/login">Iniciá Sesión</a></p>
+        <section class="section_registro_main_formulario_account">
+            <form action="/users/registro" method="post" class="registro_main_formulario_account">
+                <label for="nombre">NOMBRE:</label>
+                <input type="text" name="nombre" placeholder="ej: Roberto Carlos">
+                <label for="email">E-MAIL:</label >
+                <input type="email" name="email" placeholder="ej: tumail@email.com" required>
+                <label for="telefono">TELÉFONO:</label >
+                <input type="tel" name="apellido" placeholder="ej:1122334455">
+                <label for="password">CONTRASEÑA:</label>
+                <input type="password" name="password" placeholder="●●●●●●●●" required>
+                <label for="password">REPETIR CONTRASEÑA:</label>
+                <input type="password" name="password" placeholder="●●●●●●●●" required>
+                
+                <div class="g-recaptcha" data-sitekey="6LeSXBMpAAAAANooS21qTPO1k_ga29vmHPZm9CQI"></div>
+
+                <div class="registro_main_botones_account">
+                    <button type="submit">CREAR CUENTA</button>
+                    <button type="reset">BORRAR FORMULARIO</button>
+                </div>
+            </form>
+        </section>
+        <p class="registro_main_titulos_account">¿Ya ténes una cuenta? <a href="/users/login">Iniciá Sesión</a></p>
+    </main>
+    
+    <%- include('./partials/footer.ejs')%>  
+</body>
+</html>

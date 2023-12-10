@@ -1,0 +1,59 @@
+<%- include("./partials/head.ejs")  %>
+
+<body>
+
+    <%- include('../partials/header.ejs') %>
+
+    <main class="main">
+
+    <h1 class="INGRESA">INGRESA</h1>
+
+        <form action="/users/login" method="post" class="formulario__general">
+        <div  class="form">
+        <div  class="opciones-registro1">
+            <input class="input-registro" type="email" placeholder="correo electronico" />
+        </div>
+        </div>
+        <div  class="form">
+        
+        <div  class="opciones-registro1">
+            <input  class="input-registro" type="password" placeholder="contraseña" />
+            <i class=" eye fa-regular fa-eye-slash"></i>
+        </div>
+        </div>
+        
+        <div  class="form">
+        <div  class="opciones-registro1">
+            <button type="submit" class="inicio-reg-hijo">
+                INGRESAR
+            </button>
+            </div>
+        </div>
+    
+    <div class="form">
+        <div  class="opciones-registro1">
+            <a href="/users/registro"></a><button class="inicio-reg-hijo"> 
+                REGISTRAME
+            </button></a>
+            </div>
+    </div>
+    </form>
+
+    <form>
+        
+    <div class="opciones-de-registro">
+        <a href="/users/registro"> Crear Cuenta </a> 
+    
+        <a href=""> ¿olvidó su contraseña? </a>
+    </div>
+    </form>
+
+    <div class="g-recaptcha" data-sitekey="6LeSXBMpAAAAANooS21qTPO1k_ga29vmHPZm9CQI"></div>
+    <br/>
+
+
+</main>
+
+<%- include('./partials/footer.ejs')%>  
+</body>
+</html>

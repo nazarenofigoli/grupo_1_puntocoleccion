@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src="https://kit.fontawesome.com/cbbf860933.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b99d7ed5f9.js" crossorigin="anonymous"></script>
+    <title><%=title%></title>
+</head>
+
+<body>
+    
+    <%- include('../partials/header.ejs') %>
+
+    <h1 class="cargaProducto__titulo">Formulario de carga de producto</h1>
+
+<form class="cargaProducto__formulario" action="/producto" method="post">
+
+        <div class="cargaProducto__contenedor__formulario">
+    <input type="text" name="nombre" placeholder="Nombre de producto">
+    <input type="file" name="imagen">
+    <textarea name="descripcion" placeholder="Agregue una breve descripción"></textarea>
+    <input type="text" name="marca" placeholder="Marca">
+    <input type="text" name="categoria" placeholder="Categoría">
+    <input type="number" name="precio" placeholder="Precio">
+
+
+    <div class="cargaProducto__contenedor__buton__enviar" >
+        <a  href="/"><button type="submit" value="Enviar">Enviar</button></a>
+        <a href="/"> <button type="reset" value="Borrar">Borrar</button></a>
+    </div>
+
+</div>
+</form>
+</body>
+</html>

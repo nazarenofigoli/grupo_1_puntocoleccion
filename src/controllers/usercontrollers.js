@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const userControllers = {
-    login: (req,res)=>  res.render('login', {title:'Login'}),
+    login: (req,res)=>  res.render('users/login', {title:'Login'}),
     registro: (req,res)=>  res.render('registro', {title:'Registro'}),
 
     createUsers:(req,res)=> {
