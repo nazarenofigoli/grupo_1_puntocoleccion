@@ -8,6 +8,4 @@ router.post('/registro', userControllers.createUsers);
 router.post('/login', userControllers.createLogueo);
 
 
-
-
 module.exports = router;
