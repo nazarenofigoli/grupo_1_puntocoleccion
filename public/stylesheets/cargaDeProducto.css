@@ -50,7 +50,11 @@
         gap: 10px;
         padding: 5px;
     }
-
+    .cargaProducto__contenedor__buton__enviar {
+        padding: 10px;
+        gap: 10px;
+        
+    }
 
 }
 
@@ -68,5 +72,9 @@
     justify-content: center;
     width: 100%;
 }
-
+.cargaProducto__contenedor__buton__enviar {
+    padding: 10px;
+    gap: 10px;
+    
+}
 }
