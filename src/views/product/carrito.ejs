@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script
+      src="https://kit.fontawesome.com/cbbf860933.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Punto Colección carrito</title>
+  </head>
+  <body>
+    
+    <%- include('../partials/header.ejs') %>
+
+    <main class="carrito-main">
+
+    <div class="carrito-query-producto-enlaces">
+
+        <section class="carrito-producto-cantidad">
+          
+          <div class="carrito-producto"><h5>PRODUCTO</h5></div>
+
+          <div class="carrito-3-pct">
+          <h5 class="carrito-h5-ocultar">PRECIO</h5>
+          <h5>CANTIDAD</h5>
+          <h5 class="carrito-h5-ocultar">TOTAL</h5></div>
+        </section>
+        <hr class="carrito-linea" />
+
+        <section class="carrito-section">
+        
+          <article class="carrito-accesorio-descripcion-total">
+            <a href=""><i class="fa-solid fa-circle-xmark"></i></a>
+            <img src="/img/naruto.jpeg" alt="producto" width="100%" />
+
+            <div class="carrito-loren-precio">
+              <p>Naruto Shippuden-<br>Naruto Uzumaki Good Smile</p>
+              <h4 class="carrito-precio-movile">1x00.000,00</h4>
+            </div>
+
+            <h4 class="carrito-precio-query">00.000,00</h4>
+
+            <input type="button" value="-1+" />
+
+            <h4 class="carrito-precio-query">00.000,00</h4>
+          </article>
+          
+          <hr class="carrito-linea" />
+
+          <article class="carrito-accesorio-descripcion-total">
+            <a href=""><i class="fa-solid fa-circle-xmark"></i></a>
+            <img src="/img/naruto.jpeg" alt="producto" width="100%" />
+            <div class="carrito-loren-precio">
+              <p>Naruto Shippuden-<br>Naruto Uzumaki Good Smile</p>
+              <h4 class="carrito-precio-movile">1x00.000,00</h4>
+            </div>
+
+            <h4 class="carrito-precio-query">00.000,00</h4>
+
+            <input type="button" value="-1+" />
+
+            <h4 class="carrito-precio-query">00.000,00</h4>
+          </article>
+          <hr class="carrito-linea" />
+        </section>
+
+        <section>
+          <nav class="carrito-nav">
+            <ul>
+              <li>
+                <a class="carrito-nav-seguir" href="/"
+                  ><h5>SEGUIR COMPRANDO</h5></a
+                >
+                <a class="carrito-nav-actualizar" href="/product/carrito"
+                  ><h5>ACTUALIZAR CARRITO</h5></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+
+      <section class="carrito-caja-total">
+        <article class="carrito-caja-total-h5">
+          <div class="carrito-h5">
+            <h5>TOTAL DEL PRODUCTO</h5>
+          </div>
+        </article>
+
+        <div class="carrito-subtotal">
+          <p>Subtotal</p>
+          <p>$00.000,00</p>
+        </div>
+        <hr class="carrito-linea" />
+
+        <div class="carrito-envio">
+          <p>Envío</p>
+        </div>
+
+        <article class="carrito-detalle-compra">
+          <div class="carrito-form-definitivo">
+            <form class="carrito-form1">
+              <input type="radio" id="si" name="Precío" value="Si" />
+              <label for="si">Precío fijo: $00.000,00</label>
+            </form>
+            <br />
+
+            <form class="carrito-form2">
+              <input type="radio" id="si" name="Retirar" value="Si" />
+              <label for="si">Retirar en el local</label>
+            </form>
+          </div>
+
+          <div class="carrito-cambiar-enviar">
+            <nav>
+              <p>Enviar a</p>
+              <a href="">cambiar dirección</a>
+            </nav>
+          </div>
+          <hr class="carrito-linea" />
+
+          <div class="carrito-precio-total">
+            <p>Total</p>
+            <p>$00.000,00</p>
+          </div>
+        </article>
+
+        <div class="carrito-finalizar">
+          <a href="">IR A FINALIZAR COMPRA</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section class="footer_section_parte1">
+        <article class="footer_section_article">
+          <div class="footer_section_article_titulos">
+            <hr class="linea" />
+            <h4>síguenos</h4>
+            <hr class="linea" />
+          </div>
+          <ul>
+            <li>
+              <a href="" target="_blank"
+                ><i class="fa-brands fa-instagram"></i>
+                <p>punto_coleccion</p>
+                <p></p
+              ></a>
+            </li>
+            <li>
+              <a href="" target="_blank"
+                ><i class="fa-brands fa-square-facebook"></i>
+                <p>puntocoleccion</p></a
+              >
+            </li>
+            <li>
+              <a href="" target="_blank"
+                ><i class="fa-brands fa-twitter"></i>
+                <p>@puntonoticias</p></a
+              >
+            </li>
+          </ul>
+        </article>
+
+        <article class="footer_section_article">
+          <div class="footer_section_article_titulos">
+            <hr class="linea2" />
+            <h4>marcas destacadas</h4>
+            <hr class="linea2" />
+          </div>
+          <div class="footer_article_marcas_descatadas">
+            <img src="/img/pop!.png" />
+            <img src="/img/banpresto.png" />
+            <img src="/img/tsume.jpeg" />
+            <img src="/img/bandai jpg.jpg" />
+            <img src="/img/good-smile.png" />
+          </div>
+        </article>
+
+        <article class="footer_section_article">
+          <div class="footer_section_article_titulos">
+            <hr class="linea" />
+            <h4>ayuda</h4>
+            <hr class="linea" />
+          </div>
+          <ul>
+            <li><a href="">La Empresa</a></li>
+            <li><a href="">Preguntas Frecuentes</a></li>
+            <li><a href="">Avisos Legales</a></li>
+            <li><a href="">Contáctenos</a></li>
+          </ul>
+        </article>
+      </section>
+      <section class="footer_section_parte2">
+        <img src="/img/LogoP-footer.png" alt="Logo" />
+        <div class="footer_section_derechos_contactos">
+          <p>Copyright 2023©Punto Colección-Todos los derechos reservados</p>
+          <p>
+            Contacto:<i class="fa-brands fa-whatsapp"></i>11 76543234<i
+              class="fa-solid fa-at"
+            ></i
+            >contacto@puntocoleccion.com
+          </p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
