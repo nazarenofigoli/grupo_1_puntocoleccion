@@ -72,7 +72,7 @@ Se comezo la reunion con todos los integrantes via meet,(videollamada), implemen
 *Dejar fuera las discuciones o temas que no esten dentro del tema del trabajo.
 
 
----------------------------------------------------------------------------------------
+
 
 #Retrospectiva Sprint 2
 
@@ -98,7 +98,7 @@ tareas más dinámicamente para optimizar el tiempo. Comunicarnos de la mejor
 manera posible y con claridad para no generar confusiones o incomodidad en los 
 demás. Implementar mas Daylis. En caso de que haya malos entendidos, resolverlo de forma civilizada escuchando y respetando a la otra persona.
 	
-3. Hacer menos:----
+3. Hacer menos:Entrar en dialogos que no aportan al proyecto.
 
 
 	
