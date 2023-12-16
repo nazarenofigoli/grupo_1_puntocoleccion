@@ -1,0 +1,113 @@
+.body_dashboard{
+    display: flex;
+    flex-direction: column;
+}
+.header_general_dashboard{
+    height: auto;
+}
+.main_dashboard {
+    width: 85%;
+}
+.aside_dashboard{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(202, 196, 196, 0.39);
+    gap: 24px;
+    width: 9%;
+    align-items: center;
+    font-size: 20px;
+    justify-content: center;
+}
+.contenedor2_dasboard{
+    display: flex;
+    margin-top: 1%;
+    padding: 2px;
+}
+.logo_barraMenu_dashboard{
+    width: 39px;
+}
+.titulo_header_dashboard{
+    border: 3px solid var(--Negro);
+    background-color: var(--Verde);
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.tabla_dashboard {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 43vw;
+    font-size: 38%;
+    border: 2px #000 solid;
+}
+.boton_dashboard i{
+    font-size: 17px;
+    background-color: #19b984;
+    padding: 2px
+}
+.head_tabla_dashboard {
+    border: solid 2px rgb(0, 0, 0);
+}
+.body_tabla_dashboard {
+    border: solid 2px rgb(0, 0, 0);
+    width: 70%
+}
+.body_tabla_dashboard tr td th{
+    border: 1px solid #19b984;
+    text-align: left;
+    padding: 8px;
+    /* border: solid 2px rgb(0, 0, 0); */
+}
+.divisor_dashboard{
+    color:#19b984 2px solid;
+}
+
+.boton_dashboard_tabla{
+    font-size: 17px;
+    background-color: #19b984;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 4px;
+    font-weight: bold;
+}
+td{
+    font-weight: 10px;
+}
+th{
+    background-color:#64f5c5 ;
+}
+/* transform and animations  */
+.boton_dashboard i{
+    background-color: var(--Verde);
+    border-color:var(--Negro);
+    color: var(--Negro);
+}
+@media ( min-width:768px){
+.tabla_dashboard {
+    border-collapse: collapse;
+    width: 90vw;
+    height: auto;
+    font-size: 73%;
+    border: 2px #000 solid;
+}
+}
+@media ( min-width:1024px){
+.tabla_dashboard {   
+    font-size: 80%;
+}
+.boton_dashboard i {
+font-size: 20px;
+    background-color: #19b984;
+    padding: 4px;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-weight: bold;
+}
+}

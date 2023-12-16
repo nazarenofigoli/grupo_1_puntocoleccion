@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <%- include('../partials/head.ejs')%> 
+    <body class="body_dashboard">
+        <section class="contenedor1_dasboard">
+            <%- include('../partials/header.ejs') %>
+        </section>
+        <section class="contenedor2_dasboard">
+        <aside class="aside_dashboard">
+                <!-- <a href="../index.ejs" class="logo_barraMenu_dashboard"><img src="/img/LogoP-footer.png" alt=" logo_puntoColeccion"></a> -->
+                <a class="boton_dashboard" href="../login.ejs"><button><i class="fa-regular fa-user "></i></button></a>
+                <a class="boton_dashboard" href="../index.ejsgi"><button><i class="fa-brands fa-searchengin"></i></button></a>
+                <a class="boton_dashboard" href="./cargaDeProducto.ejs"><button><i class="fa-solid fa-plus"></i></button></a>
+                <a class="boton_dashboard" href="./updateproduct.ejs"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
+                <a class="boton_dashboard" href="./dashboard.ejs"><button><i class="fa-regular fa-trash-can"></i></button></a>
+            </aside>
+            <main class=" main_dashboard">
+                <table class="tabla_dashboard">
+                    <thead class="head_tabla_dashboard">
+                        <tr class="sections_head_tabla_dashboard">
+                            <div class="div_head_tabla_dashboard">
+                                <th>ID</th>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Precio</th>
+                                <th>Marca</th>
+                                <th>Categoría</th>
+                                <th>Acciones</th> 
+                            </div>
+                        </tr>
+                    </thead>
+                    <tbody class="body_tabla_dashboard">
+                        <% products.forEach(product=>{%>
+                        <tr>
+                                <td><%= product.id%></td>
+                                <td><%= product.imagen%></td>
+                                <td><%= product.nombre%></td>
+                                <td><%= product.descripcion%></td>
+                                <td><%= product.precio%></td>
+                                <td><%= product.marca%></td>
+                                <td><%= product.categoria%></td>
+                                <td>
+                                    <a class="boton_dashboard_tabla"
+                                        href="updateproduct.ejs"><button><i
+                                                class="fa-solid fa-pen-to-square"></i></button></a>
+                                    <a class="boton_dashboard_tabla"
+                                        href="dashboard.ejs"><button><i
+                                                class="fa-regular fa-trash-can"></i></button></a>
+                                </td>                                
+                                </tr>
+                                <% }) %>
+                            </tbody>
+                        </section>
+                        </table>
+                    </main>
+                </body>
+            </html>
