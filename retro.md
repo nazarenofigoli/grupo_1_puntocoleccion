@@ -112,13 +112,13 @@ demás. Implementar mas Daylis. En caso de que haya malos entendidos, resolverlo
     21:30am
 
 1. Comenzar Hacer:
-*Acordar en equipo y anticipar la organización de los tiempos personales para cumplir con cada sprint
+Acordar en equipo y anticipar la organización de los tiempos personales para cumplir con cada sprint
 
 2. Hacer mas:
-*Reorganizar los tiempos ya establecidos para la realización del trabajo, ya que ahora somos dos integrantes y requiere de mayor inversión de tiempo
+Reorganizar los tiempos ya establecidos para la realización del trabajo, ya que ahora somos dos integrantes y requiere de mayor inversión de tiempo
 
 3. Hacer menos:-------
         
 
 4. Dejar de hacer:
-*Perder tiempo o preocuparse por problemas externos al trabajo o a lo que demanda la formación del curso
+Perder tiempo o preocuparse por problemas externos al trabajo o a lo que demanda la formación del curso
