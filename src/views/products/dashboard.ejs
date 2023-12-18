@@ -8,11 +8,11 @@
         <section class="contenedor2_dasboard">
         <aside class="aside_dashboard">
                 <!-- <a href="../index.ejs" class="logo_barraMenu_dashboard"><img src="/img/LogoP-footer.png" alt=" logo_puntoColeccion"></a> -->
-                <a class="boton_dashboard" href="../login.ejs"><button><i class="fa-regular fa-user "></i></button></a>
-                <a class="boton_dashboard" href="../index.ejsgi"><button><i class="fa-brands fa-searchengin"></i></button></a>
-                <a class="boton_dashboard" href="./cargaDeProducto.ejs"><button><i class="fa-solid fa-plus"></i></button></a>
-                <a class="boton_dashboard" href="./updateproduct.ejs"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
-                <a class="boton_dashboard" href="./dashboard.ejs"><button><i class="fa-regular fa-trash-can"></i></button></a>
+                <a class="boton_dashboard" href="/users/login"><button><i class="fa-regular fa-user "></i></button></a>
+                <a class="boton_dashboard" href="/"><button><i class="fa-brands fa-searchengin"></i></button></a>
+                <a class="boton_dashboard" href="/product/cargaDeProducto"><button><i class="fa-solid fa-plus"></i></button></a>
+                <a class="boton_dashboard" href="/product/updateproduct"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
+                <a class="boton_dashboard" href="/product/dashboard"><button><i class="fa-regular fa-trash-can"></i></button></a>
             </aside>
             <main class=" main_dashboard">
                 <table class="tabla_dashboard">
@@ -42,10 +42,10 @@
                                 <td><%= product.categoria%></td>
                                 <td>
                                     <a class="boton_dashboard_tabla"
-                                        href="updateproduct.ejs"><button><i
+                                        href="/product/updateproduct"><button><i
                                                 class="fa-solid fa-pen-to-square"></i></button></a>
                                     <a class="boton_dashboard_tabla"
-                                        href="dashboard.ejs"><button><i
+                                        href="/product/dashboard"><button><i
                                                 class="fa-regular fa-trash-can"></i></button></a>
                                 </td>                                
                                 </tr>
