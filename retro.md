@@ -99,11 +99,26 @@ manera posible y con claridad para no generar confusiones o incomodidad en los
 demás. Implementar mas Daylis. En caso de que haya malos entendidos, resolverlo de forma civilizada escuchando y respetando a la otra persona.
 	
 3. Hacer menos:Entrar en dialogos que no aportan al proyecto.
-
-
 	
 4. Dejar de Hacer: faltarnos el respeto, u hacer comentarios que pueden herir a otros.
 
-
-	
 5. Seguir Haciendo: Continuar trabajando como hasta ahora en lo que refiere a los puntos del trabajo y resolución de incidencias.
+
+
+#Retrospectiva Sprint 3
+
+# Fecha de reunion:
+ * Viernes 15/12/2023
+    21:30am
+
+1. Comenzar Hacer:
+*Acordar en equipo y anticipar la organización de los tiempos personales para cumplir con cada sprint
+
+2. Hacer mas:
+*Reorganizar los tiempos ya establecidos para la realización del trabajo, ya que ahora somos dos integrantes y requiere de mayor inversión de tiempo
+
+3. Hacer menos:-------
+        
+
+4. Dejar de hacer:
+*Perder tiempo o preocuparse por problemas externos al trabajo o a lo que demanda la formación del curso
