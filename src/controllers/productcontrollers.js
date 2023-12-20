@@ -4,6 +4,7 @@ const json = fs.readFileSync(path.join(__dirname,"../database/product.json"),"ut
 const products = JSON.parse(json);
 
 
+
 const productControllers = {
     detalleP: (req,res)=>  res.render('products/detalleP', {title:'Detalle de producto'}),
     carrito: (req,res)=>  res.render('products/carrito', {title:'Carrito'}),
@@ -11,6 +12,8 @@ const productControllers = {
     cargaDeProducto:  (req,res)=>  res.render('products/cargaDeProducto', {title:'cargaDeProducto'}),
 
     dashboard:(req, res) => {
+        const json = fs.readFileSync(path.join(__dirname,"../database/product.json"),"utf-8")
+        const products = JSON.parse(json);
         res.render('products/dashboard',{title:"Dashboard",products});
     },
 
@@ -19,9 +22,9 @@ const productControllers = {
 		const { id } = req.params;
 		const nuevoArray = products.filter((product) => product.id !== parseInt(id));
 		const json = JSON.stringify(nuevoArray);
-		fs.writeFileSync(productsFilePath, json, "utf-8");
-		res.redirect("/products/dashboard");
-    }}
+		fs.writeFileSync(path.join(__dirname,"../database/product.json"), json, "utf-8");
+		res.redirect("/product/dashboard");
+	}}
 
 
 
