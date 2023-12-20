@@ -42,11 +42,11 @@
                                 <td><%= product.categoria%></td>
                                 <td>
                                     <a class="boton_dashboard_tabla"
-                                        href="/product/updateproduct"><button><i
-                                                class="fa-solid fa-pen-to-square"></i></button></a>
-                                    <a class="boton_dashboard_tabla"
-                                        href="/product/dashboard"><button><i
-                                                class="fa-regular fa-trash-can"></i></button></a>
+                                    href="/product/updateproduct"><button><i
+                                    class="fa-solid fa-pen-to-square"></i></button></a>
+
+                                <form class="boton_dashboard_tabla" action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                                <button><i class="fa-regular fa-trash-can"></i></button></a></form>
                                 </td>                                
                                 </tr>
                                 <% }) %>
