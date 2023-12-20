@@ -13,7 +13,15 @@ const productControllers = {
     dashboard:(req, res) => {
         res.render('products/dashboard',{title:"Dashboard",products});
     },
-}
+
+
+    productDelete: (req, res) => {
+		const { id } = req.params;
+		const nuevoArray = products.filter((product) => product.id !== parseInt(id));
+		const json = JSON.stringify(nuevoArray);
+		fs.writeFileSync(productsFilePath, json, "utf-8");
+		res.redirect("/products/dashboard");
+    }}
 
 
 
