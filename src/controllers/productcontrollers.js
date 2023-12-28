@@ -5,6 +5,8 @@ const products = JSON.parse(json);
 
 
 const productControllers = {
+
+    listadoproductos: (req,res)=> res.render('products/productos',{title: 'Todos los productos',products}),
     detalleP: (req,res)=>  res.render('products/detalleP', {title:'Detalle de producto'}),
     carrito: (req,res)=>  res.render('products/carrito', {title:'Carrito'}),
     update: (req,res)=> res.render ('products/updateproduct',{title:'Editar Producto'}),
@@ -13,6 +15,7 @@ const productControllers = {
     dashboard:(req, res) => {
         res.render('products/dashboard',{title:"Dashboard",products});
     },
+
 }
 
 

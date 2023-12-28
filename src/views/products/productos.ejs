@@ -1,0 +1,44 @@
+<%- include('../partials/head.ejs')%> 
+<body>
+    <%- include('../partials/header.ejs') %>
+
+
+    <main>
+
+      
+            <section class="main_index_section_titulos"><h4>Todos los Productos</h4></section>
+
+            
+
+            <section class="main_index_section_tendecias">
+
+                <% products.forEach( product=>  {%>
+                
+                <section class="main_index_section_article_division">
+                <article class="main_index_section_articulo">
+                <a href="/product/detalleP"><img src="/img/productos/<%=product.imagen%>" class="main_imagen_producto"></a>
+                    <div class="main_index_descripcion-precio">
+                    <a href="/product/detalleP"><h5 class="main_descripcion"><%=product.descripcion%></h5>
+                    <p class="main_precio">$ <%=product.precio%></p>
+                    <p class="main_cuotas">10 cuotas sin interés de $ <%=product.precio / 10 %></p></a>
+                    <div class="main_index_section_botones">
+                    <button class="main_index_botones">Comprar</button> 
+                    <button class="main_index_botones">Agregar al <i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+                </div>
+                </article>
+               
+            </section>
+            <% }) %>
+        </section>
+            
+            
+
+        </main>
+        
+
+<%- include('../partials/footer.ejs') %>
+
+    
+</body>
+</html>

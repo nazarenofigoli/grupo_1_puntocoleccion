@@ -3,6 +3,7 @@ var router = express.Router();
 
 const productControllers = require('../controllers/productcontrollers');
 
+router.get('/', productControllers.listadoproductos);
 router.get('/detalleP', productControllers.detalleP);
 router.get('/carrito', productControllers.carrito);
 router.get('/updateproduct',productControllers.update)

@@ -15,7 +15,7 @@
         "precio": "1200",
         "marca": "Bandai",
         "categoria": "figura",
-        "imagen":"img--2hq.webp"
+        "imagen":"naruto.jpeg"
     },
     {
         "id": "3",
@@ -33,7 +33,7 @@
         "precio": "1400",
         "marca": "Bandai-hobby",
         "categoria": "figura",
-        "imagen":"img--2hq.webp "
+        "imagen":"naruto.jpeg"
     },
     {
         "id": "5",
@@ -51,6 +51,6 @@
         "precio": "1600",
         "marca": "GoodSmile",
         "categoria": "figura",
-        "imagen":"img--2hq.webp "
+        "imagen":"naruto.jpeg"
     }
     ]
