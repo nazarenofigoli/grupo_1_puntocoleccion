@@ -52,5 +52,32 @@
         "marca": "GoodSmile",
         "categoria":  "Destacados",
         "imagen":"naruto.jpeg"
+    },
+    {
+        "id": 7,
+        "nombre": "producto 6",
+        "descripcion": "lorem impsum dolor sit amet",
+        "precio": "1600",
+        "marca": "GoodSmile",
+        "categoria":  "Destacados",
+        "imagen":"naruto.jpeg"
+    },
+    {
+        "id": 8,
+        "nombre": "producto 6",
+        "descripcion": "lorem impsum dolor sit amet",
+        "precio": "1600",
+        "marca": "GoodSmile",
+        "categoria":  "Tendencia y oferta",
+        "imagen":"naruto.jpeg"
+    },
+    {
+        "id": 9,
+        "nombre": "producto 6",
+        "descripcion": "lorem impsum dolor sit amet",
+        "precio": "1600",
+        "marca": "GoodSmile",
+        "categoria":  "Tendencia y oferta",
+        "imagen":"naruto.jpeg"
     }
-    ]
+]
