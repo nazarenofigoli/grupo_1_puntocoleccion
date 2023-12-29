@@ -1,27 +1,25 @@
     <%- include('../partials/head.ejs')%> 
-<body>
-    
+    <body>
     <%- include('../partials/header.ejs') %>
 
     <h1 class="cargaProducto__titulo"><%= product ? "Edicion de producto" : "Crea un producto"%></h1>
 
     <form action="<%= product ? `/product/updateproduct/${product.id}?_method=PUT` : '/product/cargaDeProducto' %>" method="post" class="cargaProducto__formulario">
     <div class="cargaProducto__contenedor__formulario">
-            
-    <input type="text" name="nombre" value="<%= product ? product.nombre : "Nombre"; %>">
-    <input type="file" name="imagen">
-    <input name="descripcion" value="<%= product ? product.descripcion : "Descripción"; %>"></input>
-    <input type="text" name="marca" value="<%= product ? product.marca : "Marca"; %>">
-    <input type="text" name="categoria" value="<%= product ? product.categoria : "Categoria"; %>">
-    <input type="number" name="precio" value="<%= product ? product.precio : "Precio"; %>">
+        <input type="text" name="nombre" value="<%= product ? product.nombre : "Nombre"; %>">
+        <input type="file" name="imagen">
+        <input name="descripcion" value="<%= product ? product.descripcion : "Descripción"; %>"></input>
+        <input type="text" name="marca" value="<%= product ? product.marca : "Marca"; %>">
+        <input type="text" name="categoria" value="<%= product ? product.categoria : "Categoria"; %>">
+        <input type="number" name="precio" value="<%= product ? product.precio : "Precio"; %>">
 
 
-    <div class="cargaProducto__contenedor__buton__enviar" >
-        <button type="submit" value="Enviar">Enviar</button></a>
-        <button type="reset" value="Borrar">Borrar</button></a>
+        <div class="cargaProducto__contenedor__buton__enviar" >
+            <button type="submit" value="Enviar">Enviar</button></a>
+            <button type="reset" value="Borrar">Borrar</button></a>
+        </div>
+
     </div>
-
-</div>
-</form>
-</body>
+    </form>
+    </body>
 </html>

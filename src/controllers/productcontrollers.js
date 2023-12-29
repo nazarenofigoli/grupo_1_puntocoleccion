@@ -37,7 +37,7 @@ const productControllers = {
       fs.writeFileSync(path.join(__dirname,"../database/product.json"),json,"utf-8");
       res.redirect('/product/dashboard');
     },
-    cargaDeProducto:(req,res)=>  res.render('products/cargaDeProducto', {title:'cargaDeProducto'}),
+    cargaDeProducto:(req,res)=>  res.render('products/cargaDeProducto', {title:'cargaDeProducto', product: null}),
     crearProducto: (req,res)=> {
 
       const product ={
