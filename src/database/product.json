@@ -46,38 +46,29 @@
     },
     {
         "id": 6,
-        "nombre": "producto 7",
-        "descripcion": "lorem impsum dolor sit amet",
-        "precio": "16000",
-        "categoria": "Destacados",
-        "marca": "GoodSmile",
-        "imagen": "1703960784312.png"
+        "nombre": "Batman",
+        "descripcion": "El fantasma de la noche",
+        "precio": 5000,
+        "categoria": "Tendencia y oferta",
+        "marca": "Marca",
+        "imagen": "1703962923690.webp"
     },
     {
         "id": 7,
-        "nombre": "producto 7",
-        "descripcion": "lorem impsum dolor sit amet",
-        "precio": "16000",
-        "categoria": "Destacados",
-        "marca": "GoodSmile",
-        "imagen": "naruto.jpg"
+        "nombre": "goku",
+        "descripcion": "hola soy goku",
+        "precio": 2000,
+        "categoria": "Tendencia y oferta",
+        "marca": "Marca",
+        "imagen": "1703963118073.webp"
     },
     {
         "id": 8,
-        "nombre": "Lucio",
-        "descripcion": "Unicio",
-        "precio": 1000000,
+        "nombre": "Digimon agumon",
+        "descripcion": "Descripcgfión",
+        "precio": 5442,
         "categoria": "Destacados",
-        "marca": "Golden",
-        "imagen": "1703961330832.PNG"
-    },
-    {
-        "id": 9,
-        "nombre": "Nombre",
-        "descripcion": "Descripción",
-        "precio": 150000,
-        "categoria": "Categoria",
         "marca": "Marca",
-        "imagen": "1703961635956.jpg"
+        "imagen": "1703963367175.webp"
     }
 ]
