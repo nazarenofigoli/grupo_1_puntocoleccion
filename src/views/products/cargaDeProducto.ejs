@@ -4,10 +4,10 @@
 
     <h1 class="cargaProducto__titulo"><%= product ? "Edicion de producto" : "Crea un producto"%></h1>
 
-    <form action="<%= product ? `/product/updateproduct/${product.id}?_method=PUT` : '/product/cargaDeProducto' %>" method="post" class="cargaProducto__formulario">
+    <form action="<%= product ? `/product/updateproduct/${product.id}?_method=PUT` : '/product/cargaDeProducto' %>" method="post" class="cargaProducto__formulario" enctype="multipart/form-data">
     <div class="cargaProducto__contenedor__formulario">
         <input type="text" name="nombre" value="<%= product ? product.nombre : "Nombre"; %>">
-        <input type="file" name="imagen">
+        <input type="file" name="imagen" accept = "image/*">
         <input name="descripcion" value="<%= product ? product.descripcion : "Descripción"; %>"></input>
         <input type="text" name="marca" value="<%= product ? product.marca : "Marca"; %>">
         <input type="text" name="categoria" value="<%= product ? product.categoria : "Categoria"; %>">

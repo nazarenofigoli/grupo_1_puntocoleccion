@@ -17,7 +17,7 @@ const productControllers = {
     editar: (req, res) => {
       const {id}= req.params;
       console.log(id);
-      const {nombre,descripcion,precio,marca,categoria,imagen} = req.body;
+      const {nombre,descripcion,precio,marca,categoria} = req.body;
       console.log(nombre);
       const nuevoArray = products.map(product => {
         console.log(product.id+": "+JSON.stringify(product))
@@ -27,7 +27,7 @@ const productControllers = {
           product.precio = precio;
           product.marca = marca.trim();
           product.categoria = categoria.trim();
-          product.imagen = imagen ? imagen : product.imagen;
+          product.imagen = req.file ? req.file.filename : product.imagen;
         }
         return product;
       });
@@ -48,7 +48,7 @@ const productControllers = {
       precio: +req.body.precio,
       categoria: req.body.categoria.trim(),
       marca: req.body.marca.trim(),
-      imagen: "no-image.jpg"
+      imagen: req.file ? req.file.filename : "naruto.jpg"
     } 
       
       products.push(product);
