@@ -1,56 +1,83 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "nombre": "producto 1",
         "descripcion": "lorem impsum dolor sit amet",
         "precio": "1000",
         "marca": "Pop",
-        "categoria": "funko",
+        "categoria": "Tendencia y oferta",
         "imagen":"naruto.jpeg"
     },
     {
-        "id": "2",
+        "id": 2,
         "nombre": "producto 2",
         "descripcion": "lorem impsum dolor sit amet",
         "precio": "1200",
         "marca": "Bandai",
-        "categoria": "figura",
-        "imagen":"img--2hq.webp"
+        "categoria":"Tendencia y oferta",
+        "imagen":"naruto.jpeg"
     },
     {
-        "id": "3",
+        "id": 3,
         "nombre": "producto 3",
         "descripcion": "lorem impsum dolor sit amet",
         "precio": "1300",
         "marca": "banpresto",
-        "categoria": "figura",
+        "categoria": "Destacados",
         "imagen":"naruto.jpeg "
     },
     {
-        "id": "4",
+        "id": 4,
         "nombre": "producto 4",
         "descripcion": "lorem impsum dolor sit amet",
         "precio": "1400",
         "marca": "Bandai-hobby",
-        "categoria": "figura",
-        "imagen":"img--2hq.webp "
+        "categoria": "Tendencia y oferta",
+        "imagen":"naruto.jpeg"
     },
     {
-        "id": "5",
+        "id": 5,
         "nombre": "producto 5",
         "descripcion": "lorem impsum dolor sit amet",
         "precio": "1500",
         "marca": "Tsume",
-        "categoria": "figura",
+        "categoria":  "Destacados",
         "imagen":"naruto.jpeg "
     },
     {
-        "id": "6",
+        "id": 6,
         "nombre": "producto 6",
         "descripcion": "lorem impsum dolor sit amet",
         "precio": "1600",
         "marca": "GoodSmile",
-        "categoria": "figura",
-        "imagen":"img--2hq.webp "
+        "categoria":  "Destacados",
+        "imagen":"naruto.jpeg"
+    },
+    {
+        "id": 7,
+        "nombre": "producto 6",
+        "descripcion": "lorem impsum dolor sit amet",
+        "precio": "1600",
+        "marca": "GoodSmile",
+        "categoria":  "Destacados",
+        "imagen":"naruto.jpeg"
+    },
+    {
+        "id": 8,
+        "nombre": "producto 6",
+        "descripcion": "lorem impsum dolor sit amet",
+        "precio": "1600",
+        "marca": "GoodSmile",
+        "categoria":  "Tendencia y oferta",
+        "imagen":"naruto.jpeg"
+    },
+    {
+        "id": 9,
+        "nombre": "producto 6",
+        "descripcion": "lorem impsum dolor sit amet",
+        "precio": "1600",
+        "marca": "GoodSmile",
+        "categoria":  "Tendencia y oferta",
+        "imagen":"naruto.jpeg"
     }
-    ]
+]

@@ -1,11 +1,19 @@
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
+const json = fs.readFileSync(path.join(__dirname,"../database/product.json"),"utf-8")
+const products = JSON.parse(json);
 
 const indexControllers = {
-    index: (req,res)=> { res.render('index', {title:'Punto Coleccion'})}
-    
-}
-
-
+    index: (req, res) => {
+      const tendenciasYOfetas = products.filter(product => product.categoria === "Tendencia y oferta");
+      const destacados = products.filter(product => product.categoria === "Destacados");
+      res.render('index', {
+        title: 'Punto Coleccion',
+        tendenciasYOfetas,
+        destacados
+      });
+    }
+  };
 
 
 

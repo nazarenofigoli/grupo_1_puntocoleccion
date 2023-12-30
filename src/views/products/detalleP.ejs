@@ -9,12 +9,12 @@
 
             <article class="articulos-detalleP">
                 <div class="box_foto-principal">
-                    <img id="foto-principal-dp" src="/img/naruto.jpeg" alt="imagen funko">
+                    <img id="foto-principal-dp" src="/img/productos/<%= product.imagen %>" alt="imagen funko">
                 </div>
 
                 <div class="box_fotos-secund">
-                    <img id="foto-2-dp" src="/img/narutoespalda.webp" alt="imagen-funko-perfil">
-                    <img id="foto-3-dp" src="/img/narutoperfil.webp" alt="imagen-funko-perfil-2">
+                    <img id="foto-2-dp" src="/img/productos/<%= product.imagen %>" alt="imagen-funko-perfil">
+                    <img id="foto-3-dp" src="/img/productos/<%= product.imagen %>" alt="imagen-funko-perfil-2">
                 </div>
             </article>
 
@@ -26,9 +26,9 @@
                     </ul>
 
                     <div class="compras-detalleP">
-                        <h3 id="nameP">NOMBRE DE FIGURA COLECCIONABLE/MARCA</h3>
-                        <p id="precioP">$6000</p>
-                        <p id="cuotasP">12 cuotas sin interes de $xxxxx</p>
+                        <h3 id="nameP"><%= product.nombre %></h3>
+                        <p id="precioP">$ <%= product.precio %></p>
+                        <p id="cuotasP">3 cuotas sin interes de $ <%= product.precio/3 %>></p>
                         <select class="form-select" aria-label="Default select example">
                             <option selected><a>Cantidad</a></option>
                             <option value="1">1</option>

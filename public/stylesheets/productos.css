@@ -1,0 +1,93 @@
+.main-Ptodos-section-titulos h4 {
+    background-color:var(--Negro);
+    font-size: 1em;
+    width: 100%;
+    text-transform: uppercase;
+    color: var(--Blanco);
+    text-align: center;
+    padding: 2%;
+    margin-top: 2% ;
+    }
+
+.main-Ptodos-section-tendencias {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    
+}
+
+.main-Ptodos-section-article-division {
+    width: 25%; /* Muestra 4 productos por fila */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.main-Ptodos-section-articulo {
+    padding: 10px;
+    text-align: center;
+}
+
+.main-Ptodos-imagen-producto {
+    border: 1px solid #000;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    width: 90%;
+    padding: 5%;
+}
+
+.main-Ptodos-descripcion-precio {
+    border: 1px solid #000;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;  
+    margin-top: -5px;
+    width: 90%;
+    padding: 5%;
+    display: inline-block
+}
+
+
+
+.main-Ptodos-descripcion {
+    font-size: 16px;
+    margin: 5px 0;
+    color: var(--Negro);
+}
+
+.main-Ptodos-precio {
+    font-weight: bold;
+    color: var(--Negro);
+}
+
+.main-Ptodos-cuotas {
+    color:var(--Verde);
+}
+
+.main-Ptodos-section-botones {
+    margin-top: 10px;
+}
+
+.main-Ptodos-botones {
+    margin-top: 4%;
+    background-color: var(--Negro);
+    color:var(--Verde);
+    border:1px solid var(--Negro);
+    border-radius: 20px;
+    font-size: 8px;
+    padding: 3%;  
+    width: 35%;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .main-Ptodos-section-article-division {
+        width: 50%; /* Ancho completo en dispositivos de 768px o menos */
+    }
+}
+
+@media (max-width: 320px) {
+    .main-Ptodos-section-article-division {
+        width: 100%; /* Ancho completo en dispositivos de 320px o menos */
+    }
+}
