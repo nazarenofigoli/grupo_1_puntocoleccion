@@ -28,7 +28,7 @@
                     <div class="compras-detalleP">
                         <h3 id="nameP"><%= product.nombre %></h3>
                         <p id="precioP">$ <%= product.precio %></p>
-                        <p id="cuotasP">3 cuotas sin interes de $ <%= product.precio/3 %>></p>
+                        <p id="cuotasP">10 cuotas sin interes de $ <%= product.precio/10 %></p>
                         <select class="form-select" aria-label="Default select example">
                             <option selected><a>Cantidad</a></option>
                             <option value="1">1</option>
@@ -39,7 +39,7 @@
                     <button type="button" class="btn-detalleP" href="/produtc/carrito"><a>Agregar</a><i
                             class="fa-solid fa-cart-shopping" id="carrito-dp"></i></button>
                     <h5 class="h5-dp">sku:jhbdhbsdhbh<br>Categoria:Fonko,gfdsajkl.</h5>
-                    <div>
+                    <div id="detalleP-icons">
                         <i class="fa-brands fa-instagram" style="color: #000000;"></i>
                         <i class="fa-brands fa-facebook" style="color: #000000;"></i>
                         <i class="fa-brands fa-twitter" style="color: #030303;"></i>
@@ -52,6 +52,7 @@
             </section>
         </section>
         <section class="box_detalleP-info">
+            <h3 class="detalleP-final-descripcion">Descripción :</h3>
             <p class="box_detalleP-info">
                 <%= product.descripcion %>
             </p>
