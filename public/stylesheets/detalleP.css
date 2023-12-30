@@ -1,49 +1,214 @@
-.product-container {
+.main-detalleP {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height:5% ;
-    
 }
 
-.product-details {
-    text-align: center;
-    background-color:var(--Negro);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.contenedor_general_detalleP {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
 
-.product-image {
+.articulos-detalleP {
+    width: 50%;
+}
+
+.box_foto-principal img {
+    width: 100%;
     height: auto;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    width: 20%;
+    border: 1px solid var(--Negro);
+    border-radius: 20%;
 }
 
-.description {
-    color:var(--Blanco);
+.contenedor_detalle_info {
+    width: 45%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.compras-detalleP {
+    margin-bottom: 15px;
+}
+
+.form-select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.btn-detalleP {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-detalleP a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.box_fotos-secund {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    overflow: hidden; 
+}
+
+#foto-2-dp{
+    border: 1px solid var(--Negro);
+    border-radius: 20%;
+}
+
+#foto-3-dp{
+    border: 1px solid var(--Negro);
+    border-radius: 20%;
+}
+
+.box_fotos-secund img {
+    width: 48%;
+    height: auto;
+}
+
+.box_detalleP-info {
+    width: 80%;
+    margin: 20px auto;
+    font-size: 16px;
     line-height: 1.5;
+    text-align: justify;
+    color: #555;
 }
 
-.price {
+.contenedor_detalle_info {
+    width: 45%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.nav-bar-detalleP {
+    margin-bottom: 20px;
+}
+
+.nav-bar-detalleP ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar-detalleP li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.nav-bar-detalleP a {
+    text-decoration: none;
     color: var(--Verde);
     font-weight: bold;
-    font-size: 1.2em;
+}
+
+.compras-detalleP {
+    margin-bottom: 20px;
+}
+
+#nameP {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#precioP {
+    font-size: 18px;
+    color: bold var(--Negro);
+    margin-bottom: 5px;
+}
+
+#cuotasP {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.form-select {
+    width: 100%;
+    padding: 8px;
     margin-top: 10px;
 }
 
-.buy-button {
-    background-color: var(--Verde);
-    color:var(--Negro);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1em;
+.btn-detalleP {
+    background-color:var(--Negro);
+    padding: 12px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 5%;
+    font-weight: bold;
+    border-color: 1px solid #000;
 }
 
-.buy-button:hover {
-    background-color: #333;
+.h5-dp {
+    margin-top: 20px;
+    color: var(--Negro);
 }
+
+.nav-bar-detalleP i {
+    margin-right: 5px;
+    font-size: 18px;
+    color: var(--Verde);
+}
+
+.h4-dp {
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--Negro);
+}
+
+.fa-whatsapp {
+    font-size: 24px;
+    color: var(--Verde);
+}
+
+/* Mobile View (up to 320px) */
+@media (max-width: 320px) {
+    .contenedor_general_detalleP {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .articulos-detalleP,
+    .contenedor_detalle_info {
+        width: 100%;
+    }
+
+    .box_fotos-secund {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .box_fotos-secund img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .contenedor_detalle_info {
+        padding: 10px;
+    }
+
+    .nav-bar-detalleP,
+    .compras-detalleP,
+    .h5-dp,
+    .h4-dp {
+        text-align: center;
+    }
+
+    .btn-detalleP {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-select,
+    .btn-detalleP {
+        margin-top: 10px;
+    }
+}
+
