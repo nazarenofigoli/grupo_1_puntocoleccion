@@ -1,27 +1,25 @@
     <%- include('../partials/head.ejs')%> 
-<body>
-    
+    <body>
     <%- include('../partials/header.ejs') %>
 
-    <h1 class="cargaProducto__titulo">Formulario de carga de producto</h1>
+    <h1 class="cargaProducto__titulo"><%= product ? "Edicion de producto" : "Crea un producto"%></h1>
 
-<form class="cargaProducto__formulario" action="/producto" method="post">
+    <form action="<%= product ? `/product/updateproduct/${product.id}?_method=PUT` : '/product/cargaDeProducto' %>" method="post" class="cargaProducto__formulario" enctype="multipart/form-data">
+    <div class="cargaProducto__contenedor__formulario">
+        <input type="text" name="nombre" value="<%= product ? product.nombre : "Nombre"; %>">
+        <input type="file" name="imagen" accept = "image/*">
+        <input name="descripcion" value="<%= product ? product.descripcion : "Descripción"; %>"></input>
+        <input type="text" name="marca" value="<%= product ? product.marca : "Marca"; %>">
+        <input type="text" name="categoria" value="<%= product ? product.categoria : "Categoria"; %>">
+        <input type="number" name="precio" value="<%= product ? product.precio : "Precio"; %>">
 
-        <div class="cargaProducto__contenedor__formulario">
-    <input type="text" name="nombre" placeholder="Nombre de producto">
-    <input type="file" name="imagen">
-    <textarea name="descripcion" placeholder="Agregue una breve descripción"></textarea>
-    <input type="text" name="marca" placeholder="Marca">
-    <input type="text" name="categoria" placeholder="Categoría">
-    <input type="number" name="precio" placeholder="Precio">
 
+        <div class="cargaProducto__contenedor__buton__enviar" >
+            <button type="submit" value="Enviar">Enviar</button></a>
+            <button type="reset" value="Borrar">Borrar</button></a>
+        </div>
 
-    <div class="cargaProducto__contenedor__buton__enviar" >
-        <a  href="/"><button type="submit" value="Enviar">Enviar</button></a>
-        <a href="/"> <button type="reset" value="Borrar">Borrar</button></a>
     </div>
-
-</div>
-</form>
-</body>
+    </form>
+    </body>
 </html>

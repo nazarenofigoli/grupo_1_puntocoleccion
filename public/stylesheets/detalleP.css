@@ -169,6 +169,7 @@
     color: var(--Verde);
 }
 
+
 /* Mobile View (up to 320px) */
 @media (max-width: 320px) {
     .contenedor_general_detalleP {
