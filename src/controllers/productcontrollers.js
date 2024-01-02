@@ -47,10 +47,11 @@ const productControllers = {
     },
     cargaDeProducto:(req,res)=>  res.render('products/cargaDeProducto', {title:'cargaDeProducto', product: null}),
     crearProducto: (req,res)=> {
-
+    
+    
       const product ={
 
-      id: products.length  + 1,
+      id: products[products.length - 1].id  + 1,
       nombre: req.body.nombre.trim(),
       descripcion: req.body.descripcion,
       precio: +req.body.precio,
