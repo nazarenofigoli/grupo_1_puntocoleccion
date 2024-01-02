@@ -6,12 +6,18 @@
 
     <form action="<%= product ? `/product/updateproduct/${product.id}?_method=PUT` : '/product/cargaDeProducto' %>" method="post" class="cargaProducto__formulario" enctype="multipart/form-data">
     <div class="cargaProducto__contenedor__formulario">
-        <input type="text" name="nombre" value="<%= product ? product.nombre : "Nombre"; %>">
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" name="nombre" value="<%= product ? product.nombre : ""; %>">
+        <label for="imagen">Imagen:</label>
         <input type="file" name="imagen" accept = "image/*">
-        <input name="descripcion" value="<%= product ? product.descripcion : "Descripción"; %>"></input>
-        <input type="text" name="marca" value="<%= product ? product.marca : "Marca"; %>">
-        <input type="text" name="categoria" value="<%= product ? product.categoria : "Categoria"; %>">
-        <input type="number" name="precio" value="<%= product ? product.precio : "Precio"; %>">
+        <label for="descripcion">Descripcion:</label>
+        <input name="descripcion" value="<%= product ? product.descripcion : ""; %>"></input>
+        <label for="marca">Marca:</label>
+        <input type="text" name="marca" value="<%= product ? product.marca : ""; %>">
+        <label for="categoria">Categoria:</label>
+        <input type="text" name="categoria" value="<%= product ? product.categoria : ""; %>">
+        <label for="precio">Precio:</label>
+        <input type="number" name="precio" value="<%= product ? product.precio : ""; %>">
 
 
         <div class="cargaProducto__contenedor__buton__enviar" >
