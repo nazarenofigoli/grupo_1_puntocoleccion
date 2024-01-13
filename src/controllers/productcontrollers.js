@@ -6,7 +6,7 @@ const products = JSON.parse(json);
 
 
 const productControllers = {
-    detalleP: (req,res)=>  {
+    detail: (req,res)=>  {
     const {id} = req.params;
 		
 		const product = products.find (product => product.id == id);
@@ -43,9 +43,9 @@ const productControllers = {
       const json = JSON.stringify(nuevoArray);
           
       fs.writeFileSync(path.join(__dirname,"../database/product.json"),json,"utf-8");
-      res.redirect('/product/dashboard');
+      res.redirect('/products/dashboard');
     },
-    cargaDeProducto:(req,res)=>  res.render('products/cargaDeProducto', {title:'cargaDeProducto', product: null}),
+    cargaDeProducto:(req,res)=>  res.render('products/cargaDeProducto', {title:'Carga de producto', product: null}),
     crearProducto: (req,res)=> {
     
     
@@ -63,7 +63,7 @@ const productControllers = {
       products.push(product);
       const json = JSON.stringify(products);
       fs.writeFileSync(path.join(__dirname,"../database/product.json"),json,"utf-8");
-      res.redirect("/product/dashboard")
+      res.redirect("/products/dashboard")
   
       
     },
@@ -77,7 +77,7 @@ const productControllers = {
 		const nuevoArray = products.filter((product) => product.id !== parseInt(id));
 		const json = JSON.stringify(nuevoArray);
 		fs.writeFileSync(path.join(__dirname,"../database/product.json"), json, "utf-8");
-		res.redirect("/product/dashboard");
+		res.redirect("/products/dashboard");
 	}
 
 }

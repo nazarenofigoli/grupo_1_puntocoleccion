@@ -25,7 +25,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/product', productRouter);
+app.use('/products', productRouter);
 
 
 // catch 404 and forward to error handler

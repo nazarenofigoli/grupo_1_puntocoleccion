@@ -23,11 +23,11 @@
                 <ul class="index-productos">
                     <% tendenciasYOfetas.forEach(product=> { %>
                         <li>
-                            <a href="/product/detalleP/<%= product.id %>">
+                            <a href="/products/detail/<%= product.id %>">
                                 <img src="/img/productos/<%=product.imagen %>" class="main_imagen_producto">
                             </a>
                             <div class="main_index_descripcion-precio">
-                                <a href="/product/detalleP/<%= product.id %>">
+                                <a href="/products/detail/<%= product.id %>">
                                     <h5 class="main_descripcion">
                                         <%= product.nombre %>
                                     </h5>
@@ -63,11 +63,11 @@
                 <ul class="index-productos">
                     <% destacados.forEach(product=> { %>
                         <li>
-                            <a href="/product/detalleP/<%= product.id %>">
+                            <a href="/products/detail/<%= product.id %>">
                                 <img src="/img/productos/<%=product.imagen %>" class="main_imagen_producto">
                             </a>
                             <div class="main_index_descripcion-precio">
-                                <a href="/product/detalleP/<%= product.id %>">
+                                <a href="/products/detail/<%= product.id %>">
                                     <h5 class="main_descripcion">
                                         <%= product.nombre %>
                                     </h5>

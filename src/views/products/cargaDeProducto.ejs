@@ -4,7 +4,7 @@
 
     <h1 class="cargaProducto__titulo"><%= product ? "Edicion de producto" : "Crea un producto"%></h1>
 
-    <form action="<%= product ? `/product/updateproduct/${product.id}?_method=PUT` : '/product/cargaDeProducto' %>" method="post" class="cargaProducto__formulario" enctype="multipart/form-data">
+    <form action="<%= product ? `/products/updateproduct/${product.id}?_method=PUT` : '/products/loadproduct' %>" method="post" class="cargaProducto__formulario" enctype="multipart/form-data">
     <div class="cargaProducto__contenedor__formulario">
         <label for="nombre">Nombre del Producto:</label>
         <input type="text" name="nombre" value="<%= product ? product.nombre : ""; %>">
