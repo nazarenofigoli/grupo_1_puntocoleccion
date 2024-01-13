@@ -118,7 +118,30 @@ Acordar en equipo y anticipar la organización de los tiempos personales para cu
 Reorganizar los tiempos ya establecidos para la realización del trabajo, ya que ahora somos dos integrantes y requiere de mayor inversión de tiempo
 
 3. Hacer menos:-------
-        
+
 
 4. Dejar de hacer:
 Perder tiempo o preocuparse por problemas externos al trabajo o a lo que demanda la formación del curso
+
+# Retrospectiva Sprint 4 
+
+# Fecha de reunion:
+ * Sabado 13/01/2024
+   11:20 AM
+
+1. Comenzar Hacer:
+Nos compromentimos a intentar a realizar una tarea por día para llegar a finalizar el sprint con mas antelación. 
+
+2. Hacer mas:
+Realizar mas reuniones con el fin de asimilar mejor los conceptos nuevos vistos en clase y poder ponerlos en practica en el proyecto y en los trabajos prácticos. 
+
+3. Hacer menos:
+Dejar de posponer las tareas y reuniones para casi la finalizacion del sprint.
+
+
+4. Dejar de hacer:
+No sentirnos afectados por el entorno y concentrarnos en el aprendizaje. 
+
+Estamos adaptandonos al cambio de ser 2 integrantes, no tenemos problemas en comunicarnos. Podemos manejar los tiempos sin problemas. Tenemos que trabajar un poco mas pero es mas fluido y aprendemos mas así. 
+
+
