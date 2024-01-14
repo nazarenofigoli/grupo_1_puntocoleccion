@@ -11,17 +11,28 @@
         </section>
         <p class="registro_main_titulos_account">¿Ya ténes una cuenta? <a href="/users/login">Iniciá Sesión</a></p>
         <section class="section_registro_main_formulario_account">
+        
             <form action="/users/registro" method="post" class="registro_main_formulario_account">
+                
                 <label for="nombre">NOMBRE:</label>
-                <input type="text" name="nombre" placeholder="ej: Roberto">
+                <input type="text" name="nombre" placeholder="ej: Roberto" value="<%= locals.old && old.nombre %>">
+                <p style="color:red"><%= locals.errors && errors.nombre? errors.nombre.msg : null %></p>
+                
                 <label for="apellido">APELLIDO:</label >
-                <input type="text" name="apellido" placeholder="ej: Sánchez">
+                <input type="text" name="apellido" placeholder="ej: Sánchez" value="<%= locals.old && old.apellido %>">
+                <p style="color:red"><%= locals.errors && errors.apellido ? errors.apellido.msg : null %></p>
+                
                 <label for="email">E-MAIL:</label >
-                <input type="email" name="email" placeholder="ej: tumail@email.com" required>
+                <input type="email" name="email" placeholder="ej: tumail@email.com"  value="<%= locals.old && old.email%>">
+                <p style="color:red"><%= locals.errors && errors.email ? errors.email.msg : null %></p>
+                
                 <label for="password">CONTRASEÑA:</label>
-                <input type="password" name="password" placeholder="●●●●●●●●" required>
+                <input type="password" name="password" placeholder="●●●●●●●●"  value="<%= locals.old && old.password %>">
+                <p style="color:red"><%= locals.errors && errors.password ? errors.password.msg : null %></p>
+
                 <label for="password1">REPETIR CONTRASEÑA:</label>
-                <input type="password" name="password1" placeholder="●●●●●●●●" required>
+                <input type="password" name="password1" placeholder="●●●●●●●●"  value="<%= locals.old && old.password1%>">
+                <p style="color:red"><%= locals.errors && errors.password1 ? errors.password1.msg : null %></p>
                 
                 <div class="g-recaptcha" data-sitekey="6LeSXBMpAAAAANooS21qTPO1k_ga29vmHPZm9CQI"></div>
 
