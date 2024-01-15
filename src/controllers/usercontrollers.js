@@ -12,7 +12,7 @@ const userControllers = {
     
     createLogueo:(req,res)=> {
         console.log(req.body);
-        res.redirect('/users/registro')
+        res.send('/users/registro')
     }
 }
 
