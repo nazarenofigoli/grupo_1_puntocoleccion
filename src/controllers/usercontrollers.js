@@ -16,8 +16,9 @@ const userControllers = {
     },
 
     createLogueo:(req,res)=> {
+        let errors = validationResult(req);
         console.log(req.body);
-        res.redirect('/')
+        res.send({errors: errors.mapped()})
     }
 }
 
