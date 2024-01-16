@@ -1,10 +1,16 @@
 [
     {
-        "id": "1",
-        "nombre": "producto 1",
-        "telefono":1111111,
-        "email": "lorem impsum dolor sit amet",
-        "password": "1000",
-        "avatar": "Pop"
+        "id": 1,
+        "nombre": "Javier",
+        "apellido": "Elia",
+        "email": "javierelia3@gmail.com",
+        "password": "$2a$10$xSXVoBO8y2KbL4PTY2W6cORefVC9PMXuKd7.vSL7pOybAWlGxgVXW"
+    },
+    {
+        "id": 2,
+        "nombre": "Nazareno",
+        "apellido": "Figoli",
+        "email": "nazarenofigoli69@gmail.com",
+        "password": "$2a$10$OmBNcc/K2RLhyVi7E868V.QQbOyI6yktmCNkqEZ.tAHHgIKnFHkOe"
     }
 ]

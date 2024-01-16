@@ -21,8 +21,6 @@ body('password')
     .notEmpty().withMessage("El campo no puede estar vacío").bail()
     .custom((value, { req }) => {
         const user = users.find(elemento => elemento.email == req.body.email);
-        console.log("user:", user);
-
         if (!user || !bcrypt.compareSync(value, user.password)) {
             throw new Error("La contraseña no es correcta");
         }
