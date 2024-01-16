@@ -25,6 +25,7 @@ const userControllers = {
         res.redirect('/')
         }
         else {
+            res.send(errors.mapped())
 
         }
 
