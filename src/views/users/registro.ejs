@@ -27,11 +27,11 @@
                 <p style="color:red"><%= locals.errors && errors.email ? errors.email.msg : null %></p>
                 
                 <label for="password">CONTRASEÑA:</label>
-                <input type="password" name="password" placeholder="●●●●●●●●"  value="<%= locals.old && old.password %>">
+                <input type="password" name="password" placeholder="●●●●●●●●" >
                 <p style="color:red"><%= locals.errors && errors.password ? errors.password.msg : null %></p>
 
                 <label for="password1">REPETIR CONTRASEÑA:</label>
-                <input type="password" name="password1" placeholder="●●●●●●●●"  value="<%= locals.old && old.password1%>">
+                <input type="password" name="password1" placeholder="●●●●●●●●">
                 <p style="color:red"><%= locals.errors && errors.password1 ? errors.password1.msg : null %></p>
                 
                 <div class="g-recaptcha" data-sitekey="6LeSXBMpAAAAANooS21qTPO1k_ga29vmHPZm9CQI"></div>
@@ -40,11 +40,12 @@
                     <button type="submit">CREAR CUENTA</button>
                     <button type="reset">BORRAR FORMULARIO</button>
                 </div>
+                
             </form>
         </section>
         <p class="registro_main_titulos_account">¿Ya ténes una cuenta? <a href="/users/login">Iniciá Sesión</a></p>
     </main>
-    
     <%- include('../partials/footer.ejs')%>  
+
 </body>
 </html>
