@@ -8,9 +8,10 @@ const userControllers = {
     login: (req,res)=>  res.render('./users/login', {title:'Login'}),
     registro: (req,res)=>  res.render('./users/registro', {title:'Registro'}),
     createUsers:(req,res)=> {
+        
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-
+console.log(req.body);
             const user = {
                 id: users[users.length - 1].id + 1 ,
                 nombre: req.body.nombre,
@@ -25,7 +26,7 @@ const userControllers = {
         res.redirect('/')
         }
         else {
-
+            res.render('./users/registro', {errors:errors.mapped(), old:req.body, title:'Registro'})
         }
 
         

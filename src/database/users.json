@@ -1,16 +1,1 @@
-[
-    {
-        "id": 1,
-        "nombre": "producto 1",
-        "apellido": "diaz",
-        "email": "lorem impsum dolor sit amet",
-        "password": "1000"
-    },
-    {
-        "id": 2,
-        "nombre": "Javier",
-        "apellido": "Elia",
-        "email": "javierelia3@gmail.com",
-        "password": "$2a$10$xSXVoBO8y2KbL4PTY2W6cORefVC9PMXuKd7.vSL7pOybAWlGxgVXW"
-    }
-]
+[{"id":1,"nombre":"producto 1","apellido":"diaz","email":"lorem impsum dolor sit amet","password":"1000"},{"id":2,"nombre":"Javier","apellido":"Elia","email":"javierelia3@gmail.com","password":"$2a$10$xSXVoBO8y2KbL4PTY2W6cORefVC9PMXuKd7.vSL7pOybAWlGxgVXW"},{"id":3,"nombre":"Mirta","apellido":"LLoris","email":"mirtaslloris@gmail.com","password":"$2a$10$7dhPPGlNj1isqPJWZQ.lPeQhS3od5L6RTJHQPiuCZC0qzB/f3va1m"},{"id":4,"nombre":"Roberto","apellido":"Testa","email":"robert@gmail.com","password":"$2a$10$tiCx70EpQ85RBPPgn.nE6uoUbqgYg1YUz6oG1cWr1vgZZxSHLtUH6"},{"id":5,"nombre":"Nazareno","apellido":"Filogi","email":"nazareno@gmail.com","password":"$2a$10$JlqBq1Opdd/78Du/geuzEu.iYdmt66uwt.XDbj0TCvGzkZA9J2rHq"},{"id":6,"nombre":"Luca","apellido":"Prodan","email":"summo@gmail.com","password":"$2a$10$Znz3U8vIpR16IjyHL00.hO5USF6uoA6maei5ZpUFPU9Gt7nS0HUBO"},{"id":7,"nombre":"roberto","apellido":"pettinato","email":"robertp@gmail.com","password":"$2a$10$CsmQ8uiaPBBUSBLeAvguYOpNU/mEGdcjpy0j/.x7VhPcWJnZvxxeW"}]
