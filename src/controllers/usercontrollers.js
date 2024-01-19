@@ -17,7 +17,8 @@ const userControllers = {
                 nombre: req.body.nombre,
                 apellido : req.body.apellido,
                 email: req.body.email,
-                password: bcrypt.hashSync(req.body.password)
+                password: bcrypt.hashSync(req.body.password),
+                rol: req.body.rol ? req.body.rol : "user"
             }
         users.push(user);
         newUsers = JSON.stringify(users);

@@ -19,5 +19,13 @@
         "apellido": "Testa",
         "email": "luciotesta@gmail.com",
         "password": "$2a$10$otSydAITJLlBJs1S24ZItuQ97NmXJrUUlWt7JIQpM/aa6y0.FKw1C"
+    },
+    {
+        "id": 4,
+        "nombre": "Nazareno",
+        "apellido": "Figoli",
+        "email": "naza69@gmail.com",
+        "password": "$2a$10$whe8PZ.bXVSaUD1of8WqWODLTXZRimu/9zuLMxB6kAGLtppHQweFG",
+        "rol": "user"
     }
 ]
