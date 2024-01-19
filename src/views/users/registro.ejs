@@ -25,6 +25,12 @@
                 <label for="email">E-MAIL:</label >
                 <input type="email" name="email" placeholder="ej: tumail@email.com"  value="<%= locals.old && old.email%>">
                 <p style="color:red"><%= locals.errors && errors.email ? errors.email.msg : null %></p>
+
+                <% if (locals.usuario && usuario.rol == 'admin') {%>
+                        <label for="rol">Rol</label>
+                        <input type="text" id="rol" name="rol" value="<%= locals.old && old.rol ? old.rol : null %>">
+                        <p style="color:red"> <%= locals.errores && errores.rol ? errores.rol.msg : null %> </p>
+                <% } %>
                 
                 <label for="password">CONTRASEÑA:</label>
                 <input type="password" name="password" placeholder="●●●●●●●●" >

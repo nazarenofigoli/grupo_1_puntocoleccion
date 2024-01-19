@@ -6,7 +6,7 @@ const users = JSON.parse(fs.readFileSync(path.join(__dirname, '../database/users
 
 const userControllers = {
     login: (req,res)=>  res.render('./users/login', {title:'Login'}),
-    registro: (req,res)=>  res.render('./users/registro', {title:'Registro'}),
+    registro: (req,res)=>  res.render('./users/registro', {title:'Registro', usuario:req.session.user}),
     createUsers:(req,res)=> {
         
         let errors = validationResult(req);
@@ -26,7 +26,7 @@ const userControllers = {
         res.redirect('/')
         }
         else {
-            res.render('./users/registro', {errors:errors.mapped(), old:req.body, title:'Registro'})
+            res.render('./users/registro', {errors:errors.mapped(), old:req.body, title:'Registro', usuario:req.session.user})
         }
     }
     ,
