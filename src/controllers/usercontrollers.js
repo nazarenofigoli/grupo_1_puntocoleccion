@@ -11,7 +11,7 @@ const userControllers = {
         
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-console.log(req.body);
+
             const user = {
                 id: users[users.length - 1].id + 1 ,
                 nombre: req.body.nombre,
@@ -19,7 +19,6 @@ console.log(req.body);
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password)
             }
-        
         users.push(user);
         newUsers = JSON.stringify(users);
         fs.writeFileSync(path.join(__dirname, '../database/users.json'), newUsers , 'utf-8');
@@ -28,28 +27,25 @@ console.log(req.body);
         else {
             res.render('./users/registro', {errors:errors.mapped(), old:req.body, title:'Registro'})
         }
-
-        
-
-
-
-        }
+    }
     ,
 
     createLogueo:(req,res)=> {
-        console.log(req.body);
-        res.send({ errors: errors.mapped()})
+        let errors = validationResult(req);
+        
+        if (errors.isEmpty()){
+            const user = users.find(elemento => elemento.email == req.body.email);
+            req.session.user = user;
+            res.redirect('/')
 
-    },
+        }
 
-    createLogueo:(req,res)=> {
-        res.redirect('/')
-        /*let errors = validationResult(req);
-        console.log(req.body);
-        res.send({errors: errors.mapped()})*/
+        else {
+            res.render('./users/login', {errors:errors.mapped(), title:"Login"})
+        }
+
     }
+
 }
-
-
 
 module.exports = userControllers;

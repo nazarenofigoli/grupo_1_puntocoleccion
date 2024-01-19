@@ -13,7 +13,7 @@ const validateLogin = [
     .custom(value => {
         const user = users.find(elemento => elemento.email == value);
         if (!user) {
-            throw new Error("El usuario no existe");
+            throw new Error("Credenciales Inválidas");
         }
         return true;
     }),
@@ -22,7 +22,7 @@ body('password')
     .custom((value, { req }) => {
         const user = users.find(elemento => elemento.email == req.body.email);
         if (!user || !bcrypt.compareSync(value, user.password)) {
-            throw new Error("La contraseña no es correcta");
+            throw new Error("Credenciales Inválidas");
         }
         return true;
     })

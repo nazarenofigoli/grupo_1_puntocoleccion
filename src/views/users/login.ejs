@@ -12,11 +12,13 @@
         <div class="form">
             <div class="opciones-registro1">
                 <input class="input-registro" type="email" name="email" placeholder="correo electronico" />
+                <p style="color:red"><%= locals.errors && errors.email? errors.email.msg : null %></p>
             </div>
         </div>
         <div class="form">
             <div class="opciones-registro1">
                 <input class="input-registro" type="password" name="password" placeholder="contraseña" />
+                <p style="color:red"><%= locals.errors && errors.password? errors.password.msg : null %></p>
                 <i class="eye fa-regular fa-eye-slash"></i>
             </div>
         </div>

@@ -8,7 +8,7 @@ const indexControllers = {
     index: (req, res) => {
       const tendenciasYOfetas = products.filter(product => product.categoria === "Tendencia y oferta");
       const destacados = products.filter(product => product.categoria === "Destacados");
-      res.render('index', {title: 'Punto Coleccion',tendenciasYOfetas, destacados,});
+      res.render('index', {title: 'Punto Coleccion',tendenciasYOfetas, destacados , usuario:req.session.user});
     }
   };
 

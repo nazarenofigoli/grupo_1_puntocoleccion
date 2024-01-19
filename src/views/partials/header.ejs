@@ -40,11 +40,18 @@
             </a>
         
 
-            <a class="nav-opcion" href="/users/login">
-
-            <i class="fa-regular fa-user icons_navegacion"></i>
-            <p>Ingresá</p>
-            </a>
+                <% if(locals.usuario){%>
+                    <a class="nav-opcion" href="/users/profile/:id">
+                    <i class="fa-regular fa-user icons_navegacion"></i>    
+                    <p><%= usuario.nombre %> </p>
+                    </a>
+                <% }else{ %>
+                <a class="nav-opcion" href="/users/login">
+                    <i class="fa-regular fa-user icons_navegacion"></i>
+                    <p>Ingresá</p>
+                    </a>
+                <% } %>
+            
         
 
             <a class="nav-opcion" href="/products/carrito">
