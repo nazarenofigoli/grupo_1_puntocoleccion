@@ -1,31 +1,39 @@
 [
-    {
-        "id": 1,
-        "nombre": "producto 1",
-        "apellido": "diaz",
-        "email": "lorem impsum dolor sit amet",
-        "password": "1000"
-    },
-    {
-        "id": 2,
-        "nombre": "Javier",
-        "apellido": "Elia",
-        "email": "javierelia3@gmail.com",
-        "password": "$2a$10$xSXVoBO8y2KbL4PTY2W6cORefVC9PMXuKd7.vSL7pOybAWlGxgVXW"
-    },
-    {
-        "id": 3,
-        "nombre": "Lucio ",
-        "apellido": "Testa",
-        "email": "luciotesta@gmail.com",
-        "password": "$2a$10$otSydAITJLlBJs1S24ZItuQ97NmXJrUUlWt7JIQpM/aa6y0.FKw1C"
-    },
-    {
-        "id": 4,
-        "nombre": "Nazareno",
-        "apellido": "Figoli",
-        "email": "nazarenofigoli69@gmail.com",
-        "password": "$2a$10$whe8PZ.bXVSaUD1of8WqWODLTXZRimu/9zuLMxB6kAGLtppHQweFG",
-        "rol": "admin"
-    }
+  {
+    "id": 1,
+    "nombre": "producto 1",
+    "apellido": "diaz",
+    "email": "lorem impsum dolor sit amet",
+    "password": "1000"
+  },
+  {
+    "id": 2,
+    "nombre": "Javier",
+    "apellido": "Elia",
+    "email": "javierelia3@gmail.com",
+    "password": "$2a$10$xSXVoBO8y2KbL4PTY2W6cORefVC9PMXuKd7.vSL7pOybAWlGxgVXW"
+  },
+  {
+    "id": 3,
+    "nombre": "Lucio ",
+    "apellido": "Testa",
+    "email": "luciotesta@gmail.com",
+    "password": "$2a$10$otSydAITJLlBJs1S24ZItuQ97NmXJrUUlWt7JIQpM/aa6y0.FKw1C"
+  },
+  {
+    "id": 4,
+    "nombre": "Nazareno",
+    "apellido": "Figoli",
+    "email": "nazarenofigoli69@gmail.com",
+    "password": "$2a$10$whe8PZ.bXVSaUD1of8WqWODLTXZRimu/9zuLMxB6kAGLtppHQweFG",
+    "rol": "admin"
+  },
+  {
+    "id": 5,
+    "nombre": "lucio",
+    "apellido": "testa",
+    "email": "lucio71@gmail.com",
+    "password": "$2a$10$0iNXTplXvu1Q59FpaeqkG.PI/z41tKDMfW9yT2ZfRYV2XWb0zpwl2",
+    "rol": "admin"
+  }
 ]
