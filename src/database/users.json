@@ -24,8 +24,8 @@
         "id": 4,
         "nombre": "Nazareno",
         "apellido": "Figoli",
-        "email": "naza69@gmail.com",
+        "email": "nazarenofigoli69@gmail.com",
         "password": "$2a$10$whe8PZ.bXVSaUD1of8WqWODLTXZRimu/9zuLMxB6kAGLtppHQweFG",
-        "rol": "user"
+        "rol": "admin"
     }
 ]

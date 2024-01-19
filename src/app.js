@@ -5,8 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session');
-const rememberUser = require ('./middlewares/rememberUser.js')
-const validateAdmin = require('./middlewares/validateAdmin.js')
+const rememberUser = require ('./middlewares/rememberUser.js');
 
 const indexRouter = require('./routes/indexRouter');
 const usersRouter = require('./routes/usersRouter');
@@ -30,7 +29,6 @@ app.use(session({
     saveUninitialized: true,
 }))
 app.use(rememberUser);
-app.use(validateAdmin);
 
 
 app.use('/', indexRouter);

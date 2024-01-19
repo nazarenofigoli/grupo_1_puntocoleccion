@@ -40,7 +40,7 @@ const userControllers = {
             if(req.body.remember == "true") {
                 res.cookie('user',user,{maxAge: 1000 * 60 * 15 });
                 res.cookie('rememberMe',"true", {maxAge: 1000 * 60 * 15 });
-              }
+            }
             res.redirect('/')
 
         }
