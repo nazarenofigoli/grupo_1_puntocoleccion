@@ -36,6 +36,10 @@ const userControllers = {
         if (errors.isEmpty()){
             const user = users.find(elemento => elemento.email == req.body.email);
             req.session.user = user;
+            if(req.body.remember == "true") {
+                res.cookie('user',user,{maxAge: 1000 * 60 * 15 });
+                res.cookie('rememberMe',"true", {maxAge: 1000 * 60 * 15 });
+              }
             res.redirect('/')
 
         }
