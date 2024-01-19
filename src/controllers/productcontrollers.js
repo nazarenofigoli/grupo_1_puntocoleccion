@@ -70,7 +70,7 @@ const productControllers = {
     dashboard:(req, res) => {
         const json = fs.readFileSync(path.join(__dirname,"../database/product.json"),"utf-8")
         const products = JSON.parse(json);
-        res.render('products/dashboard',{title:"Dashboard",products});
+        res.render('products/dashboard',{title:"Dashboard",products, usuario:req.session.user});
     },
     productDelete: (req, res) => {
 		const { id } = req.params;
