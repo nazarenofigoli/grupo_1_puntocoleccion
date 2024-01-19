@@ -33,13 +33,21 @@
     </div>
 </div>
 <section>
-        <nav class="header_navegacion__icons">
-            <a class="nav-opcion" href="">
-            <i class="icono fa-regular fa-envelope icons_navegacion"></i>
-            <p>Contacto</p>
+    <nav class="header_navegacion__icons">
+    <% if(locals.usuario && usuario.rol == 'admin'){%>
+        <a class="nav-opcion" href="/products/dashboard">
+            <i class="fa-solid fa-gear icons_navegacion"></i>
+            <p>Dashboard</p>
             </a>
+        <% }else{ %>
+            <a class="nav-opcion" href="">
+                <i class="icono fa-regular fa-envelope icons_navegacion"></i>
+                <p>Contacto</p>
+                </a>
+            <% } %>
         
-
+            
+         
                 <% if(locals.usuario){%>
                     <a class="nav-opcion" href="/users/profile/:id">
                     <i class="fa-regular fa-user icons_navegacion"></i>    
