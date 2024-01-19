@@ -1,0 +1,45 @@
+<%- include("../partials/head.ejs")  %>
+
+<body>
+    
+    <%- include('../partials/header.ejs') %>
+
+    <main class="registro_main">
+        <section class="registro_main_titulos">
+            
+            <h1>EDITAR PERFIL</h1>
+        </section>
+        
+        <section class="section_registro_main_formulario_account">
+        
+            <form action="/users/profile?_method=PUT" method="post" class="registro_main_formulario_account">
+                
+                <label for="nombre">NOMBRE:</label>
+                <input type="text" name="nombre" placeholder="ej: Roberto" value="<%= locals.user && user.nombre %>">
+                <p style="color:red"><%= locals.errors && errors.nombre? errors.nombre.msg : null %></p>
+                
+                <label for="apellido">APELLIDO:</label >
+                <input type="text" name="apellido" placeholder="ej: Sánchez" value="<%= locals.user && user.apellido %>">
+                <p style="color:red"><%= locals.errors && errors.apellido ? errors.apellido.msg : null %></p>
+            
+                <% if (locals.usuario && usuario.rol == 'admin') {%>
+                        <label for="rol">Rol</label>
+                        <input type="text" id="rol" name="rol" value="<%= locals.old && old.rol ? old.rol : null %>">
+                        <p style="color:red"> <%= locals.errores && errores.rol ? errores.rol.msg : null %> </p>
+                <% } %>
+                
+                
+
+                <div class="registro_main_botones_account">
+                    <button type="submit">ACTUALIZAR</button>
+                    <button type="reset">BORRAR FORMULARIO</button>
+                </div>
+                
+            </form>
+        </section>
+        <p class="registro_main_titulos_account">¿Ya ténes una cuenta? <a href="/users/login">Iniciá Sesión</a></p>
+    </main>
+    <%- include('../partials/footer.ejs')%>  
+
+</body>
+</html>

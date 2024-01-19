@@ -49,6 +49,30 @@ const userControllers = {
             res.render('./users/login', {errors:errors.mapped(), title:"Login"})
         }
 
+    },
+    profile: (req,res)=> {
+        const user = users.find(elemento => elemento.id == req.session.user.id);
+        res.render('./users/profile', {title:'Perfil Usuario',usuario:req.session.user , user})
+    },
+    updateProfile: (req,res) => {
+        const id= req.session.user.id;
+        console.log(id);
+        const {nombre,apellido} = req.body;
+        console.log(nombre);
+        const nuevoArray = users.map(user => {
+            console.log(user.id+": "+JSON.stringify(user))
+            if(user.id == id){
+            user.nombre = nombre.trim();
+            user.apellido =apellido.trim();
+            
+            }
+            return user;
+        });
+        console.log("nuevo array: "+JSON.stringify(nuevoArray));
+        const json = JSON.stringify(nuevoArray);
+            
+        fs.writeFileSync(path.join(__dirname,"../database/users.json"),json,"utf-8");
+        res.redirect('/users/profile');
     }
 
 }

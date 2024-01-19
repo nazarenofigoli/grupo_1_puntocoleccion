@@ -9,6 +9,8 @@ router.get('/login', userControllers.login);
 router.post('/login',validateLogin,userControllers.createLogueo);
 router.get('/registro', userControllers.registro);
 router.post('/registro',validateRegister, userControllers.createUsers);
+router.get('/profile', validateUsers, userControllers.profile);
+router.put('/profile',validateUsers,userControllers.updateProfile);
 
 
 
