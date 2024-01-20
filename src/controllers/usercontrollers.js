@@ -58,9 +58,9 @@ const userControllers = {
     updateProfile: (req,res) => {
         const users = JSON.parse(fs.readFileSync(path.join(__dirname, '../database/users.json'),'utf-8'));
         const id= req.session.user.id;
-        console.log(id);
+        
         const {nombre,apellido} = req.body;
-        console.log(nombre);
+        
         const nuevoArray = users.map(user => {
             console.log(user.id+": "+JSON.stringify(user))
             if(user.id == id){
@@ -69,12 +69,13 @@ const userControllers = {
             }
             return user;
         });
-        console.log("nuevo array: "+JSON.stringify(nuevoArray));
+        
         const json = JSON.stringify(nuevoArray);
         fs.writeFileSync(path.join(__dirname,"../database/users.json"),json,"utf-8");
-        const update = nuevoArray.find(elemento.id==id);
+        const update = nuevoArray.find(elemento => elemento.id==id);
+        
         req.session.user = update;
-        console.log(req.session.user);
+        
         res.redirect('/users/profile');
     }
 
