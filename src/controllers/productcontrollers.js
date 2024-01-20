@@ -10,11 +10,13 @@ const productControllers = {
     const {id} = req.params;
 		
 		const product = products.find (product => product.id == id);
-		res.render ('products/detalleP', {title:product.name, product})
+		res.render ('products/detalleP', {title:product.name, product, usuario:req.session.user})
     },
 
-    listadoproductos: (req,res)=> res.render('products/productos',{title: 'Todos los productos',products}),
-    carrito: (req,res)=>  res.render('products/carrito', {title:'Carrito'}),
+    listadoproductos: (req,res)=> res.render('products/productos',{title: 'Todos los productos',products, usuario:req.session.user}),
+    
+    carrito: (req,res)=>  res.render('products/carrito', {title:'Carrito', usuario:req.session.user}),
+
     update: (req,res)=> {
         const {id} = req.params;
         const product = products.find(producto => producto.id == parseInt(id));
@@ -45,7 +47,7 @@ const productControllers = {
       fs.writeFileSync(path.join(__dirname,"../database/product.json"),json,"utf-8");
       res.redirect('/products/dashboard');
     },
-    cargaDeProducto:(req,res)=>  res.render('products/cargaDeProducto', {title:'Carga de producto', product: null}),
+    cargaDeProducto:(req,res)=>  res.render('products/cargaDeProducto', {title:'Carga de producto', product: null, usuario:req.session.user}),
     crearProducto: (req,res)=> {
     
     

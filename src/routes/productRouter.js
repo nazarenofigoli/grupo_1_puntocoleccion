@@ -19,14 +19,15 @@ const upload = multer ({storage})
 
 const productControllers = require('../controllers/productcontrollers');
 
-router.get('/', productControllers.listadoproductos);
-router.get('/detail/:id', productControllers.detail);
-router.get('/carrito',validateUsers, productControllers.carrito);
-router.get('/updateproduct/:id',validateAdmin,productControllers.update)
-router.put('/updateproduct/:id',validateAdmin, upload.single('imagen'),productControllers.editar)
-router.get('/dashboard',validateAdmin, productControllers.dashboard);
-router.get('/loadproduct',validateAdmin, productControllers.cargaDeProducto);
-router.post('/loadproduct',validateAdmin, upload.single('imagen'), productControllers.crearProducto);
-router.delete('/delete/:id',validateAdmin, productControllers.productDelete);
+router
+.get('/', productControllers.listadoproductos)
+.get('/detail/:id', productControllers.detail)
+.get('/carrito',validateUsers, productControllers.carrito)
+.get('/updateproduct/:id',validateAdmin,productControllers.update)
+.put('/updateproduct/:id',validateAdmin, upload.single('imagen'),productControllers.editar)
+.get('/dashboard',validateAdmin, productControllers.dashboard)
+.get('/loadproduct',validateAdmin, productControllers.cargaDeProducto)
+.post('/loadproduct',validateAdmin, upload.single('imagen'), productControllers.crearProducto)
+.delete('/delete/:id',validateAdmin, productControllers.productDelete)
 
 module.exports = router;
