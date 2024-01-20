@@ -51,10 +51,12 @@ const userControllers = {
 
     },
     profile: (req,res)=> {
+        const users = JSON.parse(fs.readFileSync(path.join(__dirname, '../database/users.json'),'utf-8'));
         const user = users.find(elemento => elemento.id == req.session.user.id);
         res.render('./users/profile', {title:'Perfil Usuario',usuario:req.session.user , user})
     },
     updateProfile: (req,res) => {
+        const users = JSON.parse(fs.readFileSync(path.join(__dirname, '../database/users.json'),'utf-8'));
         const id= req.session.user.id;
         console.log(id);
         const {nombre,apellido} = req.body;
@@ -64,14 +66,15 @@ const userControllers = {
             if(user.id == id){
             user.nombre = nombre.trim();
             user.apellido =apellido.trim();
-            
             }
             return user;
         });
         console.log("nuevo array: "+JSON.stringify(nuevoArray));
         const json = JSON.stringify(nuevoArray);
-            
         fs.writeFileSync(path.join(__dirname,"../database/users.json"),json,"utf-8");
+        const update = nuevoArray.find(elemento.id==id);
+        req.session.user = update;
+        console.log(req.session.user);
         res.redirect('/users/profile');
     }
 
