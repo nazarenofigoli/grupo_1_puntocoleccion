@@ -67,6 +67,7 @@ const productControllers = {
   
       
     },
+  
     dashboard:(req, res) => {
         const json = fs.readFileSync(path.join(__dirname,"../database/product.json"),"utf-8")
         const products = JSON.parse(json);
@@ -74,7 +75,7 @@ const productControllers = {
     },
     productDelete: (req, res) => {
 		const { id } = req.params;
-		const nuevoArray = products.filter((product) => product.id !== parseInt(id));
+		const nuevoArray = products.filter(product => product.id !== parseInt(id));
 		const json = JSON.stringify(nuevoArray);
 		fs.writeFileSync(path.join(__dirname,"../database/product.json"), json, "utf-8");
 		res.redirect("/products/dashboard");
