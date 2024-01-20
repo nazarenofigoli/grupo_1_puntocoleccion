@@ -53,13 +53,14 @@
                     <i class="fa-regular fa-user icons_navegacion"></i>    
                     <p><%= usuario.nombre %> </p>
                     </a>
+
                 <% }else{ %>
                 <a class="nav-opcion" href="/users/login">
                     <i class="fa-regular fa-user icons_navegacion"></i>
                     <p>Ingresá</p>
                     </a>
                 <% } %>
-            
+
         
 
             <a class="nav-opcion" href="/products/carrito">
@@ -67,7 +68,18 @@
             <i class="fa-solid fa-cart-shopping icons_navegacion"></i>
             <p>$0.000,0</p>
         </a>
+
+        <% if(locals.usuario){%>
+            <a class="nav-opcion" href="/users/logout">
+            <i class="fa-solid fa-right-from-bracket icons_navegacion"></i>
+            <p>Cerrar session</p>
+            </a>
+            <% } %>
+            
         </nav>
+
+     
+    
     </section>
 
 </section>

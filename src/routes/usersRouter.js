@@ -5,13 +5,14 @@ const validateRegister = require('../middlewares/validateRegister.js');
 const validateLogin = require('../middlewares/validateLogin.js');
 
 
-router.get('/login', userControllers.login);
-router.post('/login',validateLogin,userControllers.createLogueo);
-router.get('/registro', userControllers.registro);
-router.post('/registro',validateRegister, userControllers.createUsers);
-router.get('/profile', userControllers.profile);
-router.put('/profile',userControllers.updateProfile);
-
+router
+.get('/login', userControllers.login)
+.post('/login',validateLogin,userControllers.createLogueo)
+.get('/registro', userControllers.registro)
+.post('/registro',validateRegister, userControllers.createUsers)
+.get('/profile', userControllers.profile)
+.put('/profile',userControllers.updateProfile)
+.get('/logout',userControllers.logout)
 
 
 module.exports = router;
