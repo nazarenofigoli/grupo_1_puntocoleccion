@@ -22,13 +22,15 @@
                 <input type="text" name="apellido" placeholder="ej: Sánchez" value="<%= locals.user && user.apellido %>">
                 <p style="color:red"><%= locals.errors && errors.apellido ? errors.apellido.msg : null %></p>
             
-                <% if (locals.usuario && usuario.rol == 'admin') {%>
+                <% if (locals.user && user.rol == 'admin') {%>
                         <label for="rol">Rol</label>
                         <input type="text" id="rol" name="rol" value="<%= locals.old && old.rol ? old.rol : null %>">
                         <p style="color:red"> <%= locals.errores && errores.rol ? errores.rol.msg : null %> </p>
                 <% } %>
                 
-                
+                <label for="email">EMAIL:</label >
+                    <input type="email" name="email" placeholder="ej: Sánchez" value="<%= locals.user && user.email %>">
+                    <p style="color:red"><%= locals.errors && errors.apellido ? errors.apellido.msg : null %></p>
 
                 <div class="registro_main_botones_account">
                     <button type="submit">ACTUALIZAR</button>

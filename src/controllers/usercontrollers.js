@@ -53,7 +53,7 @@ const userControllers = {
     profile: (req,res)=> {
         const users = JSON.parse(fs.readFileSync(path.join(__dirname, '../database/users.json'),'utf-8'));
         const user = users.find(elemento => elemento.id == req.session.user.id);
-        res.render('./users/profile', {title:'Perfil Usuario',usuario:req.session.user , user})
+        res.render('./users/profile', {title:'Perfil Usuario',usuario:req.session.user,user})
     },
     updateProfile: (req,res) => {
         const users = JSON.parse(fs.readFileSync(path.join(__dirname, '../database/users.json'),'utf-8'));
