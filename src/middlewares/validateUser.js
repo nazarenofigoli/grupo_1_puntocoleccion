@@ -1,8 +1,10 @@
-const validateUser = (req,res,next)=>{
-    if(req.session.user){
-        next()
+const validateUser = (req, res, next) => {
+    if (req.session.user) {
+        next();
+    } else {
+        res.redirect("/users/login");
+        return;
     }
-    res.redirect("/users/login");
-}
+};
 
 module.exports = validateUser;
