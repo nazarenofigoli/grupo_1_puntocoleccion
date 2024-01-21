@@ -86,6 +86,7 @@ const userControllers = {
         const update = nuevoArray.find(elemento => elemento.id==id);
         
         req.session.user = update;
+        res.cookie('user',update);
         
         res.redirect('/users/profile');
     }
