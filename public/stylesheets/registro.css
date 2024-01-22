@@ -62,7 +62,7 @@ justify-content: center; */
     margin-top: 7px;
 }
 
-.registro_main_formulario_account input, textarea {
+.registro_main_formulario_account input, textarea , select {
     border:1px solid var(--Verde);
     padding: 2%;
 }

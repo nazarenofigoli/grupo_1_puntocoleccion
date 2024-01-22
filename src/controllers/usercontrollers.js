@@ -77,6 +77,9 @@ const userControllers = {
             if(user.id == id){
             user.nombre = nombre.trim();
             user.apellido =apellido.trim();
+            user.fechaNacimiento = req.body.fecha_nacimiento ? req.body.fecha_nacimiento : null,
+            user.edad = req.body.edad ? req.body.edad : null,
+            user.genero = req.body.genero ? req.body.genero : null
             }
             return user;
         });

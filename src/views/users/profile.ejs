@@ -24,14 +24,25 @@
             
                 <% if (locals.user && user.rol == 'admin') {%>
                         <label for="rol">Rol</label>
-                        <input type="text" id="rol" name="rol" value="<%= locals.old && old.rol ? old.rol : null %>">
-                        <p style="color:red"> <%= locals.errores && errores.rol ? errores.rol.msg : null %> </p>
+                        <select name="rol">
+                        <option value="admin">admin</option>
+                        <option value="user">user</option>
+                        </select>
                 <% } %>
+                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" value="<%= locals.user && user.fechaNacimiento %>">
                 
-                <label for="email">EMAIL:</label >
-                    <input type="email" name="email" placeholder="ej: Sánchez" value="<%= locals.user && user.email %>">
-                    <p style="color:red"><%= locals.errors && errors.apellido ? errors.apellido.msg : null %></p>
-
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad"  value="<%= locals.user && user.edad %>">
+                
+                <label for="genero">Género:</label>
+                <select id="genero" name="genero">
+                <option value="" <%= user.genero == "" ? "selected" : null %>>Elegi</option>    
+                <option value="Femenino" <%= user.genero == "Femenino" ? "selected" : null %>>Femenino</option>
+                <option value="Masculino" <%= user.genero == "Masculino" ? "selected" : null%>>Masculino</option>
+                <option value="Otro" <%= user.genero == "Otro" ? "selected" : null%>>Otro</option>
+                </select><br>
+                
                 <div class="registro_main_botones_account">
                     <button type="submit">ACTUALIZAR</button>
                     <button type="reset">BORRAR FORMULARIO</button>
