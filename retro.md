@@ -145,3 +145,24 @@ No sentirnos afectados por el entorno y concentrarnos en el aprendizaje.
 Estamos adaptandonos al cambio de ser 2 integrantes, no tenemos problemas en comunicarnos. Podemos manejar los tiempos sin problemas. Tenemos que trabajar un poco mas pero es mas fluido y aprendemos mas así. 
 
 
+# Retrospectiva Sprint 5
+
+# Fecha de reunión:
+* Sábado 10/02/2024
+10:00 AM
+
+1. Comenzar Hacer:
+Establecer metas más específicas para cada día de trabajo dentro del sprint.
+Implementar técnicas de planificación y gestión del tiempo para optimizar la productividad.
+
+2. Hacer más:
+Mejorar la coordinación de horarios para garantizar una colaboración aún más efectiva, asegurando que ambos miembros del equipo estén al tanto de los avances, desafíos y soluciones, fomentando un intercambio continuo de conocimientos y experiencias.
+
+3. Hacer menos:
+Reducir la cantidad de distracciones durante las horas de trabajo, manteniendo un ambiente propicio para la concentración.
+
+4. Dejar de hacer:
+Dejar de procrastinar o posponer tareas importantes, abordarlas de manera proactiva para evitar acumulaciones de trabajo hacia el final del sprint.
+
+5. Seguir Haciendo:
+En general, seguimos adaptándonos bien al trabajo en equipo y gestionando los tiempos de manera eficiente. Aunque hay áreas de mejora identificadas, estamos contentos con el progreso y la dinámica del grupo.
