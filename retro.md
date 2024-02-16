@@ -38,11 +38,6 @@ Proyecto e-commerce (Retrospectiva de primer sprint)
 Fecha de reunion:
 Domingo 05/11/2023
 10:35am
-Integrantes:
-* Castillo, Valeria.
-* Escobar, Paula.
-* Figoli, Nazareno.
-* Testa, Lucio.
 Reseña:
 Se comezo la reunion con todos los integrantes via meet,(videollamada), implementando le dinamica estrella de mar cada integrante fue esponiendo y su opinion respecto a estos 5 ejes, y llegamos a las siguientes conclusiones:
 
