@@ -36,6 +36,16 @@ module.exports = {
         unsigne: true,
         allowNull: true
       },
+      subcategoria_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model:{
+            tableName:'Subcategories' 
+        },
+          key: 'id'
+        }
+      },
       marca_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
