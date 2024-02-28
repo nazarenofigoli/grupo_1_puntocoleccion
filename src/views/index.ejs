@@ -21,10 +21,10 @@
                 <h4>tendencias y ofertas</h4>
             </section>
                 <ul class="index-productos">
-                    <% tendenciasYOfetas.forEach(product=> { %>
+                    <% tendenciasYOfertas.forEach(product=> { %>
                         <li>
                             <a href="/products/detail/<%= product.id %>">
-                                <img src="/img/productos/<%=product.imagen %>" class="main_imagen_producto">
+                                <img src="/img/productos/<%=product.Imageproducts[0].imagen%>" class="main_imagen_producto">
                             </a>
                             <div class="main_index_descripcion-precio">
                                 <a href="/products/detail/<%= product.id %>">
@@ -32,7 +32,7 @@
                                         <%= product.nombre %>
                                     </h5>
                                     <p class="main_precio">
-                                        <%= product.precio %>
+                                    $<%= product.precio %>
                                     </p>
                                     <p class="main_cuotas">
                                         <%= product.cuotas %> 3 cuotas sin interés de $<%= (product.precio / 3)%>
@@ -64,7 +64,7 @@
                     <% destacados.forEach(product=> { %>
                         <li>
                             <a href="/products/detail/<%= product.id %>">
-                                <img src="/img/productos/<%=product.imagen %>" class="main_imagen_producto">
+                                <img src="/img/productos/<%=product.Imageproducts[0].imagen%>" class="main_imagen_producto">
                             </a>
                             <div class="main_index_descripcion-precio">
                                 <a href="/products/detail/<%= product.id %>">
@@ -72,7 +72,7 @@
                                         <%= product.nombre %>
                                     </h5>
                                     <p class="main_precio">
-                                        <%= product.precio %>
+                                     $<%= product.precio %>
                                     </p>
                                     <p class="main_cuotas">
                                         <%= product.cuotas %> 3 cuotas sin interés de $<%= product.precio / 3%>
