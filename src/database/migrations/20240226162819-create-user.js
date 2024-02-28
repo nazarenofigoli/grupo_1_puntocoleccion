@@ -32,26 +32,26 @@ module.exports = {
       },
       fechaNaciento: {
         type: Sequelize.DATE,
-        allowNull: false
+        allowNull: true
       },
       edad: {
         type: Sequelize.TINYINT,
-        allowNull: false
+        allowNull: true
       },
       genero: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       avatar: {
         type: Sequelize.STRING,
         allowNull: true
       },
       createdAt: {
-        allowNull: true,
+        allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: true,
+        allowNull: false,
         type: Sequelize.DATE
       }
     });
