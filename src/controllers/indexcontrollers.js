@@ -2,7 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const json = fs.readFileSync(path.join(__dirname,"../database/product.json"),"utf-8")
 const products = JSON.parse(json);
-const db = require('../database/models')
 
 
 const indexControllers = {

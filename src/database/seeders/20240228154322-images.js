@@ -3,9 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    
-  
-    await queryInterface.bulkInsert('imageproducts', [{
+      await queryInterface.bulkInsert('imageproducts', [{
       imagen:'tanjirokamado12cm1.jpg',
       producto_id : 1 ,
       createdAt: null,
