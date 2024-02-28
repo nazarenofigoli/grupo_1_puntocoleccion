@@ -13,13 +13,19 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.Address, {
         As:'addresses',
         foreignKey:'usuario_id'
-      }),
-      this.belongsToMany(models.Detailpurchase, {
-        through:models.Userpurchases,
+      });
+      this.belongsToMany(models.Purchasedetail, {
+        through:models.Userpurchase,
         As:'detailpurchasses',
         foreignKey:'usuario_id',
         otherKey:'detalleCompra_id'
-      })
+      });
+      this.belongsToMany(models.Product, {
+        through:models.Cart,
+        As:'products',
+        foreignKey:'usuario_id',
+        otherKey:'producto_id'
+      });
     }
   }
   User.init({

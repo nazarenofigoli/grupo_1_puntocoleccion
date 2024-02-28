@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class subcategory extends Model {
+  class Subcategory extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -15,11 +15,11 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey:'subcategoria_id'
       })    }
   }
-  subcategory.init({
+  Subcategory.init({
     nombre: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Subcategory',
   });
-  return subcategory;
+  return Subcategory;
 };
