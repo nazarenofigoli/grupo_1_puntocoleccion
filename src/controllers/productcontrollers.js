@@ -1,7 +1,8 @@
 const fs = require("fs");
 const path = require("path");
+const db = require ('../database/models')
 const json = fs.readFileSync(path.join(__dirname,"../database/product.json"),"utf-8");
-const products = JSON.parse(json);
+// const products = JSON.parse(json);
 
 const productControllers = {
     detail: (req,res)=>  {
@@ -11,8 +12,16 @@ const productControllers = {
 		res.render ('products/detalleP', {title:product.name, product, usuario:req.session.user})
     },
 
-    listadoproductos: (req,res)=> res.render('products/productos',{title: 'Todos los productos',products, usuario:req.session.user}),
-    
+    listadoproductos: (req,res)=> {
+    db.Product.findAll({ 
+        include: [{
+        model: db.Imageproduct,
+        limit: 1}]})
+        .then ((result) => {products=result;
+        res.render('products/productos',{title:'Todos los productos',products, usuario:req.session.user})})    
+},
+  
+
     carrito: (req,res)=>  res.render('products/carrito', {title:'Carrito', usuario:req.session.user}),
 
     update: (req,res)=> {
