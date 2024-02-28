@@ -77,7 +77,6 @@ module.exports = {
       createdAt: null,
       updatedAt: null
     }, 
-    ,
     {
       imagen: 'brolydgsuper1.jpg',
       producto_id : 5,

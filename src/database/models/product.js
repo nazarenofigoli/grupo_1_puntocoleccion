@@ -10,32 +10,33 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      this.belongsTo(models.Subategory, {
+      this.belongsTo(models.Subcategory, {
         As:'subcategories',
         foreignKey:'subcategoria_id'
-      }),
+      });
       this.belongsTo(models.Category, {
         As:'categories',
         foreignKey:'categoria_id'
-      }),
+      });
       this.belongsTo(models.Brand, {
         As:'brands',
         foreignKey:'marca_id'
-        }),
+        });
         this.hasMany(models.Purchasedetail, {
           As:'purchasedetails',
           foreignKey:'producto_id'
-          }),
+          });
         this.hasMany(models.Imageproduct, {
           As:'imageProducts',
-          foreignKey:'productos_id'
-        }),
+          foreignKey:'producto_id'
+        });
         this.belongsToMany(models.User, {
-          through:models.Carts,
+          through:models.Cart,
           As:'users',
           foreignKey:'producto_id',
           otherKey:'usuario_id'
         })
+
     }
   }
   Product.init({

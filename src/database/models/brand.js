@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       this.hasMany(models.Product, {
         As:'products',
         foreignKey:'marca_id'
-      })    
+      });    
     }
   }
   Brand.init({
