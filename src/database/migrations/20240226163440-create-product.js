@@ -22,10 +22,6 @@ module.exports = {
         unsigne: true,
         allowNull: false
       },
-      imagen: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
       stock: {
         type: Sequelize.INTEGER,
         unsigne: true,
@@ -38,7 +34,7 @@ module.exports = {
       },
       subcategoria_id: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
         references: {
           model:{
             tableName:'Subcategories' 

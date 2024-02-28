@@ -36,7 +36,7 @@ module.exports = {
       updatedAt: null
     },
     {
-      nombre: 'Qposket',
+      nombre: 'Qpos',
       createdAt: null,
       updatedAt: null
     },
