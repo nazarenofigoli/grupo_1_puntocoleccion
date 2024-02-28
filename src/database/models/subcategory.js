@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     nombre: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'subcategory',
+    modelName: 'Subcategory',
   });
   return subcategory;
 };
