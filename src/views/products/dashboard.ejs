@@ -34,12 +34,13 @@
                         <% products.forEach(product=>{%>
                         <tr>
                                 <td><%= product.id%></td>
-                                <td><%= product.imagen%></td>
+                                
+                                <td><img src="/img/productos/<%=product.Imageproducts[0].imagen%>" class="main_imagen_producto"></td>
                                 <td><%= product.nombre%></td>
                                 <td><%= product.descripcion%></td>
                                 <td><%= product.precio%></td>
-                                <td><%= product.marca%></td>
-                                <td><%= product.categoria%></td>
+                                <td><%= product.Brand.nombre%></td>
+                                <td><%= product.Category.nombre%></td>
                                 <td>
                                     <a class="boton_dashboard_tabla"
                                     href="/products/updateproduct/<%= product.id %>"><button><i

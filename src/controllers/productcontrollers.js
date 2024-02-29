@@ -69,10 +69,22 @@ const productControllers = {
     cargaDeProducto:(req,res)=>  res.render('products/cargaDeProducto', {title:'Carga de producto', product: null, usuario:req.session.user}),
     
     dashboard:(req, res) => {
-      const json = fs.readFileSync(path.join(__dirname,"../database/product.json"),"utf-8")
-      const products = JSON.parse(json);
-      console.log(products);
-      res.render('products/dashboard',{title:"Dashboard",products, usuario:req.session.user});
+    db.Product.findAll({
+      include: [
+        {
+        model: db.Imageproduct,
+        limit: 1,
+        },
+        {
+        model: db.Category,
+        },
+        {
+          model: db.Brand,
+        },
+      ],
+    })
+    .then ((result)=> {products=result;res.render('products/dashboard',{title:"Dashboard",products, usuario:req.session.user})})
+    
   },
     
     crearProducto: (req,res)=> {
