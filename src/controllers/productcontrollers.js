@@ -5,13 +5,21 @@ const json = fs.readFileSync(path.join(__dirname,"../database/product.json"),"ut
 // const products = JSON.parse(json);
 
 const productControllers = {
-    detail: (req,res)=>  {
-    const {id} = req.params;
-		
-		const product = products.find (product => product.id == id);
-		res.render ('products/detalleP', {title:product.name, product, usuario:req.session.user})
-    },
-
+  detail: (req,res)=> {
+    db.Product.findByPk(req.params.id, 
+      {include: [
+        {
+          model: db.Imageproduct,
+          limit: 3,
+        },
+        {
+          model: db.Category,
+        },
+      ],
+      }) 
+      .then ((result) => {product=result; res.render ('products/detalleP', {title:product.name, product, usuario:req.session.user})})
+  },
+    
     listadoproductos: (req,res)=> {
     db.Product.findAll({ 
         include: [{

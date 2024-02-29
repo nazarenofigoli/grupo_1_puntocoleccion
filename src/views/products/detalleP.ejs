@@ -9,12 +9,12 @@
 
             <article class="articulos-detalleP">
                 <div class="box_foto-principal">
-                    <img id="foto-principal-dp" src="/img/productos/<%= product.imagen %>" alt="imagen funko">
+                    <img id="foto-principal-dp" src="/img/productos/<%= product.Imageproducts[0].imagen %>" alt="imagen funko">
                 </div>
 
                 <div class="box_fotos-secund">
-                    <img id="foto-2-dp" src="/img/productos/<%= product.imagen %>" alt="imagen-funko-perfil">
-                    <img id="foto-3-dp" src="/img/productos/<%= product.imagen %>" alt="imagen-funko-perfil-2">
+                    <img id="foto-2-dp" src="/img/productos/<%= product.Imageproducts[1].imagen %>" alt="imagen-funko-perfil">
+                    <img id="foto-3-dp" src="/img/productos/<%= product.Imageproducts[2].imagen %>" alt="imagen-funko-perfil-2">
                 </div>
             </article>
 
@@ -38,7 +38,7 @@
                     </div>
                     <button type="button" class="btn-detalleP" href="/products/carrito"><a>Agregar</a><i
                             class="fa-solid fa-cart-shopping" id="carrito-dp"></i></button>
-                    <h5 class="h5-dp">sku:jhbdhbsdhbh<br>Categoria:Fonko,gfdsajkl.</h5>
+                    <h5 class="h5-dp"><br>Categoria: <%= product.Category.nombre %></h5>
                     <div id="detalleP-icons">
                         <i class="fa-brands fa-instagram" style="color: #000000;"></i>
                         <i class="fa-brands fa-facebook" style="color: #000000;"></i>
