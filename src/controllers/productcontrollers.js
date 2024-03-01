@@ -111,15 +111,15 @@ const productControllers = {
     },
   
     productDelete: (req, res) => {
-		const { id } = req.params;
-    const leer = fs.readFileSync(path.join(__dirname,"../database/product.json"),"utf-8")
-    const products = JSON.parse(leer);
-		const nuevoArray = products.filter(product => product.id !== parseInt(id));
-		const json = JSON.stringify(nuevoArray);
-		fs.writeFileSync(path.join(__dirname,"../database/product.json"), json, "utf-8");
-		res.redirect("/products/dashboard");
-	}
-
+      const { id } = req.params;
+      db.Product.destroy({ where: { id } })
+          .then(() => {
+              res.redirect("/products/dashboard");
+          })
+          .catch(error => {
+              console.log("Error al eliminar el producto:", error);
+          });
+  }
 }
 
 module.exports = productControllers;

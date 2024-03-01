@@ -21,7 +21,8 @@ module.exports = {
             tableName:'products' 
         },
           key: 'id'
-        }
+        },
+        onDelete: 'cascade'
       },
       createdAt: {
         allowNull: true,

@@ -10,7 +10,7 @@ const indexControllers = {
       where: { subcategoria_id: 1 },
       include: [
         {model: db.Imageproduct,
-        limit: 2}]})
+        limit: 1}]})
       .then ((result) => {tendenciasYOfertas = result})
     db.Product.findAll({  
       where: { subcategoria_id: 2 },

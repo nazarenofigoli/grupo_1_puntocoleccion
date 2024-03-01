@@ -40,7 +40,8 @@ module.exports = {
             tableName:'Subcategories' 
         },
           key: 'id'
-        }
+        },
+        onDelete: 'cascade'
       },
       marca_id: {
         type: Sequelize.INTEGER,
@@ -50,7 +51,8 @@ module.exports = {
             tableName:'Brands' 
         },
           key: 'id'
-        }
+        },
+        onDelete: 'cascade'
         
       },
       categoria_id: {
