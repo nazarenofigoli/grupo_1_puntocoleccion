@@ -14,16 +14,6 @@
     "password": "$2a$10$xSXVoBO8y2KbL4PTY2W6cORefVC9PMXuKd7.vSL7pOybAWlGxgVXW"
   },
   {
-    "id": 3,
-    "nombre": "Lucio",
-    "apellido": "Testa",
-    "email": "luciotesta@gmail.com",
-    "password": "$2a$10$otSydAITJLlBJs1S24ZItuQ97NmXJrUUlWt7JIQpM/aa6y0.FKw1C",
-    "fechaNacimiento": "1989-06-26",
-    "edad": "34",
-    "genero": "Masculino"
-  },
-  {
     "id": 4,
     "nombre": "Nazareno",
     "apellido": "Figoli",

@@ -8,10 +8,15 @@
 .main_dashboard {
     width: 85%;
 }
+
+.dashboard_imagen_producto {
+    width: 40%;
+    height:70%
+
+}
 .aside_dashboard{
     display: flex;
     flex-direction: column;
-    background-color: rgba(202, 196, 196, 0.39);
     gap: 24px;
     width: 9%;
     align-items: center;
@@ -22,6 +27,7 @@
     display: flex;
     margin-top: 1%;
     padding: 2px;
+    align-items: flex-start;
 }
 .logo_barraMenu_dashboard{
     width: 39px;
@@ -49,6 +55,8 @@
 .head_tabla_dashboard {
     border: solid 2px rgb(0, 0, 0);
 }
+
+
 .body_tabla_dashboard {
     border: solid 2px rgb(0, 0, 0);
     width: 70%
@@ -57,7 +65,7 @@
     border: 1px solid #19b984;
     text-align: left;
     padding: 8px;
-    /* border: solid 2px rgb(0, 0, 0); */
+
 }
 .divisor_dashboard{
     color:#19b984 2px solid;
