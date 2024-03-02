@@ -1,5 +1,5 @@
 const { body } = require('express-validator');
-const bcrypt = require('bcrypt');
+const bcrypt = require("bcryptjs");
 const db = require('../database/models');
 
 const validateLogin = [
@@ -17,10 +17,14 @@ const validateLogin = [
     body('password')
         .notEmpty().withMessage("El campo no puede estar vacío").bail()
         .custom((value, { req }) => {
+            
             return db.User.findOne({ where: { email: req.body.email } })
                 .then(user => {
+                    console.log (user.dataValues.password)
+                    console.log (user.password)
+                    console.log (bcrypt.compareSync(value, user.dataValues.password))
                     if (!bcrypt.compareSync(value, user.dataValues.password)) {
-                        return Promise.reject("Credenciales Inválidas");
+                    return  Promise.reject("Credenciales Inválidas");
                     }
                 })
                 .catch(error => {

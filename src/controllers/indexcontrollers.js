@@ -11,13 +11,13 @@ const indexControllers = {
       include: [
         {model: db.Imageproduct,
         limit: 1}]})
-      .then ((result) => {tendenciasYOfertas = result})
+      .then ((result) => { tendenciasYOfertas = result})
     db.Product.findAll({  
       where: { subcategoria_id: 2 },
       include: [{
         model: db.Imageproduct,
         limit: 1}]})
-        .then ((result) => {destacados=result;
+        .then ((result) => { destacados=result;
         res.render('index', {title: 'Punto Coleccion',tendenciasYOfertas,destacados, usuario: req.session.user}) 
       
     })
