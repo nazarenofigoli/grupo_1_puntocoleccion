@@ -33,39 +33,56 @@ const productControllers = {
     carrito: (req,res)=>  res.render('products/carrito', {title:'Carrito', usuario:req.session.user}),
 
     update: (req,res)=> {
-        const {id} = req.params;
-        const json = fs.readFileSync(path.join(__dirname,"../database/product.json"),"utf-8");
-        const products = JSON.parse(json);
-        const product = products.find(producto => producto.id == parseInt(id));
-        res.render('products/cargaDeProducto',{title: product.nombre, product});
-    
-    }
+      db.Product.findByPk(req.params.id)
+          .then (product => res.render('products/cargaDeProducto',{title: product.nombre, product}))
+        
+   }
     ,
     editar: (req, res) => {
-    const {id}= req.params;
-    const leer = fs.readFileSync(path.join(__dirname,"../database/product.json"),"utf-8")
-    const products = JSON.parse(leer);
-      console.log(id);
-      const {nombre,descripcion,precio,marca,categoria} = req.body;
-      console.log(nombre);
-      const nuevoArray = products.map(product => {
-        console.log(product.id+": "+JSON.stringify(product))
-        if(product.id == parseInt(id)){
-          product.nombre = nombre.trim();
-          product.descripcion =descripcion.trim();
-          product.precio = +precio;
-          product.marca = marca.trim();
-          product.categoria = categoria.trim();
-          product.imagen = req.file ? req.file.filename : product.imagen;
-        }
-        return product;
-      });
-      console.log("nuevo array: "+JSON.stringify(nuevoArray));
-      const json = JSON.stringify(nuevoArray);
+      db.Product.findByPk(req.params.id)
+      .then((response) =>
+          db.Product.update(
+          {
+          categoria_id: req.body.categoria.trim(), 
+          marca_id: req.body.marca.trim(),   
+          nombre: req.body.nombre.trim(),
+          descripcion :req.body.descripcion.trim(),
+          precio: req.body.precio,
+          updatedAt: new Date(),  
+        },
+          {
+            where: {id:req.params.id},
+          }
+          )
+      )
+      
+      .then((response) => res.redirect('/products/dashboard'));
+
+    // const {id}= req.params;
+    // const leer = fs.readFileSync(path.join(__dirname,"../database/product.json"),"utf-8")
+    // const products = JSON.parse(leer);
+    //   console.log(id);
+    //   const {nombre,descripcion,precio,marca,categoria} = req.body;
+    //   console.log(nombre);
+    //   const nuevoArray = products.map(product => {
+    //     console.log(product.id+": "+JSON.stringify(product))
+    //     if(product.id == parseInt(id)){
+    //       product.nombre = nombre.trim();
+    //       product.descripcion =descripcion.trim();
+    //       product.precio = +precio;
+    //       product.marca = marca.trim();
+    //       product.categoria = categoria.trim();
+    //       product.imagen = req.file ? req.file.filename : product.imagen;
+    //     }
+    //     return product;
+    //   });
+    //   console.log("nuevo array: "+JSON.stringify(nuevoArray));
+    //   const json = JSON.stringify(nuevoArray);
           
-      fs.writeFileSync(path.join(__dirname,"../database/product.json"),json,"utf-8");
-      res.redirect('/products/dashboard');
+    //   fs.writeFileSync(path.join(__dirname,"../database/product.json"),json,"utf-8");
+    //   res.redirect('/products/dashboard');
     },
+
     cargaDeProducto:(req,res)=>  res.render('products/cargaDeProducto', {title:'Carga de producto', product: null, usuario:req.session.user}),
     
     dashboard:(req, res) => {
