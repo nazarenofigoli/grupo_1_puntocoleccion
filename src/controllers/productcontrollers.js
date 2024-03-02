@@ -34,9 +34,9 @@ const productControllers = {
 
     update: (req,res)=> {
       db.Product.findByPk(req.params.id)
-          .then (product => res.render('products/cargaDeProducto',{title: product.nombre, product}))
+          .then (product => res.render('products/actualizarproducto',{title: product.nombre, product}))
         
-   }
+}
     ,
     editar: (req, res) => {
       db.Product.findByPk(req.params.id)
@@ -55,7 +55,7 @@ const productControllers = {
           }
           )
       )
-      
+
       .then((response) => res.redirect('/products/dashboard'));
 
     // const {id}= req.params;
@@ -83,8 +83,22 @@ const productControllers = {
     //   res.redirect('/products/dashboard');
     },
 
-    cargaDeProducto:(req,res)=>  res.render('products/cargaDeProducto', {title:'Carga de producto', product: null, usuario:req.session.user}),
-    
+    cargaDeProducto:(req,res)=> {
+      db.Category.findAll({ attributes: ['id', 'nombre'] })
+      .then(categories => {
+          return db.Brand.findAll({ attributes: ['id', 'nombre'] })
+              .then(brands => {
+              // res.send ([{categories},{brands}])
+              res.render('products/cargaDeProducto', {title:'Carga de producto', product: null,brands, categories, usuario:req.session.user})
+              });
+      })
+      .catch(err => {
+          console.log(err);
+  
+    })
+        
+    }
+    ,
     dashboard:(req, res) => {
     db.Product.findAll({
       include: [
@@ -105,26 +119,24 @@ const productControllers = {
   },
     
     crearProducto: (req,res)=> {
-    const json = fs.readFileSync(path.join(__dirname,"../database/product.json"),"utf-8")
-    const products = JSON.parse(json);
-    
-    const product ={
-
-      id: products[products.length - 1].id  + 1,
+      db.Product.create ({
+      categoria_id: req.body.categoria,
+      marca_id: req.body.marca,  
       nombre: req.body.nombre.trim(),
-      descripcion: req.body.descripcion,
-      precio: +req.body.precio,
-      categoria: req.body.categoria.trim(),
-      marca: req.body.marca.trim(),
-      imagen: req.file ? req.file.filename : "naruto.jpg"
-    } 
-      
-      products.push(product);
-      const nuevoArray = JSON.stringify(products);
-      fs.writeFileSync(path.join(__dirname,"../database/product.json"),nuevoArray,"utf-8");
-      res.redirect("/products/dashboard")
-  
-      
+      descripcion: req.body.descripcion.trim(),
+      precio: req.body.precio,
+      stock: req.body.stock,
+      descuento:null,
+      createdAt: new Date,
+      updateAt: new Date,  
+    }).then (response => {
+      console.log("ESTO ES EL RESPONSE:", response);
+      db.Imageproduct.create({imagen:req.file.filename, 
+        producto_id: response.id,
+        createdAt: new Date,
+        updateAt: new Date }).then (()=>{res.redirect("/products/dashboard")
+      })
+    })
     },
   
     productDelete: (req, res) => {

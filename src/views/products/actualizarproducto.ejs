@@ -1,0 +1,31 @@
+    <%- include('../partials/head.ejs')%> 
+    <body>
+    <%- include('../partials/header.ejs') %>
+
+    <h1 class="cargaProducto__titulo"><%= product ? "Edicion de producto" : "Crea un producto"%></h1>
+
+    <form action="<%= product ? `/products/updateproduct/${product.id}?_method=PUT` : '/products/loadproduct' %>" method="post" class="cargaProducto__formulario" enctype="multipart/form-data">
+    <div class="cargaProducto__contenedor__formulario">
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" name="nombre" value="<%= product ? product.nombre : ""; %>">
+        <label for="imagen">Imagen:</label>
+        <input type="file" name="imagen" accept = "image/*">
+        <label for="descripcion">Descripcion:</label>
+        <input name="descripcion" value="<%= product ? product.descripcion : ""; %>"></input>
+        <label for="marca">Marca:</label>
+        <input type="text" name="marca" value="<%= product ? product.marca : ""; %>">
+        <label for="categoria">Categoria:</label>
+        <input type="text" name="categoria" value="<%= product ? product.categoria : ""; %>">
+        <label for="precio">Precio:</label>
+        <input type="number" name="precio" value="<%= product ? product.precio : ""; %>">
+
+
+        <div class="cargaProducto__contenedor__buton__enviar" >
+            <button type="submit" value="Enviar">Enviar</button></a>
+            <button type="reset" value="Borrar">Borrar</button></a>
+        </div>
+
+    </div>
+    </form>
+    </body>
+</html>
