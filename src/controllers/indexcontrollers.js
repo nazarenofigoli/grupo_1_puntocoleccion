@@ -12,8 +12,9 @@ const indexControllers = {
     res.render('index', {title: 'Punto Coleccion',tendenciasYOfertas,destacados, usuario: req.session.user}) 
   
   })
+  .catch(error => {console.log(error)});
   }
-    
+  
 }
 
 module.exports = indexControllers;
