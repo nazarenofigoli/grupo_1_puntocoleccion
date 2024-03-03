@@ -33,10 +33,22 @@ const productControllers = {
     carrito: (req,res)=>  res.render('products/carrito', {title:'Carrito', usuario:req.session.user}),
 
     update: (req,res)=> {
-      db.Product.findByPk(req.params.id)
-          .then (product => res.render('products/actualizarproducto',{title: product.nombre, product}))
-        
-}
+      const brands = db.Brand.findAll().catch(err => console.log(err))
+      const categories = db.Category.findAll().catch(err => console.log(err))
+      const product = db.Product.findByPk(req.params.id).catch(err => console.log(err))
+  
+      Promise.all([brands,categories,product]).then(([brands,categories,product])=>{
+        console.log("products: dentro del then");
+        res.render('products/actualizarproducto',{title: product.nombre, product, categories, brands})
+      })
+  
+      console.log("Despues del promise all");
+    },
+    all:(req,res)=>{
+      db.Product.findAll().then(resp => {
+        res.send(resp)
+      })
+    }
     ,
     editar: (req, res) => {
       db.Product.findByPk(req.params.id)
@@ -58,29 +70,6 @@ const productControllers = {
 
       .then((response) => res.redirect('/products/dashboard'));
 
-    // const {id}= req.params;
-    // const leer = fs.readFileSync(path.join(__dirname,"../database/product.json"),"utf-8")
-    // const products = JSON.parse(leer);
-    //   console.log(id);
-    //   const {nombre,descripcion,precio,marca,categoria} = req.body;
-    //   console.log(nombre);
-    //   const nuevoArray = products.map(product => {
-    //     console.log(product.id+": "+JSON.stringify(product))
-    //     if(product.id == parseInt(id)){
-    //       product.nombre = nombre.trim();
-    //       product.descripcion =descripcion.trim();
-    //       product.precio = +precio;
-    //       product.marca = marca.trim();
-    //       product.categoria = categoria.trim();
-    //       product.imagen = req.file ? req.file.filename : product.imagen;
-    //     }
-    //     return product;
-    //   });
-    //   console.log("nuevo array: "+JSON.stringify(nuevoArray));
-    //   const json = JSON.stringify(nuevoArray);
-          
-    //   fs.writeFileSync(path.join(__dirname,"../database/product.json"),json,"utf-8");
-    //   res.redirect('/products/dashboard');
     },
 
     cargaDeProducto:(req,res)=> {

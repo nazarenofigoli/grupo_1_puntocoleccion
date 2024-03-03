@@ -6,23 +6,16 @@ const db = require('../database/models')
 
 const indexControllers = {
   index: (req, res) => {
-    db.Product.findAll({
-      where: { subcategoria_id: 1 },
-      include: [
-        {model: db.Imageproduct,
-        limit: 1}]})
-      .then ((result) => { tendenciasYOfertas = result})
-    db.Product.findAll({  
-      where: { subcategoria_id: 2 },
-      include: [{
-        model: db.Imageproduct,
-        limit: 1}]})
-        .then ((result) => { destacados=result;
-        res.render('index', {title: 'Punto Coleccion',tendenciasYOfertas,destacados, usuario: req.session.user}) 
-      
-    })
-    .catch((err) => console.log(err))
+  const tendenciasYOfertas = db.Product.findAll({where: { subcategoria_id: 1 },include: [{model: db.Imageproduct,limit: 1}]}).catch(err => console.log(err))
+  const destacados = db.Product.findAll({ where: { subcategoria_id: 2 }, include: [{ model: db.Imageproduct,limit: 1}]}).catch(err => console.log(err))
+  Promise.all([tendenciasYOfertas,destacados]).then(([tendenciasYOfertas,destacados])=>{
+    res.render('index', {title: 'Punto Coleccion',tendenciasYOfertas,destacados, usuario: req.session.user}) 
+  
+  })
+  .catch(error => {console.log(error)});
+  }
+  
 }
-}
+
 module.exports = indexControllers;
 

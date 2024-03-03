@@ -8,16 +8,26 @@
     <div class="cargaProducto__contenedor__formulario">
         <label for="nombre">Nombre del Producto:</label>
         <input type="text" name="nombre" value="<%= product ? product.nombre : ""; %>">
-        <label for="imagen">Imagen:</label>
-        <input type="file" name="imagen" accept = "image/*">
         <label for="descripcion">Descripcion:</label>
         <input name="descripcion" value="<%= product ? product.descripcion : ""; %>"></input>
         <label for="marca">Marca:</label>
-        <input type="text" name="marca" value="<%= product ? product.marca : ""; %>">
-        <label for="categoria">Categoria:</label>
-        <input type="text" name="categoria" value="<%= product ? product.categoria : ""; %>">
+        <select name="marca">
+         <% brands.forEach((brand) => { %>
+        <option value="<%= brand.id %>"> <%= brand.nombre %> </option>
+    <% }) %>
+</select>
+
+        <label for="categoria">Categoría:</label>
+    
+        <select name="categoria">
+            <% categories.forEach((categoria) => { %>
+                <option value=<%=categoria.id %>> <%= categoria.nombre %> </option>
+            <% }) %>
+        </select>
         <label for="precio">Precio:</label>
         <input type="number" name="precio" value="<%= product ? product.precio : ""; %>">
+        <label for="stock">Stock:</label>
+        <input type="number" name="stock" value="<%= product ? product.stock : ""; %>">
 
 
         <div class="cargaProducto__contenedor__buton__enviar" >

@@ -26,6 +26,7 @@
                                 <th>Precio</th>
                                 <th>Marca</th>
                                 <th>Categoría</th>
+                                <th>Stock</th>
                                 <th>Acciones</th> 
                             </div>
                         </tr>
@@ -40,6 +41,7 @@
                                 <td><%= product.precio%></td>
                                 <td><%= product.Brand.nombre%></td>
                                 <td><%= product.Category.nombre%></td>
+                                <td><%= product.stock%></td>
                                 <td>
                                     <a class="boton_dashboard_tabla"
                                     href="/products/updateproduct/<%= product.id %>"><button><i
