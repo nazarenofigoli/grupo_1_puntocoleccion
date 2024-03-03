@@ -97,8 +97,8 @@ const productControllers = {
   
     })
         
-    }
-    ,
+    },
+    
     dashboard:(req, res) => {
     db.Product.findAll({
       include: [
@@ -118,28 +118,27 @@ const productControllers = {
     
   },
     
-    crearProducto: (req,res)=> {
-      db.Product.create ({
-      categoria_id: req.body.categoria,
-      marca_id: req.body.marca,  
-      nombre: req.body.nombre.trim(),
-      descripcion: req.body.descripcion.trim(),
-      precio: req.body.precio,
-      stock: req.body.stock,
-      descuento:null,
+  crearProducto: (req,res)=> {
+    db.Product.create ({
+    categoria_id: req.body.categoria,
+    marca_id: req.body.marca,  
+    nombre: req.body.nombre.trim(),
+    descripcion: req.body.descripcion.trim(),
+    precio: req.body.precio,
+    stock: req.body.stock,
+    descuento:null,
+    createdAt: new Date,
+    updateAt: new Date,  
+  }).then (response => {
+    console.log("ESTO ES EL RESPONSE:", response);
+    db.Imageproduct.create({imagen:req.file.filename, 
+      producto_id: response.id,
       createdAt: new Date,
-      updateAt: new Date,  
-    }).then (response => {
-      console.log("ESTO ES EL RESPONSE:", response);
-      db.Imageproduct.create({imagen:req.file.filename, 
-        producto_id: response.id,
-        createdAt: new Date,
-        updateAt: new Date }).then (()=>{res.redirect("/products/dashboard")
-      })
+      updateAt: new Date }).then (()=>{res.redirect("/products/dashboard")
     })
-    },
-  
-    productDelete: (req, res) => {
+  })
+  },
+  productDelete: (req, res) => {
       const { id } = req.params;
       db.Product.destroy({ where: { id } })
           .then(() => {
