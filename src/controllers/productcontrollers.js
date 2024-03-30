@@ -1,11 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const db = require("../database/models");
-const json = fs.readFileSync(
-  path.join(__dirname, "../database/product.json"),
-  "utf-8"
-);
-// const products = JSON.parse(json);
+const { validationResult } = require("express-validator");
 
 const productControllers = {
   detail: (req, res) => {
@@ -105,8 +101,8 @@ const productControllers = {
       .then((categories) => {
         return db.Brand.findAll({ attributes: ["id", "nombre"] }).then(
           (brands) => {
-            // res.send ([{categories},{brands}])
-            res.render("products/cargaDeProducto", {
+          
+            res.render("./products/cargaDeProducto", {
               title: "Carga de producto",
               product: null,
               brands,
@@ -137,7 +133,7 @@ const productControllers = {
       ],
     }).then((result) => {
       products = result;
-      res.render("products/dashboard", {
+      res.render("./products/dashboard", {
         title: "Dashboard",
         products,
         usuario: req.session.user,
@@ -145,7 +141,9 @@ const productControllers = {
     });
   },
 
-  crearProducto: (req, res) => {
+  crearProducto: (req, res) => { 
+    let errors = validationResult(req);
+    if (errors.isEmpty()) {
     db.Product.create({
       categoria_id: req.body.categoria,
       marca_id: req.body.marca,
@@ -157,7 +155,7 @@ const productControllers = {
       createdAt: new Date(),
       updateAt: new Date(),
     }).then((response) => {
-      console.log("ESTO ES EL RESPONSE:", response);
+     
       db.Imageproduct.create({
         imagen: req.file.filename,
         producto_id: response.id,
@@ -165,9 +163,30 @@ const productControllers = {
         updateAt: new Date(),
       }).then(() => {
         res.redirect("/products/dashboard");
+      })
+    })}
+    else {
+      db.Category.findAll({ attributes: ["id", "nombre"] })
+      .then((categories) => {
+        return db.Brand.findAll({ attributes: ["id", "nombre"] }).then(
+          (brands) => {
+          
+            res.render("./products/cargaDeProducto", {
+              title: "Carga de producto",
+              product: null,
+              errors:errors.mapped(),
+              brands,
+              categories,
+              usuario: req.session.user,
+            });
+          }
+        );
+      })
+      .catch((err) => {
+        console.log(err);
       });
-    });
-  },
+      
+}},
   productDelete: (req, res) => {
     const { id } = req.params;
     db.Product.destroy({ where: { id } })

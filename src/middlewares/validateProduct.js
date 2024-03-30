@@ -19,9 +19,12 @@ const validateProduct = [
     check("categoria")
         .notEmpty()
         .withMessage("Selecciona una Marca"),
-    
-      
-      
+    check("precio")
+        .notEmpty()
+        .withMessage("Ingrese el Precio"),
+    check("stock")
+    .notEmpty()
+    .withMessage("Ingrese el Precio"),      
   ];
   
   module.exports = validateProduct;

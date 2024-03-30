@@ -8,10 +8,12 @@
 <div class="cargaProducto__contenedor__formulario">
     <label for="nombre">Nombre del Producto:</label>
     <input type="text" name="nombre" value="<%= product ? product.nombre : ""; %>">
+    <p style="color:red"><%= locals.errors && errors.nombre? errors.nombre.msg : null %></p>
     <label for="imagen">Imagen:</label>
     <input type="file" name="imagen" accept = "image/*">
     <label for="descripcion">Descripcion:</label>
     <input name="descripcion" value="<%= product ? product.descripcion : ""; %>"></input>
+    <p style="color:red"><%= locals.errors && errors.descripcion? errors.descripcion.msg : null %></p>
     
 
     <label for="marca">Marca: </label>
@@ -22,7 +24,7 @@
                         <option value="<%= brand.id %>"><%= brand.nombre %></option>
                         <% }); %>
                     </select>
-                
+    <p style="color:red"><%= locals.errors && errors.marca? errors.marca.msg : null %></p>            
     
     <label for="categoria">Categoría:</label>
 
@@ -32,14 +34,15 @@
             <option value=<%=categoria.id %>> <%= categoria.nombre %> </option>
         <% }) %>
     </select>
+    <p style="color:red"><%= locals.errors && errors.categoria? errors.categoria.msg : null %></p>
     <label for="precio">Precio:</label>
     
     <input type="number" name="precio" value="<%= product ? product.precio : ""; %>">
-    
+    <p style="color:red"><%= locals.errors && errors.precio? errors.precio.msg : null %></p>
     <label for="stock">Stock:</label>    
 
     <input type="number" name="stock" value="<%= product ? product.stock : ""; %>">
-
+    <p style="color:red"><%= locals.errors && errors.stock? errors.stock.msg : null %></p>
 
 
     <div class="cargaProducto__contenedor__buton__enviar" >

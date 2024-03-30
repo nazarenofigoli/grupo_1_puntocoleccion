@@ -4,7 +4,7 @@ const path = require("path");
 const multer = require("multer");
 const validateAdmin = require("../middlewares/validateAdmin.js");
 const validateUsers = require("../middlewares/validateUser.js");
-
+const validateProduct = require ("../middlewares/validateProduct.js");
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.join(__dirname, "../../public/img/productos"));
@@ -24,20 +24,10 @@ router
   .get("/detail/:id", productControllers.detail)
   .get("/carrito", validateUsers, productControllers.carrito)
   .get("/updateproduct/:id", validateAdmin, productControllers.update)
-  .put(
-    "/updateproduct/:id",
-    validateAdmin,
-    upload.single("imagen"),
-    productControllers.editar
-  )
+  .put("/updateproduct/:id", validateAdmin, upload.single("imagen"), productControllers.editar )
   .get("/dashboard", validateAdmin, productControllers.dashboard)
   .get("/loadproduct", validateAdmin, productControllers.cargaDeProducto)
-  .post(
-    "/loadproduct",
-    validateAdmin,
-    upload.single("imagen"),
-    productControllers.crearProducto
-  )
+  .post("/loadproduct", validateAdmin,validateProduct,upload.single("imagen"), productControllers.crearProducto)
   .delete("/delete/:id", validateAdmin, productControllers.productDelete);
 
 module.exports = router;
