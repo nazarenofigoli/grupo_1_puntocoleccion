@@ -12,7 +12,7 @@
         <input name="descripcion" value="<%= product ? product.descripcion : ""; %>"></input>
         <label for="marca">Marca:</label>
         <select name="marca">
-         <% brands.forEach((brand) => { %>
+        <% brands.forEach((brand) => { %>
         <option value="<%= brand.id %>"> <%= brand.nombre %> </option>
     <% }) %>
 </select>

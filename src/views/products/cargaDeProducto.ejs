@@ -12,18 +12,22 @@
     <input type="file" name="imagen" accept = "image/*">
     <label for="descripcion">Descripcion:</label>
     <input name="descripcion" value="<%= product ? product.descripcion : ""; %>"></input>
-    <label for="marca">Marca:</label>
     
 
-    <select name="marca">
-        <% brands.forEach((brand) => { %>
-            <option value="<%= product ? product.categoria_id : brand.id %>"> <%= brand.nombre %> </option>
-        <% }) %>
-    </select>
+    <label for="marca">Marca: </label>
+                
+                    <select name="marca" id="marca">
+                        <option value="" disabled selected>- Seleccione la Marca - </option>
+                        <% brands.forEach(brand => { %>
+                        <option value="<%= brand.id %>"><%= brand.nombre %></option>
+                        <% }); %>
+                    </select>
+                
     
     <label for="categoria">Categoría:</label>
 
-    <select name="categoria">
+        <select name="categoria" id="categoria">
+    <option value="" disabled selected>- Seleccione la categoria - </option>
         <% categories.forEach((categoria) => { %>
             <option value=<%=categoria.id %>> <%= categoria.nombre %> </option>
         <% }) %>

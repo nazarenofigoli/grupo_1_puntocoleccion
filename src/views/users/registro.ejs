@@ -23,7 +23,8 @@
                 <p style="color:red"><%= locals.errors && errors.apellido ? errors.apellido.msg : null %></p>
                 
                 <label for="email">E-MAIL:</label >
-                <input type="email" name="email" placeholder="ej: tumail@email.com"  value="<%= locals.old && old.email%>">
+                <input type="text" name="email" placeholder="ej: tumail@email.com"  value="<%= locals.old && old.email%>">
+                
                 <p style="color:red"><%= locals.errors && errors.email ? errors.email.msg : null %></p>
 
                 <% if (locals.usuario && usuario.rol == 'admin') {%>
@@ -39,7 +40,12 @@
                 <label for="password1">REPETIR CONTRASEÑA:</label>
                 <input type="password" name="password1" placeholder="●●●●●●●●">
                 <p style="color:red"><%= locals.errors && errors.password1 ? errors.password1.msg : null %></p>
-                
+                <label class="switch">
+                   <div class = "errores">
+                        <ul>
+
+                        </ul>
+                    </div>
                 <div class="g-recaptcha" data-sitekey="6LeSXBMpAAAAANooS21qTPO1k_ga29vmHPZm9CQI"></div>
 
                 <div class="registro_main_botones_account">
@@ -51,6 +57,7 @@
         </section>
         <p class="registro_main_titulos_account">¿Ya ténes una cuenta? <a href="/users/login">Iniciá Sesión</a></p>
     </main>
+    <script src="/js/form-registro-validation.js"></script>
     <%- include('../partials/footer.ejs')%>  
 
 </body>

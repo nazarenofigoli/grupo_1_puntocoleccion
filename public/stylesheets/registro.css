@@ -16,7 +16,11 @@
 text-align: center;
 font-size: 12px;
 }
-
+.errores ul li {
+color: red;
+text-transform: none;
+text-align: center;
+}
 .registro_main_titulos h1 {
     background-color: var(--Negro);
     font-size: 25px;

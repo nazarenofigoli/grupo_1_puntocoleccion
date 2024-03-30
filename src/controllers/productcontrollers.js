@@ -72,7 +72,7 @@ const productControllers = {
       }
     );
 
-    console.log("Despues del promise all");
+    
   },
   all: (req, res) => {
     db.Product.findAll().then((resp) => {
@@ -181,3 +181,4 @@ const productControllers = {
 };
 
 module.exports = productControllers;
+
