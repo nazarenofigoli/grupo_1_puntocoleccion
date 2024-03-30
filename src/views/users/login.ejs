@@ -1,8 +1,13 @@
 <%- include("../partials/head.ejs")%>
 
+
+
 <body>
 
     <%- include('../partials/header.ejs')%>
+
+
+
 
     <main class="main">
 
@@ -11,7 +16,7 @@
     <form action="/users/login" method="post" class="formulario__general">
         <div class="form">
             <div class="opciones-registro1">
-                <input class="input-registro" type="email" name="email" placeholder="correo electronico" />
+                <input class="input-registro" type="text" name="email" placeholder="correo electronico" />
                 <p style="color:red"><%= locals.errors && errors.email? errors.email.msg : null %></p>
             </div>
         </div>
@@ -25,6 +30,11 @@
         <div>
             <label for="remember">Mantener sesion</label>
             <input type="checkbox" name="remember" value="true">
+        </div>
+        <div class="errores">
+            <ul>
+
+            </ul>
         </div>
         <div class="form">
             <div class="opciones-registro1">
@@ -49,7 +59,7 @@
 
 
 </main>
-
+<script src="/js/login-validation.js"></script>
 <%- include('../partials/footer.ejs')%>  
 </body> 
 </html>
