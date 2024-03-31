@@ -72,7 +72,8 @@ const userControllers = {
         usuario: req.session.user,
         user,
       });
-    });
+    })
+    
   },
   updateProfile: (req, res) => {
     db.User.findByPk(req.session.user.id)
@@ -93,8 +94,11 @@ const userControllers = {
           }
         )
       )
-      .then((response) => res.redirect("/"));
-  },
-};
+      .then((response) => { 
+        db.User.findOne({ where: { email: req.session.user.email } }).then((result) => {
+        req.session.user = result,
+        res.redirect("/")});
+  })},
+}
 
 module.exports = userControllers;
