@@ -33,10 +33,10 @@ window.addEventListener('load', function() {
 
         if (userAge.value === "") {
             errores.push('Debe proporcionar una edad');
-           
+        
         } else if (userAge.value < 0) {
             errores.push('La edad no puede ser negativa');
-           
+        
         } 
 
         if (errores.length > 0) {

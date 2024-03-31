@@ -159,3 +159,27 @@ Dejar de procrastinar o posponer tareas importantes, abordarlas de manera proact
 
 5. Seguir Haciendo:
 En general, seguimos adaptándonos bien al trabajo en equipo y gestionando los tiempos de manera eficiente. Aunque hay áreas de mejora identificadas, estamos contentos con el progreso y la dinámica del grupo.
+
+# Retrospectiva Sprint 6
+
+# Fecha de reunión:
+* Sábado 23/03/2024
+11:30 AM
+
+1. Empezar a hacer:
+   - Hablar más seguido para estar al tanto de lo que estamos haciendo y necesitamos hacer.
+   - Asignar claramente quién hace qué desde el principio.
+
+2. Hacer más:
+   - Reunirnos a mitad de semana para ver cómo vamos con nuestras tareas y si necesitamos ayuda.
+   - Compartir consejos para mejorar nuestro trabajo juntos.
+
+3. Hacer menos:
+   - Reducir la comunicación escrita; preferimos hablar cara a cara para resolver problemas más rápido.
+
+4. Dejar de hacer:
+   - No dejar tareas importantes para el último minuto; resolver problemas en cuanto surjan.
+
+5. Seguir haciendo:
+   - Revisar nuestra lista de tareas al inicio del sprint para mantenernos enfocados.
+   - Celebrar nuestros logros y apoyarnos mutuamente para mantenernos motivados.

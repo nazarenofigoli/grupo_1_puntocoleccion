@@ -37,7 +37,8 @@
                 
                 <label for="genero">Género:</label>
                 <select id="genero" name="genero">
-                <option value="" <%= user.genero == "" ? "selected" : null %>>Elegi</option>    
+                <option value="" disabled selected>- Seleccione un genero - </option>
+                
                 <option value="Femenino" <%= user.genero == "Femenino" ? "selected" : null %>>Femenino</option>
                 <option value="Masculino" <%= user.genero == "Masculino" ? "selected" : null%>>Masculino</option>
                 <option value="Otro" <%= user.genero == "Otro" ? "selected" : null%>>Otro</option>

@@ -18,7 +18,7 @@ const validateProduct = [
       .withMessage("Selecciona una Marca"),
     check("categoria")
         .notEmpty()
-        .withMessage("Selecciona una Marca"),
+        .withMessage("Selecciona una Categoría"),
     check("precio")
         .notEmpty()
         .withMessage("Ingrese el Precio"),
