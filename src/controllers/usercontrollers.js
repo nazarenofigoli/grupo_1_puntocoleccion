@@ -75,8 +75,10 @@ const userControllers = {
     })
     
   },
-  updateProfile: (req, res) => {
-    db.User.findByPk(req.session.user.id)
+  updateProfile: (req, res) => { 
+    let errors = validationResult(req); 
+    if (errors.isEmpty()) {
+      db.User.findByPk(req.session.user.id)
       .then((response) =>
         db.User.update(
           {
@@ -98,7 +100,14 @@ const userControllers = {
         db.User.findOne({ where: { email: req.session.user.email } }).then((result) => {
         req.session.user = result,
         res.redirect("/")});
-  })},
+  })}
+    else {
+      db.User.findByPk(req.session.user.id).then((result) => {
+        user = result;})
+      res.render ("./users/profile", {title: "Perfil Usuario", usuario: req.session.user, user } )
+    }  
+    
+  
 }
-
+}
 module.exports = userControllers;
