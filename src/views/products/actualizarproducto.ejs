@@ -25,12 +25,12 @@
             <% }) %>
         </select>
         <label for="precio">Precio:</label>
-        <input type="number" name="precio" value="<%= product ? product.precio : ""; %>">
+        <input type="text" name="precio" value="<%= product ? product.precio : ""; %>">
         <label for="stock">Stock:</label>
-        <input type="number" name="stock" value="<%= product ? product.stock : ""; %>">
+        <input type="text" name="stock" value="<%= product ? product.stock : ""; %>">
         <div class="errores">
             <ul>
-                
+
             </ul>
         </div>
 
@@ -41,5 +41,6 @@
 
     </div>
     </form>
+    <script src="/js/product-validation.js"></script>
     </body>
 </html>

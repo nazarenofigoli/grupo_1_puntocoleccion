@@ -39,7 +39,7 @@ window.addEventListener("load", function () {
     if (stock.value.length === 0) {
       errores.push("Ingrese la cantidad en stock")
     } else if (isNaN(parseFloat(stock.value))) {
-      errores.push("La cantidad en stock debe ser un número entero");
+      errores.push("La cantidad en stock debe ser un número");
     }
 
     if (errores.length > 0) {
