@@ -27,7 +27,7 @@ router
   .put("/updateproduct/:id", validateAdmin, upload.single("imagen"), productControllers.editar )
   .get("/dashboard", validateAdmin, productControllers.dashboard)
   .get("/loadproduct", validateAdmin, productControllers.cargaDeProducto)
-  .post("/loadproduct", validateAdmin,validateProduct,upload.single("imagen"), productControllers.crearProducto)
+  .post("/loadproduct", validateAdmin,upload.single("imagen"), productControllers.crearProducto)
   .delete("/delete/:id", validateAdmin, productControllers.productDelete);
 
 module.exports = router;
