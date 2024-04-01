@@ -64,6 +64,7 @@ const productControllers = {
           product,
           categories,
           brands,
+          usuario: req.session.user
         });
       }
     );
