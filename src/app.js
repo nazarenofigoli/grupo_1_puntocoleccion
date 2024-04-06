@@ -10,7 +10,7 @@ const rememberUser = require ('./middlewares/rememberUser.js');
 const indexRouter = require('./routes/indexRouter');
 const usersRouter = require('./routes/usersRouter');
 const productRouter = require('./routes/productRouter');
-
+const apiProductRouter = require('./routes/api/apiProductRouter');
 var app = express();
 
 // view engine setup
@@ -34,7 +34,7 @@ app.use(rememberUser);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productRouter);
-
+app.use('/api', apiProductRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const db = require("../database/models");
 const { validationResult } = require("express-validator");
+const { all } = require("../routes/indexRouter");
 
 const productControllers = {
   detail: (req, res) => {
@@ -76,6 +77,7 @@ const productControllers = {
       res.send(resp);
     });
   },
+
   editar: (req, res) => {
     db.Product.findByPk(req.params.id)
       .then((response) =>
