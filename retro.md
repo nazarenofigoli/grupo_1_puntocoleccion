@@ -183,3 +183,35 @@ En general, seguimos adaptándonos bien al trabajo en equipo y gestionando los t
 5. Seguir haciendo:
    - Revisar nuestra lista de tareas al inicio del sprint para mantenernos enfocados.
    - Celebrar nuestros logros y apoyarnos mutuamente para mantenernos motivados.
+
+
+  # Retrospectiva Sprint 7
+
+  # Fecha de reunión:
+* Domingo 7/04/2024
+16:15 AM
+
+1. Empezar a hacer:
+   - Definir quién hace qué para que no haya confusiones.
+   - Hacer reuniones breves todos los días para mantenernos en la misma página.
+
+2. Hacer más:
+   - Trabajar juntos para resolver problemas de manera creativa.
+   - Celebrar los logros, ¡incluso los pequeños!
+
+3. Hacer menos:
+   - Reducir las interrupciones para poder concentrarnos en el trabajo.
+   - Dejar de posponer las cosas importantes; abordarlas de inmediato.
+
+4. Dejar de hacer:
+   - Dejar de lado tareas que no nos acercan a nuestros objetivos.
+   - Evitar distracciones durante el trabajo; mantenernos enfocados.
+
+5. Seguir haciendo:
+   - Revisar y ajustar nuestras metas regularmente.
+   - Mantener una comunicación abierta para resolver problemas juntos.
+
+
+
+
+
