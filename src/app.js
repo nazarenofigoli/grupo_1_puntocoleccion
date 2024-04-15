@@ -35,7 +35,7 @@ app.use(rememberUser);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productRouter);
-app.use('/api', apiProductRouter);
+app.use('/api/product', apiProductRouter);
 app.use('/api/user', apiUserRouter);
 
 // catch 404 and forward to error handler
