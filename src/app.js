@@ -12,6 +12,7 @@ const usersRouter = require('./routes/usersRouter');
 const productRouter = require('./routes/productRouter');
 const apiProductRouter = require('./routes/api/apiProductRouter');
 const apiUserRouter = require('./routes/api/apiUserRouter');
+const headerFooterRoutes = require('./routes/api/headerFooterRoutes');
 var app = express();
 
 // view engine setup
@@ -38,6 +39,7 @@ app.use('/users', usersRouter);
 app.use('/products', productRouter);
 app.use('/api/product', apiProductRouter);
 app.use('/api/user', apiUserRouter);
+app.use('/partials', headerFooterRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

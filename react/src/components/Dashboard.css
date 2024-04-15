@@ -1,0 +1,26 @@
+/* Dashboard.css */
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .section {
+    background-color: aqua;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .section1 {
+    grid-column: 1 / span 2;
+  }
+  
+  .section2 {
+    grid-column: 3;
+  }
+  
+  .section3 {
+    grid-column: 1;
+  }
+  
