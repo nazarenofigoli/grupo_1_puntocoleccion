@@ -93,7 +93,21 @@ const productosController = {
             console.error("Error al obtener el producto por ID:", error);
             res.status(400).send(error.message);
         }
-    }
-};
+    }, 
+    allcategories : async (req, res) => {
+    
+                try {
+                    const categorias = await db.Category.findAll();
+                    const respuesta =  categorias.length;
+                    res.status(200).json({count:respuesta, categorias})
+                } catch (error) {
+                    console.error("Error al obtener categorías:", error);
+                    res.status(500).json({ error: "Error interno del servidor" });
+                }
+    } 
+
+    
+}
+
 
 module.exports = productosController;
