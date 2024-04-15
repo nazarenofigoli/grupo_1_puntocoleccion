@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const { create, all, update, destroy, getProduct , allcategories } = require("../../controllers/api/apiProductController");
+const { create, all, update, destroy, getProduct , allcategories, lastProduct } = require("../../controllers/api/apiProductController");
 
 router
+.get ('/lastProduct', lastProduct)
 .get ('/allcategories',allcategories)
 .get('/all', all)
 .get('/:id', getProduct)

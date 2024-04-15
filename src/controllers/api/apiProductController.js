@@ -104,9 +104,20 @@ const productosController = {
                     console.error("Error al obtener categorías:", error);
                     res.status(500).json({ error: "Error interno del servidor" });
                 }
-    } 
+    },
+    lastProduct : async (req, res) => {
+        try {
+          const ultimoProducto = await db.Product.findOne({
+            include: [{ association: "Imageproducts" }],
+            order: [["id", "DESC"]]})
+            res.status(200).json(ultimoProducto) 
+          } catch (error) {
+                console.log('Error al obtener el ultimo producto', error)
+                res.status(500).json({ error: "Error interno del servidor" });
+          }
 
     
+}
 }
 
 
