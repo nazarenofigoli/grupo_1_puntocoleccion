@@ -1,21 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Header from './components/Header'; // Importa el componente Header
-import TotalProductos from './components/TotalProductos.jsx';
-import UsuariosTotales from './components/UsuariosTotales.jsx';
-import Categories from './components/Categories.jsx';
-import LastProduct from './components/LastProduct.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Dashboard from './components/Dashboard';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* Renderiza el Header */}
-    <Header />
-    {/* Renderiza los otros componentes */}
-    <TotalProductos />
-    <UsuariosTotales />
-    <Categories />
-    <LastProduct />
+    <div class='d-flex align-items-center'>
+    <Dashboard />
+    </div>
     {/* Renderiza el Footer */}
-  </React.StrictMode>,
+  </React.StrictMode>
 );

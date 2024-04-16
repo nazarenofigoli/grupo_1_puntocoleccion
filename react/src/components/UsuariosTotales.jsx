@@ -18,9 +18,9 @@ const UsuariosTotales= () => {
   }, []);
 
   return (
-    <div className="panel">
-      <h2>Total de Usuarios</h2>
-      <p>{totalUsuarios}</p>
+    <div style={{textAlign: 'center', backgroundColor:'#000', borderTopLeftRadius: '20px', borderTopRightRadius: '20px',borderBottomLeftRadius: '20px',borderBottomRightRadius: '20px'}}className="panel">
+      <h3 style = {{color: '#27AEA8'}} >Total de Usuarios</h3>
+      <h1 style = {{color: '#27AEA8'}} h1>{totalUsuarios}</h1>
     </div>
   );
 };

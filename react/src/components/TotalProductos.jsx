@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 
+
 const TotalProductos = () => {
   const [totalProductos, setTotalProductos] = useState(0);
 
@@ -18,11 +19,13 @@ const TotalProductos = () => {
   }, []);
 
   return (
-    <div className="panel">
-      <h2>Total de Productos</h2>
-      <p>{totalProductos}</p>
+    <div style={{backgroundColor:'#000', textAlign: 'center', borderTopLeftRadius: '20px', borderTopRightRadius: '20px',borderBottomLeftRadius: '20px',borderBottomRightRadius: '20px'}}className="panel">
+      <h3 style = {{color: '#27AEA8'}} >Total de Productos</h3>
+      <h1 style = {{color: '#27AEA8'}} >{totalProductos}</h1>
+      
     </div>
   );
 };
 
 export default TotalProductos;
+
