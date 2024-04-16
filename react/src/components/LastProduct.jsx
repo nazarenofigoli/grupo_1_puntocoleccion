@@ -17,11 +17,13 @@ const LastProduct= () => {
     getCantidad();
   }, []);
 
+  
   return (
     <div className="producto">
       <h2>{ultimoProducto.nombre}</h2>
       <p>{ultimoProducto.descripcion}</p>
       <p>Precio: ${ultimoProducto.precio}</p>
+      
       <img scr= '' alt='' />
     </div>
   );
