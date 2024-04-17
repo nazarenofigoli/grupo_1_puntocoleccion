@@ -7,7 +7,15 @@ function NavBar() {
     <>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home"><img src='./LogoP2.png' width= '30%'/></Navbar.Brand>
+          
+<Navbar.Brand href="http://localhost:3000/">
+<img
+  src="./LogoP2.png"
+  width="60"
+  height="60"
+  className="d-inline-block align-top"
+  alt="React Bootstrap logo"
+/></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#features">Features</Nav.Link>
@@ -18,5 +26,7 @@ function NavBar() {
     </>
   );
 }
+
+
 
 export default NavBar;
