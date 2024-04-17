@@ -21,17 +21,18 @@ const TotalProductos = () => {
   }, []);
 
   return (
-    <Card bg="dark" data-bs-theme="dark" style={{ width: '18rem' }}>
-      <Card.Body >
-        <Card.Title style={{ fontSize: '30px',textAlign: 'center' }} >Total Productos</Card.Title>
-         <Card.Text  style={{ fontSize: '50px', textAlign: 'center' }}>
-          {totalProductos}
-        </Card.Text>
-        
-      </Card.Body>
-    </Card>
+    <div className="d-flex justify-content-center">
+      <Card bg="dark" data-bs-theme="dark" style={{ width: '18rem' }}>
+        <Card.Body>
+          <Card.Title style={{ fontSize: '30px', textAlign: 'center' }}>Total Productos</Card.Title>
+          <Card.Text style={{ fontSize: '50px', textAlign: 'center' }}>
+            {totalProductos}
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </div>
   );
-}
+};
 
 export default TotalProductos;
 

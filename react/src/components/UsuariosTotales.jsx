@@ -20,16 +20,16 @@ const UsuariosTotales= () => {
   }, []);
 
   return (
-    <Card  bg="dark" data-bs-theme="dark" style={{ width: '18rem' }}>
-      <Card.Body >
-        <Card.Title style={{ fontSize: '30px',textAlign: 'center' }} >Total Usuarios</Card.Title>
-         <Card.Text  style={{ fontSize: '50px', textAlign: 'center' }}>
-          {totalUsuarios}
-        </Card.Text>
-        
-        
-      </Card.Body>
-    </Card>
+    <div className="d-flex justify-content-center">
+      <Card bg="dark" data-bs-theme="dark" style={{ width: '18rem' }}>
+        <Card.Body>
+          <Card.Title style={{ fontSize: '30px', textAlign: 'center' }}>Total Usuarios</Card.Title>
+          <Card.Text style={{ fontSize: '50px', textAlign: 'center' }}>
+            {totalUsuarios}
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </div>
   );
 };
 

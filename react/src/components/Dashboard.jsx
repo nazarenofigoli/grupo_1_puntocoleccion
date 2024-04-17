@@ -6,6 +6,7 @@ import UsuariosTotales from './UsuariosTotales.jsx';
 import Categories from './Categories.jsx';
 import LastProduct from './LastProduct.jsx';
 import ProductoAcordeon from './ProductoAcordeon.jsx';
+import UsuariosAcordeon from './UsuariosAcordeon.jsx'
 import Navbar from './NavBar.jsx';
 
 const Dashboard = () => {
@@ -21,7 +22,9 @@ const Dashboard = () => {
       <br></br>
       <Row>
         <Col><LastProduct /></Col>
-        <Col><ProductoAcordeon /></Col>
+        <Col><ProductoAcordeon />
+        <UsuariosAcordeon />
+        </Col>
       </Row>
       
     </Container>
