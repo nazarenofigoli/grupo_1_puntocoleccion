@@ -37,7 +37,7 @@
                         <td><%= user.apellido %></td>
                         <td><%= user.email %></td>
                         <td><%= user.rol %></td>
-                        <td><%= user.fechaNaciento %></td>
+                        <td><%= user.fechaNaciento && user.fechaNaciento.toISOString().slice(0,10) %></td>
                         <td><%= user.edad %></td>
                         <td><%= user.genero %></td>
                         <!-- Agrega más celdas según sea necesario -->
