@@ -1,4 +1,5 @@
 import  { useState, useEffect } from 'react';
+import Card from 'react-bootstrap/Card';
 
 const Categories = () => {
   const [totalCategories, setTotalCategories] = useState(0);
@@ -18,10 +19,14 @@ const Categories = () => {
   }, []);
 
   return (
-    <div style={{backgroundColor:'#000', borderTopLeftRadius: '20px', textAlign: 'center', borderTopRightRadius: '20px',borderBottomLeftRadius: '20px',borderBottomRightRadius: '20px'}}className="panel">
-      <h3 style = {{color: '#27AEA8'}}>Total de Categorias</h3>
-      <h1 style = {{color: '#27AEA8'}}>{totalCategories}</h1>
-    </div>
+    <Card bg="dark" data-bs-theme="dark" style={{ width: '18rem' }}>
+      <Card.Body >
+        <Card.Title style={{ fontSize: '30px',textAlign: 'center' }} >Total Categorias</Card.Title>
+         <Card.Text  style={{ fontSize: '50px', textAlign: 'center' }}>
+          {totalCategories}
+        </Card.Text>
+      </Card.Body>
+    </Card>
   );
 };
 

@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 const LastProduct= () => {
@@ -32,13 +31,10 @@ useEffect(() => {
         <Card.Body>
           <Card.Title>{ultimoProducto.nombre}</Card.Title>
           <Card.Text>
-           { ultimoProducto.descripcion}
+          { ultimoProducto.descripcion}
           </Card.Text>
-          <Button href = {url} target='_blank' variant="primary">Ver Detalle</Button>
-        </Card.Body>
+      </Card.Body>
       </Card>
-
-    
     </div>
   );
 }

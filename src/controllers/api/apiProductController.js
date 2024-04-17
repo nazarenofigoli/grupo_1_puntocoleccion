@@ -25,9 +25,10 @@ const productosController = {
     },
     all: async (req, res) => {
         try {
-            const allProducts = await db.Product.findAll();
-            const productCount = allProducts.length;
-            res.status(200).json({ count: productCount, allProducts });
+            const countProducts = await db.Product.count();
+            const allProducts = await db.Product.findAll({limit:5});
+            
+            res.status(200).json({ count: countProducts, allProducts });
         } catch (error) {
             console.error("Error al obtener todos los productos:", error);
             res.status(400).send(error.message);

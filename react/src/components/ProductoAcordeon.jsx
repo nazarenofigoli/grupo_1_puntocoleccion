@@ -19,12 +19,10 @@ const ProductoAcordeon = () => {
     getCantidad();
   }, []);
 
-  console.log (totalProductos)
-
   return (
     <>
-    <h2>Productos:</h2>
     <Accordion>
+    <h2>Productos:</h2>
       {totalProductos.map((producto, index) => (
         <Accordion.Item key={index} eventKey={index.toString()}>
           <Accordion.Header>{producto.nombre}</Accordion.Header>
