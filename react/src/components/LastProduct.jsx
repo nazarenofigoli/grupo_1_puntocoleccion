@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 const LastProduct= () => {
   const [ultimoProducto, setUltimoProducto] = useState({});
@@ -33,6 +34,7 @@ useEffect(() => {
           <Card.Text>
           { ultimoProducto.descripcion}
           </Card.Text>
+          <Button href= {url} target='_blank' variant="dark">Ver</Button>
       </Card.Body>
       </Card>
     </div>

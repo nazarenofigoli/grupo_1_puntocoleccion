@@ -1,5 +1,4 @@
-
-import React , {useState, useEffect} from "react";
+import  {useState, useEffect} from "react";
 import Accordion from "react-bootstrap/Accordion";
 
 const ProductoAcordeon = () => {
