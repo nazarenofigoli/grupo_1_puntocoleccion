@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<%- include('../partials/head.ejs')%> 
+<body class="body_usuario">
+    <section class="contenedor1_usuario">
+        <%- include('../partials/header.ejs') %>
+    </section>
+    <section class="contenedor2_usuario">
+        <aside class="aside_usuario">
+            <!-- Opciones del menú lateral -->
+        </aside>
+        <main class=" main_usuario">
+            <table class="tabla_usuario">
+                <thead class="head_tabla_usuario">
+                    <tr class="sections_head_tabla_usuario">
+                        <div class="div_head_tabla_usuario">
+                            <!-- Encabezados de las columnas -->
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Email</th>
+                            <th>Rol</th>
+                            <th>Fecha de Nacimiento</th>
+                            <th>Edad</th>
+                            <th>Género</th>
+                            <!-- Agrega más columnas según sea necesario -->
+                            <th>Acciones</th> 
+                        </div>
+                    </tr>
+                </thead>
+                <tbody class="body_tabla_usuario">
+                    <% users.forEach(user => { %>
+                    <tr>
+                        <!-- Datos de cada usuario -->
+                        <td><%= user.id %></td>
+                        <td><%= user.nombre %></td>
+                        <td><%= user.apellido %></td>
+                        <td><%= user.email %></td>
+                        <td><%= user.rol %></td>
+                        <td><%= user.fechaNaciento %></td>
+                        <td><%= user.edad %></td>
+                        <td><%= user.genero %></td>
+                        <!-- Agrega más celdas según sea necesario -->
+                        <td>
+                            <!-- Acciones para cada usuario -->
+                        </td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </main>
+    </section>
+</body>
+</html>

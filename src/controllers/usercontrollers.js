@@ -105,9 +105,19 @@ const userControllers = {
       db.User.findByPk(req.session.user.id).then((result) => {
         user = result;})
       res.render ("./users/profile", {title: "Perfil Usuario", usuario: req.session.user, user } )
-    }  
-    
-  
-}
+    }    
+},
+getAllUser: (req, res) => {
+  db.User.findAll().then((result) => {
+    users = result;
+    res.render("./users/usuario", {
+      title: "Total de Usuarios",
+      users,
+      usuario: req.session.user,
+    });
+  });
+},
+
+
 }
 module.exports = userControllers;
