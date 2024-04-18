@@ -19,12 +19,8 @@
             </article>
 
             <section class="contenedor_detalle_info">
+                <h2 class="h5-dp"><br>Categoria: <%= product.Category.nombre %></h2>
                 <div class="nav-bar-detalleP">
-                    <ul>
-                        <li><a href="/">INICIO</a></li>
-                        <li><a href="#">/ NUESTRAS MARCAS</a></li>
-                    </ul>
-
                     <div class="compras-detalleP">
                         <h3 id="nameP"><%= product.nombre %></h3>
                         <p id="precioP">$ <%= product.precio %></p>
@@ -38,15 +34,14 @@
                     </div>
                     <button type="button" class="btn-detalleP" href="/products/carrito"><a>Agregar</a><i
                             class="fa-solid fa-cart-shopping" id="carrito-dp"></i></button>
-                    <h5 class="h5-dp"><br>Categoria: <%= product.Category.nombre %></h5>
+                   <br><br>
                     <div id="detalleP-icons">
                         <i class="fa-brands fa-instagram" style="color: #000000;"></i>
                         <i class="fa-brands fa-facebook" style="color: #000000;"></i>
                         <i class="fa-brands fa-twitter" style="color: #030303;"></i>
+                        <i href class="fa-brands fa-whatsapp" style="color:  #030303;"></i>
                     </div>
-                    <h4 class="h4-dp">DUDAS O CONSULTAS</h4>
-                    <i href class="fa-brands fa-whatsapp" style="color: #4cd742;"></i>
-                </div>
+            </div>
 
                 
             </section>
