@@ -144,52 +144,62 @@ const productControllers = {
     });
   },
 
-  crearProducto: (req, res) => { 
+  crearProducto: (req, res) => {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-    db.Product.create({
-      categoria_id: req.body.categoria,
-      marca_id: req.body.marca,
-      nombre: req.body.nombre.trim(),
-      descripcion: req.body.descripcion.trim(),
-      precio: req.body.precio,
-      stock: req.body.stock,
-      descuento: null,
-      createdAt: new Date(),
-      updateAt: new Date(),
-    }).then((response) => {
-     
-      db.Imageproduct.create({
-        imagen: req.file.filename,
-        producto_id: response.id,
+      db.Product.create({
+        categoria_id: req.body.categoria,
+        marca_id: req.body.marca,
+        nombre: req.body.nombre.trim(),
+        descripcion: req.body.descripcion.trim(),
+        precio: req.body.precio,
+        stock: req.body.stock,
+        descuento: null,
         createdAt: new Date(),
         updateAt: new Date(),
-      }).then(() => {
-        res.redirect("/products/dashboard");
-      })
-    })}
-    else {
-      db.Category.findAll({ attributes: ["id", "nombre"] })
-      .then((categories) => {
-        return db.Brand.findAll({ attributes: ["id", "nombre"] }).then(
-          (brands) => {
-          
-            res.render("./products/cargaDeProducto", {
-              title: "Carga de producto",
-              product: null,
-              errors:errors.mapped(),
-              brands,
-              categories,
-              usuario: req.session.user,
-            });
-          }
-        );
-      })
-      .catch((err) => {
-        console.log(err);
+      }).then((product) => {
+        let imageFiles = req.files.slice(0, 3); 
+        
+        let imagePromises = imageFiles.map((imageFile) => {
+          return db.Imageproduct.create({
+            imagen: imageFile.filename,
+            producto_id: product.id,
+            createdAt: new Date(),
+            updateAt: new Date(),
+          });
+        });
+  
+        Promise.all(imagePromises)
+          .then(() => {
+            res.redirect("/products/dashboard");
+          })
+          .catch((error) => {
+            console.error("Error al crear imágenes:", error);
+            res.status(500).send("Error interno del servidor");
+          });
       });
-      
-}},
+    } else {
+      db.Category.findAll({ attributes: ["id", "nombre"] })
+        .then((categories) => {
+          return db.Brand.findAll({ attributes: ["id", "nombre"] }).then(
+            (brands) => {
+              res.render("./products/cargaDeProducto", {
+                title: "Carga de producto",
+                product: null,
+                errors: errors.mapped(),
+                brands,
+                categories,
+                usuario: req.session.user,
+              });
+            }
+          );
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  },
+  
   productDelete: (req, res) => {
     const { id } = req.params;
     db.Product.destroy({ where: { id } })
