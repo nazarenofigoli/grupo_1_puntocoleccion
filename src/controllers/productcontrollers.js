@@ -88,6 +88,7 @@ const productControllers = {
             nombre: req.body.nombre.trim(),
             descripcion: req.body.descripcion.trim(),
             precio: req.body.precio,
+            stock: req.body.stock,
             updatedAt: new Date(),
           },
           {
@@ -99,28 +100,28 @@ const productControllers = {
       .then((response) => res.redirect("/products/dashboard"));
   },
 
-  cargaDeProducto: (req, res) => {
-    db.Category.findAll({ attributes: ["id", "nombre"] })
-      .then((categories) => {
-        return db.Brand.findAll({ attributes: ["id", "nombre"] }).then(
-          (brands) => {
-          
-            res.render("./products/cargaDeProducto", {
-              title: "Carga de producto",
-              product: null,
-              brands,
-              categories,
-              subcategories,
-              usuario: req.session.user,
-            });
-          }
-        );
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  },
+ cargaDeProducto: (req, res) => {
+    const categoriesPromise = db.Category.findAll({ attributes: ["id", "nombre"] }).catch((err) => console.log(err));
+    const brandsPromise = db.Brand.findAll({ attributes: ["id", "nombre"] }).catch((err) => console.log(err));
+    const subcategoriesPromise = db.Subcategory.findAll({ attributes: ["id", "nombre"] }).catch((err) => console.log(err));
 
+    Promise.all([categoriesPromise, brandsPromise, subcategoriesPromise])
+        .then(([categories, brands, subcategories]) => {
+            res.render("./products/cargaDeProducto", {
+                title: "Carga de producto",
+                product: null,
+                brands,
+                categories,
+                subcategories,
+                usuario: req.session.user,
+            });
+        })
+        .catch((err) => {
+            console.log(err);
+            // Handle error response here if needed
+            res.status(500).send("Internal Server Error");
+        });
+},
   dashboard: (req, res) => {
     db.Product.findAll({
       include: [
