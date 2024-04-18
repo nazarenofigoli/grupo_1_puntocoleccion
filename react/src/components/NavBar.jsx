@@ -7,7 +7,7 @@ function NavBar() {
     <>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="http://localhost:3000/" target='_blank'>
+          <Navbar.Brand href="http://localhost:3000/">
             <img 
               src="./LogoP2.png"
               width="60"

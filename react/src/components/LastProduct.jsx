@@ -34,7 +34,7 @@ useEffect(() => {
           <Card.Text>
           { ultimoProducto.descripcion}
           </Card.Text>
-          <Button href= {url} target='_blank' variant="dark">Ver</Button>
+          <Button href= {url} variant="dark">Ver</Button>
       </Card.Body>
       </Card>
     </div>
