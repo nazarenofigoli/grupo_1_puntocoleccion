@@ -110,6 +110,7 @@ const productControllers = {
               product: null,
               brands,
               categories,
+              subcategories,
               usuario: req.session.user,
             });
           }
@@ -148,6 +149,7 @@ const productControllers = {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
       db.Product.create({
+        subcategoria_id: req.body.subcategoria,
         categoria_id: req.body.categoria,
         marca_id: req.body.marca,
         nombre: req.body.nombre.trim(),

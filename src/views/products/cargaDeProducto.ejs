@@ -35,6 +35,15 @@
                 <% }) %>
             </select>
             <p style="color:red"><%= locals.errors && errors.categoria ? errors.categoria.msg : null %></p>
+
+            <label for="subcategoria">SubCategoria:</label>
+            <select name="subcategoria" id="subcategoria">
+                <option value="" disabled selected>- Seleccione la Subcategoria -</option>
+                <% subcategories.forEach((subcategoria) => { %>
+                <option value="<%= subcategoria.id %>"><%= subcategoria.nombre %></option>
+                <% }) %>
+            </select>
+            <p style="color:red"><%= locals.errors && errors.subcategoria ? errors.subcategoria.msg : null %></p>
             
             <label for="precio">Precio:</label>
             <input type="text" name="precio" value="<%= product ? product.precio : ""; %>">
