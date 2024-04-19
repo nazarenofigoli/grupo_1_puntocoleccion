@@ -56,10 +56,6 @@
     justify-content: space-around;
 }
 
-.main_index_section_botones i {
-    font-size: 10px;
-}
-
 .main_index_section_ofertas {
     margin-top: 15px;
     display: flex;
@@ -141,6 +137,13 @@
     padding: 3%;
     width: 35%;
     font-weight: 600;
+    transition: all 2s;
+}
+
+.main_index_botones:hover {
+    background-color: var(--Verde);
+    color: var(--Negro);
+    border: 1px solid var(--Verde);
 }
 
 .main_index_section_envios {
@@ -247,39 +250,5 @@
     
     .main_index_textos_envios p {
         font-size: 13px;
-    }
-}
-
-@keyframes slide {
-    0% {
-        margin-left: 0;
-    }
-
-    20% {
-        margin-left: 0;
-    }
-
-    25% {
-        margin-left: -100%;
-    }
-
-    45% {
-        margin-left: -100%;
-    }
-
-    50% {
-        margin-left: -200%;
-    }
-
-    70% {
-        margin-left: -200%;
-    }
-
-    75% {
-        margin-left: -300%;
-    }
-
-    100% {
-        margin-left: -300%;
     }
 }
