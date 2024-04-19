@@ -13,9 +13,20 @@
     animation-duration: 1000ms;  
     animation-iteration-count: infinite;
 }
+.main_registro{
+    margin-top: -3%;
+    padding: 4%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)); /* Degradado que se difumina a la mitad de la pantalla */
+}
 
 .div-main-login{
-    margin-top: -3%;
+    margin-top: 20px;
+    margin-top: 1%;
     padding: 4%;
     width: 40%;
     display: flex;
