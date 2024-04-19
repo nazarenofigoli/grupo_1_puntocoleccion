@@ -14,5 +14,7 @@ router
   .put("/profile",validateProfile, userControllers.updateProfile)
   .get("/logout", userControllers.logout)
   .get("/all", validateAdmin, userControllers.getAllUser)
-  .delete("/delete/:id", userControllers.deleteUser)
+  .delete("/delete/:id", userControllers.deleteUser);
+
+  module.exports = router;
   
