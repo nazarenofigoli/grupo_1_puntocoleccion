@@ -13,8 +13,8 @@
                 </div>
 
                 <div class="box_fotos-secund">
-                    <img id="foto-2-dp" src="/img/productos/<%= product.Imageproducts[1].imagen %>" alt="imagen-funko-perfil">
-                    <img id="foto-3-dp" src="/img/productos/<%= product.Imageproducts[2].imagen %>" alt="imagen-funko-perfil-2">
+                    <img class="foto-secundaria" src="/img/productos/<%= product.Imageproducts[1].imagen %>" alt="imagen-funko-perfil">
+                    <img class="foto-secundaria" src="/img/productos/<%= product.Imageproducts[2].imagen %>" alt="imagen-funko-perfil-2">
                 </div>
             </article>
 
@@ -54,4 +54,21 @@
         </section>
     </main>
     <%- include('../partials/footer.ejs')%>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fotosSecundarias = document.querySelectorAll('.foto-secundaria');
+            const fotoPrincipal = document.getElementById('foto-principal-dp');
+            let srcTemporal; // Almacena temporalmente el origen de la imagen principal
+    
+            fotosSecundarias.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    // Intercambiar el origen de la imagen principal con la imagen secundaria seleccionada
+                    srcTemporal = fotoPrincipal.src;
+                    fotoPrincipal.src = img.src;
+                    img.src = srcTemporal;
+                });
+            });
+        });
+    </script>
 </body>

@@ -1,3 +1,4 @@
+
 .main-detalleP {
     display: flex;
     flex-direction: column;
@@ -21,6 +22,11 @@
     border-radius: 20%;
     margin-top: 10%;
     margin-left: 35px;
+}
+
+.foto-secundaria{
+    border: 1px solid var(--Negro);
+    border-radius: 20%;
 }
 
 .contenedor_detalle_info {
