@@ -36,14 +36,12 @@
                             class="fa-solid fa-cart-shopping" id="carrito-dp"></i></button>
                    <br><br>
                     <div id="detalleP-icons">
-                        <i class="fa-brands fa-instagram" style="color: #000000;"></i>
-                        <i class="fa-brands fa-facebook" style="color: #000000;"></i>
-                        <i class="fa-brands fa-twitter" style="color: #030303;"></i>
-                        <i href class="fa-brands fa-whatsapp" style="color:  #030303;"></i>
+                        <a href="https://www.instagram.com/punto_coleccion" target="_blank"><i class="fa-brands fa-instagram" style="color: #000000;"></i></a>
+                        <a href="https://www.facebook.com/puntocoleccion" target="_blank"><i class="fa-brands fa-facebook" style="color: #000000;"></i></a>
+                        <a href="https://twitter.com/puntonoticias" target="_blank"><i class="fa-brands fa-twitter" style="color: #030303;"></i></a>
+                        <a href="https://wa.me/11176543234" target="_blank"><i class="fa-brands fa-whatsapp" style="color:  #030303;"></i></a>
                     </div>
-            </div>
-
-                
+                </div>
             </section>
         </section>
         <section class="box_detalleP-info">
@@ -59,11 +57,11 @@
         document.addEventListener('DOMContentLoaded', function() {
             const fotosSecundarias = document.querySelectorAll('.foto-secundaria');
             const fotoPrincipal = document.getElementById('foto-principal-dp');
-            let srcTemporal; // Almacena temporalmente el origen de la imagen principal
+            let srcTemporal; 
     
             fotosSecundarias.forEach(function(img) {
                 img.addEventListener('click', function() {
-                    // Intercambiar el origen de la imagen principal con la imagen secundaria seleccionada
+                
                     srcTemporal = fotoPrincipal.src;
                     fotoPrincipal.src = img.src;
                     img.src = srcTemporal;
