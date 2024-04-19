@@ -24,7 +24,7 @@
                     <div class="compras-detalleP">
                         <h3 id="nameP"><%= product.nombre %></h3>
                         <p id="precioP">$ <%= product.precio %></p>
-                        <p id="cuotasP">10 cuotas sin interes de $ <%= product.precio/10 %></p>
+                        <p id="cuotasP">3 cuotas sin interes de $ <%= product.precio/3 %></p>
                         <select class="form-select" aria-label="Default select example">
                             <option selected><a>Cantidad</a></option>
                             <option value="1">1</option>
@@ -34,7 +34,11 @@
                     </div>
                     <button type="button" class="btn-detalleP" href="/products/carrito"><a>Agregar</a><i
                             class="fa-solid fa-cart-shopping" id="carrito-dp"></i></button>
-                   <br><br>
+                <br><br>
+
+                <div id="detalleP-icons">
+                    <h1>Nuestras redes:</h1>
+                </div>
                     <div id="detalleP-icons">
                         <a href="https://www.instagram.com/punto_coleccion" target="_blank"><i class="fa-brands fa-instagram" style="color: #000000;"></i></a>
                         <a href="https://www.facebook.com/puntocoleccion" target="_blank"><i class="fa-brands fa-facebook" style="color: #000000;"></i></a>

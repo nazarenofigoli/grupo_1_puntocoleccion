@@ -6,7 +6,7 @@
 
     <main class="main">
         <section class="section_registro_main_formulario_account div-main-login"> 
-            <h1>EDITAR PERFIL</h1>
+            <h1 class="INGRESA">EDITAR PERFIL</h1>
             <form action="/users/profile?_method=PUT" method="post" class="registro_main_formulario_account formulario__general"> 
                 <label for="nombre">NOMBRE:</label>
                 <input type="text" name="nombre" placeholder="ej: Roberto" value="<%= locals.user && user.nombre %>" class="input-registro"> 

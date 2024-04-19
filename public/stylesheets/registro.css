@@ -26,6 +26,12 @@
     margin-top: 30px;
 }
 
+.registro_main_botones_account button:hover {
+background-color: var(--Verde);
+color:var(--Negro);
+cursor: pointer;
+}
+
 
 .registro_carrito {
 display: none;   
