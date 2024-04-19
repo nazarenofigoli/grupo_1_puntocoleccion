@@ -19,7 +19,7 @@
                             <th>Fecha de Nacimiento</th>
                             <th>Edad</th>
                             <th>Género</th>
-                            <th></th>
+                            <th>Acciones</th> 
                         </div>
                     </tr>
                 </thead>
@@ -35,13 +35,13 @@
                         <td><%= user.edad %></td>
                         <td><%= user.genero %></td>
                         <td>
-                            <a
-                            href="/users/updateproduct/<%= user.id %>"><button><i
-                            class="fa-solid fa-pen-to-square"></i></button></a>
-
-                        <form class="boton_dashboard_tabla" action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-                        <button><i class="fa-regular fa-trash-can"></i></button></a></form>
-                        </td>           
+                            <a href="/users/profile/<%= user.id %>">
+                                <button><i class="fa-solid fa-pen-to-square"></i></button>
+                            </a>
+                            <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                                <button><i class="fa-regular fa-trash-can"></i></button>
+                            </form>
+                        </td> 
                     </tr>
                     <% }) %>
                 </tbody>

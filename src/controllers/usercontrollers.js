@@ -118,6 +118,16 @@ getAllUser: (req, res) => {
   });
 },
 
-
+deleteUser: (req, res) => {
+  const { id } = req.params;
+  db.User.destroy({ where: { id } })
+    .then(() => {
+      res.redirect("/users/all");
+    })
+    .catch((error) => {
+      console.log("Error al eliminar el usuario:", error);
+      res.status(500).send("Error interno del servidor");
+    });
+},
 }
 module.exports = userControllers;

@@ -13,6 +13,6 @@ router
   .get("/profile", userControllers.profile)
   .put("/profile",validateProfile, userControllers.updateProfile)
   .get("/logout", userControllers.logout)
-  .get("/all", validateAdmin, userControllers.getAllUser);
-
-module.exports = router;
+  .get("/all", validateAdmin, userControllers.getAllUser)
+  .delete("/delete/:id", userControllers.deleteUser)
+  
