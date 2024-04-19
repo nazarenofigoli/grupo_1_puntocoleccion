@@ -35,13 +35,16 @@
                                     $<%= product.precio %>
                                     </p>
                                     <p class="main_cuotas">
-                                       3 cuotas sin interés de $<%= (product.precio / 3)%>
+                                    3 cuotas sin interés de $<%= (product.precio / 3)%>
                                     </p>
                                 </a>
                                 <div class="main_index_section_botones">
                                     <button class="main_index_botones">Comprar</button>
-                                    <button class="main_index_botones">Agregar al <i
-                                            class="fa-solid fa-cart-shopping"></i></button>
+                                    <a class="main_index_botones" href="/products/detail/<%= product.id%>">Ver
+                                        <i class="fa fa-eye" aria-hidden="true"></i> 
+                                    </a>
+                                </div>
+                                
                                 </div>
                             </div>
                         </li>
@@ -80,8 +83,9 @@
                                 </a>
                                 <div class="main_index_section_botones">
                                     <button class="main_index_botones">Comprar</button>
-                                    <button class="main_index_botones">Agregar al <i
-                                            class="fa-solid fa-cart-shopping"></i></button>
+                                    <a class="main_index_botones" href="/products/detail/<%= product.id%>">Ver
+                                        <i class="fa fa-eye" aria-hidden="true"></i> 
+                                    </a>
                                 </div>
                             </div>
                         </li>

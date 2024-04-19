@@ -56,6 +56,10 @@
     justify-content: space-around;
 }
 
+.main_index_section_botones i {
+    font-size: 10px;
+}
+
 .main_index_section_ofertas {
     margin-top: 15px;
     display: flex;
@@ -137,13 +141,6 @@
     padding: 3%;
     width: 35%;
     font-weight: 600;
-    transition: all 2s;
-}
-
-.main_index_botones:hover {
-    background-color: var(--Verde);
-    color: var(--Negro);
-    border: 1px solid var(--Verde);
 }
 
 .main_index_section_envios {
