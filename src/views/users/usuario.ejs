@@ -19,6 +19,7 @@
                             <th>Fecha de Nacimiento</th>
                             <th>Edad</th>
                             <th>Género</th>
+                            <th></th>
                         </div>
                     </tr>
                 </thead>
@@ -33,6 +34,14 @@
                         <td><%= user.fechaNaciento && user.fechaNaciento.toISOString().slice(0,10) %></td>
                         <td><%= user.edad %></td>
                         <td><%= user.genero %></td>
+                        <td>
+                            <a
+                            href="/users/updateproduct/<%= user.id %>"><button><i
+                            class="fa-solid fa-pen-to-square"></i></button></a>
+
+                        <form class="boton_dashboard_tabla" action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <button><i class="fa-regular fa-trash-can"></i></button></a></form>
+                        </td>           
                     </tr>
                     <% }) %>
                 </tbody>

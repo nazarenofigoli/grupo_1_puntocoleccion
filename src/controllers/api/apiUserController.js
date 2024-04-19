@@ -32,7 +32,7 @@ const userController = {
   getAllUsers: async (req, res) => {
     try {
       const users = await db.User.findAll({
-        attributes: ["id", "nombre", "apellido","email", "rol"],limit:5
+        attributes: ["id", "nombre", "apellido","email", "rol"],limit:7
       });
       const countUsers = await db.User.count();
       res.json({

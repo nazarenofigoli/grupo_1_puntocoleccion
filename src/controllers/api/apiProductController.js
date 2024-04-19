@@ -26,7 +26,7 @@ const productosController = {
     all: async (req, res) => {
         try {
             const countProducts = await db.Product.count();
-            const allProducts = await db.Product.findAll({limit:5});
+            const allProducts = await db.Product.findAll({limit:7});
             
             res.status(200).json({ count: countProducts, allProducts });
         } catch (error) {

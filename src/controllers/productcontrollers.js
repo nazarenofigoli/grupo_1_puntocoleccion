@@ -100,7 +100,7 @@ const productControllers = {
       .then((response) => res.redirect("/products/dashboard"));
   },
 
- cargaDeProducto: (req, res) => {
+  cargaDeProducto: (req, res) => {
     const categoriesPromise = db.Category.findAll({ attributes: ["id", "nombre"] }).catch((err) => console.log(err));
     const brandsPromise = db.Brand.findAll({ attributes: ["id", "nombre"] }).catch((err) => console.log(err));
     const subcategoriesPromise = db.Subcategory.findAll({ attributes: ["id", "nombre"] }).catch((err) => console.log(err));
