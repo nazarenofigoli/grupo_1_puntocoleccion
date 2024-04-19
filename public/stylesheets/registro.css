@@ -40,13 +40,6 @@ display: none;
 
 @media (min-width:768px) {
 
-    .registro_main_botones_account {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        order: 0;
-    
-    }
     .registro_main_botones_account button {
         width: 45%;
         margin-bottom: 10px;
