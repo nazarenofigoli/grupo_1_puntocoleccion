@@ -4,43 +4,37 @@
     
     <%- include('../partials/header.ejs') %>
 
-    <main class="registro_main">
-        <section class="registro_main_titulos">
-            
+    <main class="main">
+        <section class="section_registro_main_formulario_account div-main-login"> 
             <h1>EDITAR PERFIL</h1>
-        </section>
-        
-        <section class="section_registro_main_formulario_account">
-        
-            <form action="/users/profile?_method=PUT" method="post" class="registro_main_formulario_account">
-                
+            <form action="/users/profile?_method=PUT" method="post" class="registro_main_formulario_account formulario__general"> 
                 <label for="nombre">NOMBRE:</label>
-                <input type="text" name="nombre" placeholder="ej: Roberto" value="<%= locals.user && user.nombre %>">
+                <input type="text" name="nombre" placeholder="ej: Roberto" value="<%= locals.user && user.nombre %>" class="input-registro"> 
                 <p style="color:red"><%= locals.errors && errors.nombre? errors.nombre.msg : null %></p>
                 
                 <label for="apellido">APELLIDO:</label >
-                <input type="text" name="apellido" placeholder="ej: Sánchez" value="<%= locals.user && user.apellido %>">
+                <input type="text" name="apellido" placeholder="ej: Sánchez" value="<%= locals.user && user.apellido %>" class="input-registro"> 
                 <p style="color:red"><%= locals.errors && errors.apellido ? errors.apellido.msg : null %></p>
             
                 <% if (locals.user && user.rol == 'admin') {%>
                         <label for="rol">Rol</label>
-                        <select name="rol">
-                        <option value="admin">admin</option>
-                        <option value="user">user</option>
+                        <select name="rol" class="input-registro"> 
+                            <option value="admin">admin</option>
+                            <option value="user">user</option>
                         </select>
                 <% } %>
                 <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" value="<%= locals.user.fechaNaciento && user.fechaNaciento.toISOString().slice(0,10)%>">
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" value="<%= locals.user.fechaNaciento && user.fechaNaciento.toISOString().slice(0,10)%>" class="input-registro"> <!-- Agregada clase input-registro -->
                 
                 <label for="edad">Edad:</label>
-                <input type="number" id="edad" name="edad"  value="<%= locals.user && user.edad %>">
+                <input type="number" id="edad" name="edad"  value="<%= locals.user && user.edad %>" class="input-registro"> 
                 
                 <label for="genero">Género:</label>
-                <select id="genero" name="genero">
-                <option value="" <%= user.genero == "" ? "selected" : null %>>Elegi</option>    
-                <option value="Femenino" <%= user.genero == "Femenino" ? "selected" : null %>>Femenino</option>
-                <option value="Masculino" <%= user.genero == "Masculino" ? "selected" : null%>>Masculino</option>
-                <option value="Otro" <%= user.genero == "Otro" ? "selected" : null%>>Otro</option>
+                <select id="genero" name="genero" class="input-registro"> 
+                    <option value="" <%= user.genero == "" ? "selected" : null %>>Elegi</option>    
+                    <option value="Femenino" <%= user.genero == "Femenino" ? "selected" : null %>>Femenino</option>
+                    <option value="Masculino" <%= user.genero == "Masculino" ? "selected" : null%>>Masculino</option>
+                    <option value="Otro" <%= user.genero == "Otro" ? "selected" : null%>>Otro</option>
                 </select><br>
 
 
@@ -51,7 +45,7 @@
                 </div>
                 
                 <div class="registro_main_botones_account">
-                    <button type="submit">ACTUALIZAR</button>
+                    <button type="submit" >ACTUALIZAR</button> 
                     <button type="reset">BORRAR FORMULARIO</button>
                 </div>
                 

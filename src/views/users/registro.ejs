@@ -4,41 +4,37 @@
     
     <%- include('../partials/header.ejs') %>
 
-    <main class="registro_main">
-        <section class="registro_main_titulos">
-            <a href="/"><p>Inicio</a>▶<a href="/users/login">Cuenta</a>▶Crear Cuenta</p>
+    <main class="main">
+
+        <section class="div-main-login"> 
             <h1>Crear Cuenta</h1>
-        </section>
-        
-        <section class="section_registro_main_formulario_account">
-        
-            <form action="/users/registro" method="post" class="registro_main_formulario_account">
+            <form action="/users/registro" method="post" class="registro_main_formulario_account formulario__general"> 
                 
                 <label for="nombre">NOMBRE:</label>
-                <input type="text" name="nombre" placeholder="ej: Roberto" value="<%= locals.old && old.nombre %>">
+                <input type="text" name="nombre" placeholder="ej: Roberto" value="<%= locals.old && old.nombre %>" class="input-registro">
                 <p style="color:red"><%= locals.errors && errors.nombre? errors.nombre.msg : null %></p>
                 
                 <label for="apellido">APELLIDO:</label >
-                <input type="text" name="apellido" placeholder="ej: Sánchez" value="<%= locals.old && old.apellido %>">
+                <input type="text" name="apellido" placeholder="ej: Sánchez" value="<%= locals.old && old.apellido %>" class="input-registro"> 
                 <p style="color:red"><%= locals.errors && errors.apellido ? errors.apellido.msg : null %></p>
                 
                 <label for="email">E-MAIL:</label >
-                <input type="text" name="email" placeholder="ej: tumail@email.com"  value="<%= locals.old && old.email%>">
+                <input type="text" name="email" placeholder="ej: tumail@email.com"  value="<%= locals.old && old.email%>" class="input-registro"> 
                 
                 <p style="color:red"><%= locals.errors && errors.email ? errors.email.msg : null %></p>
 
                 <% if (locals.usuario && usuario.rol == 'admin') {%>
                         <label for="rol">Rol</label>
-                        <input type="text" id="rol" name="rol" value="<%= locals.old && old.rol ? old.rol : null %>">
+                        <input type="text" id="rol" name="rol" value="<%= locals.old && old.rol ? old.rol : null %>" class="input-registro"> 
                         <p style="color:red"> <%= locals.errores && errores.rol ? errores.rol.msg : null %> </p>
                 <% } %>
                 
                 <label for="password">CONTRASEÑA:</label>
-                <input type="password" name="password" placeholder="●●●●●●●●" >
+                <input type="password" name="password" placeholder="●●●●●●●●" class="input-registro"> 
                 <p style="color:red"><%= locals.errors && errors.password ? errors.password.msg : null %></p>
 
                 <label for="password1">REPETIR CONTRASEÑA:</label>
-                <input type="password" name="password1" placeholder="●●●●●●●●">
+                <input type="password" name="password1" placeholder="●●●●●●●●" class="input-registro"> 
                 <p style="color:red"><%= locals.errors && errors.password1 ? errors.password1.msg : null %></p>
                 <label class="switch">
                    <div class = "errores">
@@ -49,7 +45,7 @@
                 <div class="g-recaptcha" data-sitekey="6LeSXBMpAAAAANooS21qTPO1k_ga29vmHPZm9CQI"></div>
 
                 <div class="registro_main_botones_account">
-                    <button type="submit">CREAR CUENTA</button>
+                    <button type="submit" class="inicio-reg-hijo">CREAR CUENTA</button> 
                     <button type="reset">BORRAR FORMULARIO</button>
                 </div>
                 
