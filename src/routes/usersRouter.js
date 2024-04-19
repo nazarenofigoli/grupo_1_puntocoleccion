@@ -5,7 +5,10 @@ const validateRegister = require("../middlewares/validateRegister.js");
 const validateLogin = require("../middlewares/validateLogin.js");
 const validateProfile = require("../middlewares/validateProfile.js")
 const validateAdmin = require("../middlewares/validateAdmin.js")
+
 router
+  .get("/rol/:id",validateAdmin, userControllers.rolUpdate)
+  .put("/rol/:id", validateAdmin, userControllers.rolActualizado)
   .get("/login", userControllers.login)
   .post("/login", validateLogin, userControllers.createLogueo)
   .get("/registro", userControllers.registro)

@@ -35,7 +35,7 @@
                         <td><%= user.edad %></td>
                         <td><%= user.genero %></td>
                         <td>
-                            <a href="/users/profile/<%= user.id %>">
+                            <a href="/users/rol/<%= user.id %>">
                                 <button><i class="fa-solid fa-pen-to-square"></i></button>
                             </a>
                             <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" style="display: inline-flex">

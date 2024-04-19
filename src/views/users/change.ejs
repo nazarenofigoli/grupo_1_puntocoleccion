@@ -1,0 +1,49 @@
+<%- include("../partials/head.ejs")  %>
+
+<body>
+    
+    <%- include('../partials/header.ejs') %>
+
+    <main class="main">
+        <section class="section_registro_main_formulario_account div-main-login"> 
+            <h1 class="INGRESA">EDITAR PERFIL</h1>
+            <form action="<%=`/users/rol/${find.id}?_method=PUT` %>" method="post" class="registro_main_formulario_account formulario__general">
+
+                <label for="nombre">NOMBRE:</label>
+                <input type="text" name="nombre" placeholder="ej: Roberto" value="<%= locals.find && find.nombre %>" class="input-registro"> 
+                
+                
+                <label for="apellido">APELLIDO:</label >
+                <input type="text" name="apellido" placeholder="ej: Sánchez" value="<%= locals.find && find.apellido %>" class="input-registro"> 
+                
+                <label for="email">EMAIL:</label >
+                <input type="text" name="email" placeholder="ej: Sánchez" value="<%= locals.find && find.email %>" class="input-registro"> 
+                    
+            
+                <% if (locals.usuario && usuario.rol == 'admin') {%>
+                        <label for="rol">Rol</label>
+                        <select name="rol" class="input-registro"> 
+                            <option value="" <%= find.rol == "" ? "selected" : null %>>Elegi</option>
+                            <option value="admin" <%= find.rol== "admin" ? "selected" : null %>>admin</option>
+                            <option value="user"<%= find.rol == "user" ? "selected" : null%>>user</option>
+                        </select>
+                <% } %>
+               
+                <div class = "errores">
+                    <ul>
+
+                    </ul>
+                </div>
+                
+                <div class="registro_main_botones_account">
+                    <button type="submit" >ACTUALIZAR</button> 
+                </div>
+                
+            </form>
+        </section>
+    </main>
+    <!-- <script src="/js/profile-validation.js"></script> -->
+    <%- include('../partials/footer.ejs')%>  
+
+</body>
+</html>

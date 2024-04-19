@@ -129,5 +129,29 @@ deleteUser: (req, res) => {
       res.status(500).send("Error interno del servidor");
     });
 },
+rolUpdate: (req, res) => {
+    db.User.findByPk(req.params.id).then((result)=>{
+      find = result
+      res.render("./users/change" , {title: "Total de Usuarios", find, usuario: req.session.user})
+    
+    })
+  },
+
+  rolActualizado: (req,res) => {
+    
+    db.User.update(
+      {
+        rol:req.body.rol
+      },
+      {
+        where: { id:req.params.id},
+      }
+    )
+  
+  .then((response) => res.redirect("/users/all"));
+  }
+
 }
+
+
 module.exports = userControllers;
