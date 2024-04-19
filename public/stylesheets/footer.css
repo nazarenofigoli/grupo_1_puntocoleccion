@@ -83,6 +83,14 @@ color: var(--Blanco);
     height: 50px;
 }
 
+.footer_section_parte2 a{
+    color:var(--Verde)
+}
+
+.fa-whatsapp{
+    color: var(--Verde);
+}
+
 .footer_section_derechos_contactos {
 
 display: flex;
