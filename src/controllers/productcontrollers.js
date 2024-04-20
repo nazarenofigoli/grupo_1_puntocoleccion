@@ -44,12 +44,22 @@ const productControllers = {
     });
   },
 
-  carrito: (req, res) =>
+  carrito: async (req, res) => {
+  try {
+    const response = await fetch ("http://localhost:3000/api/product/cart")
+    const carrito = await response.json();
+    console.log (carrito)
     res.render("products/carrito", {
       title: "Carrito",
+      carrito,
       usuario: req.session.user,
-    }),
+    })
+  } catch (error) {
+    console.error('Error:', error);
+  }
 
+  }
+,
   update: (req, res) => {
     const brands = db.Brand.findAll().catch((err) => console.log(err));
     const categories = db.Category.findAll().catch((err) => console.log(err));

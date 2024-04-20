@@ -26,7 +26,8 @@ const productosController = {
     all: async (req, res) => {
         try {
             const countProducts = await db.Product.count();
-            const allProducts = await db.Product.findAll({limit:7});
+            const allProducts = await db.Product.findAll({
+            include: [{ association: "Imageproducts" }],limit:7});
             
             res.status(200).json({ count: countProducts, allProducts });
         } catch (error) {
@@ -116,8 +117,22 @@ const productosController = {
                 console.log('Error al obtener el ultimo producto', error)
                 res.status(500).json({ error: "Error interno del servidor" });
           }
-
-    
+   },
+  
+ carrito : async (req, res) => {
+    try {
+        const carrito = await db.Cart.findAll({
+            include: [
+                { association: "Product", include: [{ association: "Imageproducts" }] },
+                { association: "User" }
+            ]
+        });
+        res.status(200).json(carrito);
+    }
+    catch (error) {
+        console.log(error)
+        res.status(500).json({ error: "Error interno del servidor" });
+   }
 }
 }
 

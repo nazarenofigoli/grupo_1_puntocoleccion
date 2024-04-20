@@ -35,7 +35,8 @@ module.exports = (sequelize, DataTypes) => {
           As:'users',
           foreignKey:'producto_id',
           otherKey:'usuario_id'
-        })
+        });
+      
 
     }
   }

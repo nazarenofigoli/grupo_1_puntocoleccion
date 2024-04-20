@@ -31,4 +31,19 @@ window.addEventListener('load', function() {
             }
         }
     });
+
+    const passwordInput = document.querySelector('input[name="password"]');
+    const togglePasswordIcon = document.querySelector('.fa-eye-slash');
+
+    togglePasswordIcon.addEventListener('click', function () {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            togglePasswordIcon.classList.remove('fa-eye-slash');
+            togglePasswordIcon.classList.add('fa-eye');
+        } else {
+            passwordInput.type = "password";
+            togglePasswordIcon.classList.remove('fa-eye');
+            togglePasswordIcon.classList.add('fa-eye-slash');
+        }
+    });
 });

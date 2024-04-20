@@ -19,41 +19,27 @@
         <hr class="carrito-linea" />
 
         <section class="carrito-section">
-        
-          <article class="carrito-accesorio-descripcion-total">
-            <a href=""><i class="fa-solid fa-circle-xmark"></i></a>
-            <img src="/img/productos/naruto.jpeg" alt="producto" width="100%" />
-
-            <div class="carrito-loren-precio">
-              <p>Naruto Shippuden-<br>Naruto Uzumaki Good Smile</p>
-              <h4 class="carrito-precio-movile">1x00.000,00</h4>
-            </div>
-
-            <h4 class="carrito-precio-query">00.000,00</h4>
-
-            <input type="button" value="-1+" />
-
-            <h4 class="carrito-precio-query">00.000,00</h4>
+          <% carrito.forEach((cart) => { %>
+          <img class="carrito-accesorio-descripcion-total">
+              <a href=""><i class="fa-solid fa-circle-xmark"></i></a>
+              <img src="/img/productos/<%= cart.Product.Imageproducts[0].imagen %>" width="20%"></img>
+      
+              <div class="carrito-loren-precio">
+                  <p><%= cart.Product.nombre %></p>
+                  <h4 class="carrito-precio-movile">1x00.000,00</h4>
+              </div>
+      
+              <h4 class="carrito-precio-query"><%= cart.Product.precio %></h4>
+      
+              <input type="button" value="-1+" />
+      
+              <h4 class="carrito-precio-query">00.000,00</h4>
           </article>
-          
+      
           <hr class="carrito-linea" />
-
-          <article class="carrito-accesorio-descripcion-total">
-            <a href=""><i class="fa-solid fa-circle-xmark"></i></a>
-            <img src="/img/productos/naruto.jpeg" alt="producto" width="100%" />
-            <div class="carrito-loren-precio">
-              <p>Naruto Shippuden-<br>Naruto Uzumaki Good Smile</p>
-              <h4 class="carrito-precio-movile">1x00.000,00</h4>
-            </div>
-
-            <h4 class="carrito-precio-query">00.000,00</h4>
-
-            <input type="button" value="-1+" />
-
-            <h4 class="carrito-precio-query">00.000,00</h4>
-          </article>
-          <hr class="carrito-linea" />
-        </section>
+          <% }) %>
+      </section>
+      
 
         <section>
           <nav class="carrito-nav">
