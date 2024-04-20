@@ -7,18 +7,18 @@
     <main class="main">
 
         <section class="div-main-login"> 
-            <h1 class="INGRESA">Crear Cuenta</h1>
+            <h1 class="INGRESA">CREA TU CUENTA</h1>
             <form action="/users/registro" method="post" class="registro_main_formulario_account formulario__general"> 
                 
-                <label for="nombre">NOMBRE:</label>
+                <label for="nombre">Nombre:</label>
                 <input type="text" name="nombre" placeholder="ej: Roberto" value="<%= locals.old && old.nombre %>" class="input-registro">
                 <p style="color:red"><%= locals.errors && errors.nombre? errors.nombre.msg : null %></p>
                 
-                <label for="apellido">APELLIDO:</label >
+                <label for="apellido">Apellido:</label >
                 <input type="text" name="apellido" placeholder="ej: Sánchez" value="<%= locals.old && old.apellido %>" class="input-registro"> 
                 <p style="color:red"><%= locals.errors && errors.apellido ? errors.apellido.msg : null %></p>
                 
-                <label for="email">E-MAIL:</label >
+                <label for="email">E-Mail:</label >
                 <input type="text" name="email" placeholder="ej: tumail@email.com"  value="<%= locals.old && old.email%>" class="input-registro"> 
                 
                 <p style="color:red"><%= locals.errors && errors.email ? errors.email.msg : null %></p>
@@ -29,11 +29,11 @@
                         <p style="color:red"> <%= locals.errores && errores.rol ? errores.rol.msg : null %> </p>
                 <% } %>
                 
-                <label for="password">CONTRASEÑA:</label>
+                <label for="password">Contraseña:</label>
                 <input type="password" name="password" placeholder="●●●●●●●●" class="input-registro"> 
                 <p style="color:red"><%= locals.errors && errors.password ? errors.password.msg : null %></p>
 
-                <label for="password1">REPETIR CONTRASEÑA:</label>
+                <label for="password1">Repetir contraseña:</label>
                 <input type="password" name="password1" placeholder="●●●●●●●●" class="input-registro"> 
                 <p style="color:red"><%= locals.errors && errors.password1 ? errors.password1.msg : null %></p>
                 <label class="switch">

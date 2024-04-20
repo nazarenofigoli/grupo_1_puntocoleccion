@@ -9,11 +9,11 @@
             <h1 class="INGRESA">EDITAR PERFIL</h1>
             <form action="<%=`/users/rol/${find.id}?_method=PUT` %>" method="post" class="registro_main_formulario_account formulario__general">
 
-                <label for="nombre">NOMBRE:</label>
+                <label for="nombre">Nombre:</label>
                 <input type="text" name="nombre" placeholder="ej: Roberto" value="<%= locals.find && find.nombre %>" class="input-registro"> 
                 
                 
-                <label for="apellido">APELLIDO:</label >
+                <label for="apellido">Apellido:</label >
                 <input type="text" name="apellido" placeholder="ej: Sánchez" value="<%= locals.find && find.apellido %>" class="input-registro"> 
                 
                 <label for="email">EMAIL:</label >
@@ -28,7 +28,6 @@
                             <option value="user"<%= find.rol == "user" ? "selected" : null%>>user</option>
                         </select>
                 <% } %>
-               
                 <div class = "errores">
                     <ul>
 
@@ -36,11 +35,18 @@
                 </div>
                 
                 <div class="registro_main_botones_account">
-                    <button type="submit" >ACTUALIZAR</button> 
-                </div>
-                
+                    <button type="button" onclick="volverAtras()">ATRÁS</button>
+                    <button type="submit" >ACTUALIZAR</button>
+                </div>                
             </form>
         </section>
+        <script>
+            function volverAtras() {
+                // Volver atrás en la historia del navegador
+                window.history.back();
+            }
+        </script>
+        
     </main>
     <!-- <script src="/js/profile-validation.js"></script> -->
     <%- include('../partials/footer.ejs')%>  
