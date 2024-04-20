@@ -58,8 +58,9 @@ const productControllers = {
     console.error('Error:', error);
   }
 
-  }
-,
+  },
+
+
   update: (req, res) => {
     const brands = db.Brand.findAll().catch((err) => console.log(err));
     const categories = db.Category.findAll().catch((err) => console.log(err));
@@ -223,7 +224,41 @@ const productControllers = {
         console.log("Error al eliminar el producto:", error);
       });
   },
-};
+
+  listCategory: (req, res) => {
+      db.Category.findAll({
+        include: [
+          { association: "Products", include: [{ association: "Imageproducts" }] }
+        ],
+        where: { nombre: req.params.category }
+      }).then((response) => {
+        const categories = response; 
+        // res.send (categories)
+        res.render("./products/categorias", { title: `Punto Coleccion ${categories[0].nombre}`, categories, usuario:req.session.user });
+      }).catch((error) => {
+        console.log("Error al obtener marcas", error);
+      });
+  },
+  listBrands: (req, res) => {
+    db.Brand.findAll({
+      include: [
+        { association: "Products", include: [{ association: "Imageproducts" }] }
+      ],
+      where: { nombre: req.params.brand }
+    }).then((response) => {
+      const brands = response; // Define brands aquí
+      // res.send (brands)
+      res.render("./products/brands", { title: `Punto Coleccion ${brands[0].nombre}`, brands, usuario: req.session.user });
+    }).catch((error) => {
+      console.log("Error al obtener marcas", error);
+    });
+}
+
+  
+
+  }
+
+
 
 module.exports = productControllers;
 

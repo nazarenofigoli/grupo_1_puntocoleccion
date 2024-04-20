@@ -21,6 +21,8 @@ const productControllers = require("../controllers/productcontrollers");
 
 router
   .get("/", productControllers.listadoproductos)
+  .get("/categorias/:category",productControllers.listCategory)
+  .get("/marcas/:brand",productControllers.listBrands)
   .get("/detail/:id", productControllers.detail)
   .get("/carrito", validateUsers, productControllers.carrito)
   .get("/updateproduct/:id", validateAdmin, productControllers.update)
