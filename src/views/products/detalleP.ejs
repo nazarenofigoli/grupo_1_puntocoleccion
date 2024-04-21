@@ -87,12 +87,23 @@
         body: JSON.stringify({producto_id , usuario_id })})
 
         if (response.ok) {
-            alert ('producto agregado')
+            
+            Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Producto Agregado",
+            showConfirmButton: false,
+            timer: 1500
+});
 
         } else {
             alert ('error al agregar')
         }
-
+        
         }
+
+        
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
 </body>

@@ -4,6 +4,7 @@ const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const db = require("../database/models");
 
+
 const userControllers = {
   login: (req, res) => res.render("./users/login", { title: "Login" }),
 
@@ -47,6 +48,7 @@ const userControllers = {
       });
     }
   },
+  
   createLogueo: (req, res) => {
     let errors = validationResult(req);
 

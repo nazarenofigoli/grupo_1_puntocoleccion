@@ -36,6 +36,8 @@ window.addEventListener('load', function() {
         if (userPass.value !== userPass1.value) {
             errores.push('Las contraseñas no son iguales');
         }
+        
+      
 
         if (errores.length > 0) {
             e.preventDefault();
