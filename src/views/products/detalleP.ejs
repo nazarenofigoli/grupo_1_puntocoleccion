@@ -32,9 +32,15 @@
                             <option value="3">3</option>
                         </select>
                     </div>
+                    <% if(locals.usuario) {%>
                     <button type="button" class="btn-detalleP" onclick="addCart(event, '<%= product.id %>', '<%= usuario.id %>' )" href="/products/carrito"><a>Agregar</a><i
                             class="fa-solid fa-cart-shopping" id="carrito-dp"></i></button>
                 <br><br>
+                <% }else{ %>
+                    <button type="button" class="btn-detalleP" ><a href="/users/login">Inicie Sesion</a>
+                        <i class="fa-solid fa-cart-shopping" id="carrito-dp"></i></button>
+                    <% } %>
+               
 
                 <div id="detalleP-icons">
                     <h1>Nuestras redes:</h1>
