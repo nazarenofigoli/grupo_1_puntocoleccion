@@ -3,6 +3,7 @@ const path = require("path");
 const db = require("../database/models");
 const { validationResult } = require("express-validator");
 const { all } = require("../routes/indexRouter");
+const { Op } = require("sequelize");
 
 const productControllers = {
   detail: (req, res) => {
@@ -44,21 +45,27 @@ const productControllers = {
     });
   },
 
-  carrito: async (req, res) => {
-  try {
-    const response = await fetch ("http://localhost:3000/api/product/cart")
-    const carrito = await response.json();
-    console.log (carrito)
-    res.render("products/carrito", {
+  carrito : async (req, res) => {
+    try {
+        const carrito = await db.Cart.findAll({
+            include: [
+                { association: "Product", include: [{ association: "Imageproducts" }] },
+                { association: "User" }, 
+            ], where: {usuario_id: req.session.user.id}
+        });
+        const total= carrito.reduce ((acum, current) => acum + (parseInt(current.Product.precio)*current.cantidad), 0)
+      res.render("products/carrito", {
       title: "Carrito",
       carrito,
+      total,
       usuario: req.session.user,
     })
-  } catch (error) {
-    console.error('Error:', error);
-  }
-
-  },
+  } 
+    catch (error) {
+        console.log(error)
+        res.status(500).json({ error: "Error interno del servidor" });
+}
+},
 
 
   update: (req, res) => {
@@ -236,7 +243,7 @@ const productControllers = {
         // res.send (categories)
         res.render("./products/categorias", { title: `Punto Coleccion ${categories[0].nombre}`, categories, usuario:req.session.user });
       }).catch((error) => {
-        console.log("Error al obtener marcas", error);
+        console.log("Error al obtener Categorias", error);
       });
   },
   listBrands: (req, res) => {
@@ -252,6 +259,26 @@ const productControllers = {
     }).catch((error) => {
       console.log("Error al obtener marcas", error);
     });
+}, 
+search : (req,res)=> {
+  const busqueda = req.query.keywords;
+  
+  db.Product.findAll({
+    where: {
+      nombre: {[Op.substring]:busqueda}
+    }, include: [
+      {
+        association: "Imageproducts",
+      },
+    ]
+  }).then((response) => { 
+    
+    products = response
+    // res.send(products)
+    res.render("./products/search", { title: `Punto Coleccion`, products, busqueda, usuario: req.session.user });
+  }).catch((error) => {
+    console.log("Error al obtener busqueda", error);
+  });
 }
 
   

@@ -119,21 +119,24 @@ const productosController = {
           }
    },
   
- carrito : async (req, res) => {
-    try {
-        const carrito = await db.Cart.findAll({
-            include: [
-                { association: "Product", include: [{ association: "Imageproducts" }] },
-                { association: "User" }
-            ]
-        });
-        res.status(200).json(carrito);
-    }
-    catch (error) {
-        console.log(error)
-        res.status(500).json({ error: "Error interno del servidor" });
-   }
+   addCart : async (req, res) => {
+    const {usuario_id, producto_id} =req.body ;
+try {
+   await db.Cart.create ({
+        cantidad: 1,
+        producto_id,
+        usuario_id,
+        
+    })
+    res.status(200).send('ok')
+
+} catch (error) {
+    console.log('Error al escribir en db', error)
+    res.status(500).json({ error: "Error al escribir en db" });
+
 }
+}
+ 
 }
 
 

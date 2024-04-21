@@ -32,7 +32,7 @@
                             <option value="3">3</option>
                         </select>
                     </div>
-                    <button type="button" class="btn-detalleP" href="/products/carrito"><a>Agregar</a><i
+                    <button type="button" class="btn-detalleP" onclick="addCart(event, '<%= product.id %>', '<%= usuario.id %>' )" href="/products/carrito"><a>Agregar</a><i
                             class="fa-solid fa-cart-shopping" id="carrito-dp"></i></button>
                 <br><br>
 
@@ -71,5 +71,21 @@
                 });
             });
         });
+
+        async function addCart (e,producto_id, usuario_id )  {
+            e.preventDefault()
+        const response = await fetch (`http://${location.hostname}:${location.port}/api/product/addCart`,
+        {method:'post', 
+        headers: {'Accept': 'application/json','Content-Type': 'application/json'},
+        body: JSON.stringify({producto_id , usuario_id })})
+
+        if (response.ok) {
+            alert ('producto agregado')
+
+        } else {
+            alert ('error al agregar')
+        }
+
+        }
     </script>
 </body>

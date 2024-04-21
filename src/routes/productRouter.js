@@ -20,6 +20,7 @@ const upload = multer({ storage });
 const productControllers = require("../controllers/productcontrollers");
 
 router
+  .get("/search", productControllers.search)
   .get("/", productControllers.listadoproductos)
   .get("/categorias/:category",productControllers.listCategory)
   .get("/marcas/:brand",productControllers.listBrands)

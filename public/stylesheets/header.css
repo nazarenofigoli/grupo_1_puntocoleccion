@@ -269,6 +269,10 @@ margin-top: -17px;
     width: 280px;
     padding: 5px;
 }
+.header__search button {
+    background-color: black;
+    color: black;
+}
 
 .nav-opcion i {
     position: relative;
