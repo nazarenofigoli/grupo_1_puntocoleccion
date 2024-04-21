@@ -189,7 +189,12 @@ margin-top: -17px;
     width: 100%;
     display: none;
 }
-
+.errores {
+    color: red;
+    display: flex;
+    justify-content: center;
+    
+}
 
 
 @media (min-width: 768px) {
