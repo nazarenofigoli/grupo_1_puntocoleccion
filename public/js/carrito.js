@@ -36,7 +36,6 @@
                             }
                         });
                     } else {
-                        alert('Producto no borrado');
                     }
                 } else {
                     alert('Ocurrió un error al borrar el producto');
