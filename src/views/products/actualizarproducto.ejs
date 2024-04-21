@@ -35,12 +35,18 @@
         </div>
 
         <div class="cargaProducto__contenedor__buton__enviar" >
-            <button type="submit" value="Enviar">Enviar</button></a>
-            <button type="reset" value="Borrar">Borrar</button></a>
+            <button type="submit" value="Enviar">ACTUALIZAR</button></a>
+            <button type="reset" value="BORRAR">Borrar</button></a>
+            <button type="button" onclick="volverAtras()">ATRÁS</button>
         </div>
 
     </div>
     </form>
+    <script>
+        function volverAtras() {
+            // Volver atrás en la historia del navegador
+            window.history.back();
+        }</script>
     <script src="/js/product-validation.js"></script>
     </body>
 </html>
