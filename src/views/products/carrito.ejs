@@ -1,167 +1,39 @@
-  <%- include('../partials/head.ejs')%> 
-  <body>
-    
-    <%- include('../partials/header.ejs')%>
+<%- include('../partials/head.ejs') %>
+<body>
 
-    <main class="carrito-main">
+  <%- include('../partials/header.ejs') %>
 
-    <div class="carrito-query-producto-enlaces">
+  <main class="carrito-main">
+    <section class="carrito-productos">
+      <% carrito.forEach((cart) => { %>
+      <article class="carrito-item">
+        <div class="carrito-imagen">
+          <img src="/img/productos/<%= cart.Product.Imageproducts[0].imagen %>" alt="<%= cart.Product.nombre %>">
+        </div>
+        <div class="carrito-info">
+          <h3><%= cart.Product.nombre %></h3>
+          <p class="carrito-precio">$<%= cart.Product.precio %></p>
+          <button class="carrito-borrar" onclick="borrarProducto('<%= cart.Product.id %>')">Eliminar</button>
+        </div>
+      </article>
+      <% }) %>
+    </section>
 
-        <section class="carrito-producto-cantidad">
-          
-          <div class="carrito-producto"><h5>PRODUCTO</h5></div>
-
-          <div class="carrito-3-pct">
-          <h5 class="carrito-h5-ocultar">PRECIO</h5>
-          <h5>CANTIDAD</h5>
-          <h5 class="carrito-h5-ocultar">TOTAL</h5></div>
-        </section>
-        <hr class="carrito-linea" />
-
-        <section class="carrito-section">
-          <% carrito.forEach((cart) => { %>
-          <img class="carrito-accesorio-descripcion-total">
-              <button onclick= "borrarProducto('<%= cart.Product.id %>')"><i class="fa-solid fa-circle-xmark"></i></button>
-              <img src="/img/productos/<%= cart.Product.Imageproducts[0].imagen %>" width="20%"></img>
-              <h1> <%= cart.Product.id %></h1>
-              <div class="carrito-loren-precio">
-                  <p><%= cart.Product.nombre %></p>
-                  <h4 class="carrito-precio-movile">1x00.000,00</h4>
-              </div>
-      
-              <h4 class="carrito-precio-query"><%= cart.Product.precio %></h4>
-      
-              <input type="button" value="-1+" />
-      
-              <h4 class="carrito-precio-query">00.000,00</h4>
-          </article>
-          
-      
-          <hr class="carrito-linea" />
-          <% }) %>
-      </section>
-      
-
-        <section>
-          <nav class="carrito-nav">
-            <ul>
-              <li>
-                <a class="carrito-nav-seguir" href="/"
-                  ><h5>SEGUIR COMPRANDO</h5></a
-                >
-                <a class="carrito-nav-actualizar" href="/products/carrito"
-                  ><h5>ACTUALIZAR CARRITO</h5></a
-                >
-              </li>
-            </ul>
-          </nav>
-        </section>
+    <section class="carrito-resumen">
+      <div class="carrito-total">
+        <h3>Total:</h3>
+        <p class="carrito-precio">$<%= total %></p>
       </div>
+      <a href="#" class="carrito-finalizar">Finalizar Compra</a>
+    </section>
+  </main>
 
-      <section class="carrito-caja-total">
-        <article class="carrito-caja-total-h5">
-          <div class="carrito-h5">
-            <h5>TOTAL DEL PRODUCTO</h5>
-          </div>
-        </article>
+  <%- include('../partials/whatsapp.ejs') %>
+  <%- include('../partials/footer.ejs') %>
+  
+  <script src="/js/carrito.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
 
-        <div class="carrito-subtotal">
-          <p>Subtotal</p>
-          <p> <%= total %></p>
-        </div>
-        <hr class="carrito-linea" />
-
-        <div class="carrito-envio">
-          <p>Envío</p>
-        </div>
-
-        <article class="carrito-detalle-compra">
-          <div class="carrito-form-definitivo">
-            <form class="carrito-form1">
-              <input type="radio" id="si" name="Precío" value="Si" />
-              <label for="si">Precío fijo: $00.000,00</label>
-            </form>
-            <br />
-
-            <form class="carrito-form2">
-              <input type="radio" id="si" name="Retirar" value="Si" />
-              <label for="si">Retirar en el local</label>
-            </form>
-          </div>
-
-          <div class="carrito-cambiar-enviar">
-            <nav>
-              <p>Enviar a</p>
-              <a href="">cambiar dirección</a>
-            </nav>
-          </div>
-          <hr class="carrito-linea" />
-
-          <div class="carrito-precio-total">
-            <p>Total</p>
-            <p>$00.000,00</p>
-          </div>
-        </article>
-
-        <div class="carrito-finalizar">
-          <a href="">IR A FINALIZAR COMPRA</a>
-        </div>
-      </section>
-      <%- include("../partials/whatsapp.ejs") %>
-
-    </main>
-      <%- include('../partials/footer.ejs')%> 
-
-      <script> 
-        async function borrarProducto(id) {
-            console.log('BORRANDO LA ID:', id);
-        
-            try {
-                const response = await fetch(`http://${location.hostname}:${location.port}/api/product/removeCart/${id}`, {
-                    method: 'DELETE',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    }
-                });
-        
-                console.log('RESPONSE:', JSON.stringify(response));
-        
-                if (response.ok) {
-                    const result = await Swal.fire({
-                        title: "Estas seguro",
-                        icon: "warning",
-                        showCancelButton: true,
-                        confirmButtonColor: "#3085d6",
-                        cancelButtonColor: "#d33",
-                        confirmButtonText: "Si, eliminar"
-                    });
-        
-                    if (result.isConfirmed) {
-                        await Swal.fire({
-                            title: "Deleted!",
-                            text: "Your file has been deleted.",
-                            icon: "success",
-                            timer: 1500,
-                            didClose: () => {
-                                // Recargar la página después de que el usuario confirme
-                                window.location.reload();
-                                window.scrollTo(0, 0);
-                            }
-                        });
-                    } else {
-                        alert('Producto no borrado');
-                    }
-                } else {
-                    alert('Ocurrió un error al borrar el producto');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Ocurrió un error al realizar la operación');
-            }
-        }
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      </html>
+</body>
+</html>
