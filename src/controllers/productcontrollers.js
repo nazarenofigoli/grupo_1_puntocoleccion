@@ -19,7 +19,7 @@ const productControllers = {
       ],
     }).then((result) => {
       product = result;
-      res.render("products/detalleP", {
+      res.render("./products/detalleP", {
         title: product.name,
         product,
         usuario: req.session.user,
@@ -45,7 +45,7 @@ const productControllers = {
     });
   },
 
-  carrito : async (req, res) => {
+carrito : async (req, res) => {
     try {
         const carrito = await db.Cart.findAll({
             include: [
@@ -54,6 +54,7 @@ const productControllers = {
             ], where: {usuario_id: req.session.user.id}
         });
         const total= carrito.reduce ((acum, current) => acum + (parseInt(current.Product.precio)*current.cantidad), 0)
+        // res.send (carrito)
       res.render("products/carrito", {
       title: "Carrito",
       carrito,

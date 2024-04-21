@@ -119,7 +119,7 @@ const productosController = {
           }
    },
   
-   addCart : async (req, res) => {
+addCart : async (req, res) => {
     const {usuario_id, producto_id} =req.body ;
 try {
    await db.Cart.create ({
@@ -135,9 +135,23 @@ try {
     res.status(500).json({ error: "Error al escribir en db" });
 
 }
-}
- 
+},
+
+removeCart: async (req,res) => {
+    const id = parseInt(req.params.id)
+    try {
+        await db.Cart.destroy({ where: { producto_id: id } })
+            
+        res.status(200).send('ok')
+
+        
+    }catch (error) {
+        console.log('Error al borrar', error)
+        res.status(500).json({ error: "Error al borrar" });
+    
 }
 
+}
+}
 
 module.exports = productosController;

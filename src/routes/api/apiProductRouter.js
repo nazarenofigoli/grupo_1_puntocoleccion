@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const { create, all, update, destroy, getProduct , allcategories, lastProduct, addCart } = require("../../controllers/api/apiProductController");
+const { create, all, update, destroy, getProduct , allcategories, lastProduct, addCart, removeCart } = require("../../controllers/api/apiProductController");
 
 router
 .post ('/addCart', addCart)
+.delete('/removeCart/:id', removeCart)
 .get ('/lastProduct', lastProduct)
 .get ('/allcategories',allcategories)
 .get('/all', all)
