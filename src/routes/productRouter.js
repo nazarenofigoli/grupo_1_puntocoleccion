@@ -1,3 +1,4 @@
+const { v4: uuidv4 } = require('uuid');
 var express = require("express");
 var router = express.Router();
 const path = require("path");
@@ -10,7 +11,7 @@ const storage = multer.diskStorage({
     cb(null, path.join(__dirname, "../../public/img/productos"));
   },
   filename: (req, file, cb) => {
-    const newFileName = Date.now() + path.extname(file.originalname);
+    const newFileName = uuidv4() + path.extname(file.originalname);
     cb(null, newFileName);
   },
 });

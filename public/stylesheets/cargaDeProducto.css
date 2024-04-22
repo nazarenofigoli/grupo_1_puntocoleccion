@@ -26,6 +26,29 @@
     padding: 5px;
 }
 
+
+
+.cargaProducto__contenedor__formulario  button{
+    font-size:16px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: var(--Negro);
+    color:var(--Verde);
+    width: 90%;
+    border:1px solid var(--Verde);
+    border-radius: 50px;
+    padding: 1%;
+    transition: all 2s;
+
+}
+
+.cargaProducto__contenedor__formulario button:hover {
+    background-color: var(--Verde);
+    color:var(--Negro);
+    cursor: pointer;
+    }
+
 .cargaProducto__contenedor__formulario input {
     display: flex;
     justify-content: center;
@@ -35,6 +58,8 @@
 }
 .cargaProducto__contenedor__formulario select {
     padding: 5px;
+    border: 2px solid #60e5b8;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.2)
 }
 .cargaProducto__contenedor__buton__enviar {
     padding: 10px;
@@ -58,7 +83,18 @@
         gap: 10px;
         
     }
-
+   
+    .cargaProducto__contenedor__formulario button {
+            text-align: center;
+            width: 25%;
+            margin-bottom: 10px;
+            
+            
+        }
+    .cargaProducto__contenedor__buton__enviar {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
