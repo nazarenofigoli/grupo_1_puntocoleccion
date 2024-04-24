@@ -38,7 +38,7 @@ const userControllers = {
         avatar: null,
         createdAt: new Date(),
         updatedAt: new Date(),
-      }).then((response) => res.redirect("/"));
+      }).then((response) => res.redirect("/users/login"));
     } else {
       res.render("./users/registro", {
         errors: errors.mapped(),
